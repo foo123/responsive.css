@@ -1,0 +1,710 @@
+@charset "UTF-8";
+/**
+* 
+* Responsive "Object-Oriented-like" Columns CSS framework
+* ======================
+* 
+* based on :
+* 
+* * gridiculous CSS framework
+* * various StackOverflow / SmashingCoding / ListApart / JSFiddle etc.. answers
+* * some custom ideas
+* 
+**/
+
+html
+{
+    font-size: 100%;    
+}
+
+/* Column Classes
+------------------------------------------------------------ */
+/* app-like panels */
+/* http://blog.stevensanderson.com/2011/10/05/full-height-app-layouts-a-css-trick-to-make-it-easier/ */
+.row, 
+.col 
+{ 
+    position: absolute; 
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    z-index:1;
+    /*font-size: 100%;*/ /* responsive font size */
+    overflow: hidden; 
+}
+.row
+ { 
+    left: 0; 
+    right: 0; 
+}
+.col 
+{ 
+    top: 0; 
+    bottom: 0; 
+}
+/* responsive/fluid columns */
+.fluid
+{
+    position:relative;
+    display:inline-block;
+    /* use border-box model, so padding is included and does not break columns */
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    z-index: 1;
+    float: left;
+    /*font-size: 100%;*/ /* responsive font size */
+}
+/* http://www.impressivewebs.com/css3-transitions-without-hover/ */
+.fluid-animated
+{
+    transition: width 2s ease;  
+}
+
+.fluid-animated2
+{
+    transition: width 2s ease, height 2s ease;  
+}
+
+/*  Responsive images, videos */
+.fluid img,
+.fluid video
+{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* http://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
+/* http://blog.brianjohnsondesign.com/responsive-background-image-sprites-css-tutorial/ */
+.aspect
+{
+    margin: 0;
+    padding:0;
+    display: block;
+    width: 100%;
+    height: 0;
+}
+/* 1:1 ratio, fit height to width */
+.asp-1-1
+{
+    padding-bottom: 100%;
+}
+/* 4:3 ratio, fit height to width */
+.asp-4-3
+{
+    padding-bottom: 75%; 
+}
+/* 3:4 ratio, fit height to width */
+.asp-3-4
+{
+    padding-bottom: 133.34%;
+}
+/* 2:1 ratio, fit height to width */
+.asp-2-1
+{
+    padding-bottom: 50%;
+}
+/* 1:2 ratio, fit height to width */
+.asp-1-2
+{
+    padding-bottom: 200%;
+}
+
+.col-1-1
+{
+    width: 100%;
+}
+.fluid.col-1-1
+{
+    float:none;
+    clear:both;
+    /*display:block;*/
+}
+
+.fluid.col-1-1.left,
+.fluid.col-1-1.right
+{
+    width: 100%;
+    padding:0;
+    float:none;
+    clear:both;
+    /*display:block;*/
+}
+
+.col-1-2,
+.col-2-4,
+.col-3-6,
+.col-4-8,
+.col-5-10
+{
+    width: 50%;
+}
+
+.col-1-3,
+.col-2-6,
+.col-3-9
+{
+    width: 33.333%;
+}
+
+.col-2-3,
+.col-4-6,
+.col-6-9
+{
+    width: 66.666%;
+}
+
+.col-1-4,
+.col-2-8
+{
+    width: 25%;
+}
+
+.col-3-4,
+.col-6-8
+{
+    width: 75%;
+}
+
+.col-1-5,
+.col-2-10 
+{
+    width: 20%;
+}
+
+.col-2-5,
+.col-4-10
+{
+    width: 40%;
+}
+
+.col-3-5,
+.col-6-10
+{
+    width: 60%;
+}
+
+.col-4-5,
+.col-8-10
+{
+    width: 80%;
+}
+
+.col-1-6
+{
+    width: 16.666%;
+}
+
+.col-5-6
+{
+    width: 83.333%;
+}
+
+.col-1-7
+{
+    width: 14.286%;
+}
+
+.col-2-7
+{
+    width: 28.571%;
+}
+
+.col-3-7
+{
+    width: 42.857%;
+}
+
+.col-4-7
+{
+    width: 57.143%;
+}
+
+.col-5-7
+{
+    width: 71.429%;
+}
+
+.col-6-7
+{
+    width: 85.714%;
+}
+
+.col-1-8
+{
+    width: 12.5%;
+}
+
+.col-3-8
+{
+    width: 37.5%;
+}
+
+.col-5-8
+{
+    width: 62.5%;
+}
+
+.col-7-8
+{
+    width: 87.5%;
+}
+
+.col-1-9
+{
+    width: 11.111%;
+}
+
+.col-2-9
+{
+    width: 22.222%;
+}
+
+.col-4-9
+{
+    width: 44.444%;
+}
+
+.col-5-9
+{
+    width: 55.555%;
+}
+
+.col-7-9
+{
+    width: 77.777%;
+}
+
+.col-8-9
+{
+    width: 99.999%;
+}
+
+.col-1-10
+{
+    width: 10%;
+}
+
+.col-3-10
+{
+    width: 30%;
+}
+
+.col-6-10
+{
+    width: 60%;
+}
+
+.col-7-10
+{
+    width: 70%;
+}
+
+.col-8-10
+{
+    width: 80%;
+}
+
+.col-9-10
+{
+    width: 90%;
+}
+
+.left
+{
+    float: left;
+}
+.first.left 
+{
+    clear: left;
+}
+.last.left 
+{
+    clear: right;
+}
+.right
+{
+    float: right;
+}
+.first.right 
+{
+    clear: right;
+}
+.last.right 
+{
+    clear: left;
+}
+
+.first.float-left,
+.first.float-right,
+.last.float-left,
+.last.float-right
+{
+    clear: none;
+}
+
+/* styles as classes abbreviations */
+.relative
+{
+    position: relative;
+}
+.absolute
+{
+    position: absolute;
+}
+.none
+{
+    display: none;
+}
+.block
+{
+    display: block;
+}
+.inline-block
+{
+    display: inline-block;
+}
+.inline
+{
+    display: inline;
+}
+.table
+{
+    display: table;
+}
+.table-cell
+{
+    display: table-cell;
+}
+.text-justify
+{
+    text-align: justify;
+}
+.text-center
+{
+    text-align:center;
+}
+.text-left
+{
+    text-align: left;
+}
+.text-right
+{
+    text-align: right;
+}
+.float-left
+{
+    float: left;
+}
+.float-right
+{
+    float: right;
+}
+.float-none
+{
+    float:none;
+}
+.clear-left
+{
+    clear: left;
+}
+.clear-right
+{
+    clear: right;
+}
+.clear-both
+{
+    clear: both;
+}
+.scroll-x-auto 
+{ 
+    overflow-x: auto; 
+}
+.scroll-y-auto
+{ 
+    overflow-y: auto; 
+}
+.scroll-x
+{ 
+    overflow-x: scroll; 
+}
+.scroll-y
+{ 
+    overflow-y: scroll; 
+}
+/* http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/ */
+.touch-scroll-x
+{
+  overflow-x: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+.touch-scroll-y
+{
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+.autoshow 
+{
+    display: none;
+}
+.autovisible
+{
+    visibility: hidden;
+}
+
+/* center alignment classes */
+/* http://www.dev-metal.com/center-div-vertically-horizontally-modern-method-without-fixed-size/ */
+.center-vertical-wrapper
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.center-horizontal-wrapper
+{
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.center-h
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-contents-h
+{
+    text-align: center;
+}
+/* http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/#Height */
+.center-absolute /* needs width/height to be set */
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    float:left;
+    margin: auto;
+}
+.center-transform /* needs width/height to be set */
+{
+    position: absolute;
+    margin: auto;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* http://coding.smashingmagazine.com/2013/05/22/centering-elements-with-flexbox/ */
+.center-flexbox 
+{
+    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box;      /* OLD: Firefox (buggy) */ 
+    display: -ms-flexbox;   /* MID: IE 10 */
+    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+    display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    height: 100%;
+    width: 100% /* needed for Firefox */
+}
+
+/* Media Queries
+------------------------------------------------------------ */
+/* =Media query for 960 Screens - sets nested grids to 100%
+-------------------------------------------------------------- */
+/*@media only screen and (max-width:960px){
+}*/
+/* =Media query for iPad and tablets
+-------------------------------------------------------------- */
+/*@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait){
+}*/
+/* =Media query for smaller tablets and larger handheld devices
+-------------------------------------------------------------- */
+/*@media handheld, only screen and (max-width: 600px), only screen and (max-device-width: 600px) and (orientation:portrait){
+}*/
+/* =Media query for iPhone and smaller handheld devices
+-------------------------------------------------------------- */
+/*@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px){
+}*/
+
+/*@media screen and (max-width:640px) {*/
+@media all and (max-width: 800px)
+{
+
+/*.fluid:not(.preserve, .float-left, .float-right, .autohide)*/
+/*.fluid:not(.preserve),
+.fluid:not(.float-left),
+.fluid:not(.float-right)*/
+.fluid.autofloat-none,
+.fluid:not(.preserve):not(.float-left):not(.float-right)
+{
+    display: block;
+    float:none;
+    clear:both;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+.autorelative
+{
+    position: relative;
+}
+.autoabsolute
+{
+    position: absolute;
+}
+.autovisible
+{
+    visibility: visible;
+}
+.autohidden
+{
+    visibility: hidden;
+}
+.autoscroll-x
+{
+    overflow-x: auto;
+}
+.autoscroll-y
+{
+    overflow-y: auto;
+}
+.autowidth
+{
+    width: 100% !important;
+}
+.autowidth-reset
+{
+    width: 0 !important;
+}
+.autoheight-reset
+{
+    height: 0;
+}
+.autoheight
+{
+    height: auto;
+}
+.autohide
+{
+    display: none !important;
+}
+.autoshow 
+{
+    display: block;
+}
+.autoinline
+{
+    display: inline-block;
+}
+.autoblock
+{
+    display: block;
+}
+.autotext-left
+{
+    text-align: left;
+}
+.autotext-right
+{
+    text-align: right;
+}
+.autotext-center
+{
+    text-align: center;
+}
+.autotext-justify
+{
+    text-align: justify;
+}
+.autofloat-left
+{
+    float: left;
+}
+.autofloat-right
+{
+    float: right;
+}
+.autofloat-none
+{
+    float: none;
+}
+.autoclear-left
+{
+    clear: left;
+}
+.autoclear-right
+{
+    clear: right;
+}
+.autoclear-both
+{
+    clear: both;
+}
+.automargin-reset
+{
+    margin: 0;
+}
+.automargin-reset-h
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+.automargin-reset-v
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.autopadding-reset
+{
+    padding: 0;
+}
+.autopadding-reset-h
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+.autopadding-reset-v
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+}
+
+/* clearfix container hack */
+.clearfloat:after 
+{
+    position: relative;
+    content: " " !important;
+    display: block !important;
+    clear: both !important;
+    float: none;
+    visibility: hidden !important;
+    font-size:1px !important;
+    width:0 !important;
+    height: 0 !important;
+    padding:0 !important;
+    margin:0 !important;
+}
+.clearfloat
+{
+    display: inline-block;
+}
+* html .clearfloat
+{
+    height: 1%;
+}
+.clearfloat
+{
+    display: block;
+}
