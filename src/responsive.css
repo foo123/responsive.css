@@ -731,27 +731,37 @@ only screen and (max-width: 760px),
 
     table.responsive tr 
         { 
-        border: 1px solid #efefef; 
+        margin-bottom: 1px; 
     }
 
-    table.responsive td,
-    /* take care of jquery.dataTables plugin as well */
-    table.responsive.dataTable tbody td 
+    table.responsive td
         { 
         /* Behave  like a "row" */
-        border: none;
-        border-bottom: 1px solid #efefef; 
+        box-sizing:border-box;
         width: 50%; 
         padding-left: 30%;
         padding-right: 15%;
     }
-
-    table.responsive.rtl td,
     /* take care of jquery.dataTables plugin as well */
-    table.responsive.rtl.dataTable tbody td 
+    table.responsive.dataTable tbody td 
+        { 
+        width: 50%; 
+        padding-left: 30%;
+        padding-right: 15%;
+        padding-left: 30% !important;
+        padding-right: 15% !important;
+    }
+
+    table.responsive.rtl td
         { 
         padding-left: 15%;
         padding-right: 30%;
+    }
+    /* take care of jquery.dataTables plugin as well */
+    table.responsive.rtl.dataTable tbody td 
+        { 
+        padding-left: 15% !important;
+        padding-right: 30% !important;
     }
 
     table.responsive td:before 

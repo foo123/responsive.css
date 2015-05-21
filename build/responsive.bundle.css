@@ -1112,27 +1112,49 @@ only screen and (max-width: 760px),
 
     table.responsive tr 
         { 
-        border: 1px solid #efefef; 
+        margin-bottom: 1px; 
     }
 
-    table.responsive td,
-    
-    table.responsive.dataTable tbody td 
+    table.responsive td
         { 
         
-        border: none;
-        border-bottom: 1px solid #efefef; 
+        -webkit-box-sizing:border-box;
+ 
+        
+        -moz-box-sizing:border-box;
+ 
+        
+        -ms-box-sizing:border-box;
+ 
+        
+        -o-box-sizing:border-box;
+ 
+        
+        box-sizing:border-box;
         width: 50%; 
         padding-left: 30%;
         padding-right: 15%;
     }
-
-    table.responsive.rtl td,
     
-    table.responsive.rtl.dataTable tbody td 
+    table.responsive.dataTable tbody td 
+        { 
+        width: 50%; 
+        padding-left: 30%;
+        padding-right: 15%;
+        padding-left: 30% !important;
+        padding-right: 15% !important;
+    }
+
+    table.responsive.rtl td
         { 
         padding-left: 15%;
         padding-right: 30%;
+    }
+    
+    table.responsive.rtl.dataTable tbody td 
+        { 
+        padding-left: 15% !important;
+        padding-right: 30% !important;
     }
 
     table.responsive td:before 
