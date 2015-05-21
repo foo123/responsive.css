@@ -69,7 +69,9 @@ html
 
 /*  Responsive images, videos */
 .fluid img,
-.fluid video
+.fluid video,
+table.responsive img,
+table.responsive video
 {
     position: relative;
     max-width: 100%;
@@ -138,179 +140,166 @@ html
 .col-2-4,
 .col-3-6,
 .col-4-8,
-.col-5-10
+.col-5-10,
+.col-6-12
 {
     width: 50%;
 }
-
 .col-1-3,
 .col-2-6,
-.col-3-9
+.col-3-9,
+.col-4-12
 {
     width: 33.333%;
 }
-
 .col-2-3,
 .col-4-6,
-.col-6-9
+.col-6-9,
+.col-8-12
 {
     width: 66.666%;
 }
-
 .col-1-4,
-.col-2-8
+.col-2-8,
+.col-3-12
 {
     width: 25%;
 }
-
 .col-3-4,
-.col-6-8
+.col-6-8,
+.col-9-12
 {
     width: 75%;
 }
-
 .col-1-5,
 .col-2-10 
 {
     width: 20%;
 }
-
 .col-2-5,
 .col-4-10
 {
     width: 40%;
 }
-
 .col-3-5,
 .col-6-10
 {
     width: 60%;
 }
-
 .col-4-5,
 .col-8-10
 {
     width: 80%;
 }
-
-.col-1-6
+.col-1-6,
+.col-2-12
 {
     width: 16.666%;
 }
-
-.col-5-6
+.col-5-6,
+.col-10-12
 {
     width: 83.333%;
 }
-
 .col-1-7
 {
     width: 14.286%;
 }
-
 .col-2-7
 {
     width: 28.571%;
 }
-
 .col-3-7
 {
     width: 42.857%;
 }
-
 .col-4-7
 {
-    width: 57.143%;
+    width: 57.142%;
 }
-
 .col-5-7
 {
-    width: 71.429%;
+    width: 71.428%;
 }
-
 .col-6-7
 {
     width: 85.714%;
 }
-
 .col-1-8
 {
     width: 12.5%;
 }
-
 .col-3-8
 {
     width: 37.5%;
 }
-
 .col-5-8
 {
     width: 62.5%;
 }
-
 .col-7-8
 {
     width: 87.5%;
 }
-
 .col-1-9
 {
-    width: 11.111%;
+    width: 11.11%;
 }
-
 .col-2-9
 {
-    width: 22.222%;
+    width: 22.22%;
 }
-
 .col-4-9
 {
-    width: 44.444%;
+    width: 44.44%;
 }
-
 .col-5-9
 {
-    width: 55.555%;
+    width: 55.55%;
 }
-
 .col-7-9
 {
-    width: 77.777%;
+    width: 77.77%;
 }
-
 .col-8-9
 {
-    width: 99.999%;
+    width: 99.99%;
 }
-
 .col-1-10
 {
     width: 10%;
 }
-
 .col-3-10
 {
     width: 30%;
 }
-
 .col-6-10
 {
     width: 60%;
 }
-
 .col-7-10
 {
     width: 70%;
 }
-
-.col-8-10
-{
-    width: 80%;
-}
-
 .col-9-10
 {
     width: 90%;
+}
+.col-1-12
+{
+    width: 8.333%;
+}
+.col-5-12
+{
+    width: 41.666%;
+}
+.col-7-12
+{
+    width: 58.333%;
+}
+.col-11-12
+{
+    width: 91.666%;
 }
 
 .left
@@ -517,6 +506,30 @@ html
     width: 100% /* needed for Firefox */
 }
 
+/* https://css-tricks.com/responsive-data-tables/ */
+table.responsive
+{ 
+    position: relative;
+    box-sizing:padding-box;
+    border-collapse: collapse; 
+}
+table.responsive thead, 
+table.responsive tbody, 
+table.responsive th, 
+table.responsive td, 
+table.responsive tr 
+{ 
+    position: relative;
+    box-sizing:padding-box;
+}
+table.responsive td:before 
+{ 
+    /* as a responsive table header */
+    position: absolute;
+    box-sizing:padding-box;
+    display: none;
+}
+
 /* Media Queries
 ------------------------------------------------------------ */
 /* =Media query for 960 Screens - sets nested grids to 100%
@@ -679,6 +692,87 @@ html
     padding-bottom: 0;
 }
 
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+    /* Force table to not be like tables anymore */
+    table.responsive,
+    table.responsive thead,
+    table.responsive tbody, 
+    table.responsive tr,
+    table.responsive th, 
+    table.responsive td
+        { 
+        display: block; 
+    }
+
+    table.responsive thead, 
+    table.responsive tbody, 
+    table.responsive tr,
+    table.responsive th, 
+    table.responsive td
+        { 
+        width: 100%; 
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    table.responsive thead tr 
+        { 
+        position: absolute;
+        top: -9999px; left: -9999px;
+    }
+
+    table.responsive tr 
+        { 
+        border: 1px solid #efefef; 
+    }
+
+    table.responsive td,
+    /* take care of jquery.dataTables plugin as well */
+    table.responsive.dataTable tbody td 
+        { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #efefef; 
+        width: 50%; 
+        padding-left: 30%;
+        padding-right: 15%;
+    }
+
+    table.responsive.rtl td,
+    /* take care of jquery.dataTables plugin as well */
+    table.responsive.rtl.dataTable tbody td 
+        { 
+        padding-left: 15%;
+        padding-right: 30%;
+    }
+
+    table.responsive td:before 
+        { 
+        /* Now like a table header */
+        display: block;
+        top: 0; left: 0;
+        width: 25%; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
+        text-overflow: ellipsis;
+        /* add the Label */
+        content: attr(data-column);
+    }
+    
+    table.responsive.rtl td:before 
+        { 
+        left: auto; right: 0;
+        text-align: right;
+    }
 }
 
 /* clearfix container hack */
