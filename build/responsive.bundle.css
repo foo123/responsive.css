@@ -892,6 +892,7 @@ table.responsive
 
     box-sizing:padding-box;
     border-collapse: collapse; 
+    width: 100%;
 }
 table.responsive thead, 
 table.responsive tbody, 
@@ -1092,14 +1093,6 @@ only screen and (max-width: 760px),
     table.responsive td
         { 
         display: block; 
-    }
-
-    table.responsive thead, 
-    table.responsive tbody, 
-    table.responsive tr,
-    table.responsive th, 
-    table.responsive td
-        { 
         width: 100%; 
     }
 
@@ -1115,7 +1108,9 @@ only screen and (max-width: 760px),
         margin-bottom: 1px; 
     }
 
-    table.responsive td
+    table.responsive td,
+    
+    table.responsive.dataTable tbody td 
         { 
         
         -webkit-box-sizing:border-box;
@@ -1131,25 +1126,12 @@ only screen and (max-width: 760px),
  
         
         box-sizing:border-box;
-        width: 50%; 
-        padding-left: 30%;
-        padding-right: 15%;
-    }
-    
-    table.responsive.dataTable tbody td 
-        { 
-        width: 50%; 
-        padding-left: 30%;
-        padding-right: 15%;
+        
         padding-left: 30% !important;
         padding-right: 15% !important;
     }
 
-    table.responsive.rtl td
-        { 
-        padding-left: 15%;
-        padding-right: 30%;
-    }
+    table.responsive.rtl td,
     
     table.responsive.rtl.dataTable tbody td 
         { 
