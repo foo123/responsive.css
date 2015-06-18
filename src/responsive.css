@@ -42,6 +42,11 @@ html
     top: 0; 
     bottom: 0; 
 }
+.flu
+{
+    position:relative;
+    box-sizing:border-box;
+}
 /* responsive/fluid columns */
 .fluid
 {

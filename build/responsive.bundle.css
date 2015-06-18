@@ -370,6 +370,19 @@ html
     top: 0; 
     bottom: 0; 
 }
+.flu
+{
+    position:relative;
+    -webkit-box-sizing:border-box;
+
+    -moz-box-sizing:border-box;
+
+    -ms-box-sizing:border-box;
+
+    -o-box-sizing:border-box;
+
+    box-sizing:border-box;
+}
 
 .fluid
 {
