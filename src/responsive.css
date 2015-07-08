@@ -440,7 +440,27 @@ table.responsive video
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
 }
-
+.break
+{
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
+}
+.unbreak
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
+}
+.unbreak.right,
+.unbreak.float-right
+{
+    float: right;
+}
 .autoshow 
 {
     display: none;
@@ -783,6 +803,27 @@ table.responsive td:before
 .autoheight
 {
     height: auto;
+}
+.autobreak
+{
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
+}
+.autounbreak
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
+}
+.autounbreak.right,
+.autounbreak.float-right
+{
+    float: right;
 }
 .autohide
 {
