@@ -469,7 +469,6 @@ table.responsive video
 {
     visibility: hidden;
 }
-
 /* center alignment classes */
 /* http://www.dev-metal.com/center-div-vertically-horizontally-modern-method-without-fixed-size/ */
 .center-vertical-wrapper
@@ -529,6 +528,22 @@ table.responsive video
     margin: 0;
     height: 100%;
     width: 100% /* needed for Firefox */
+}
+.reverse-order
+{
+    transform: rotate(180deg);
+}
+.reverse-order > *
+{
+    transform: rotate(180deg);
+}
+.reverse-flexorder-rows
+{
+    flex-direction: row-reverse;
+}
+.reverse-flexorder
+{
+    flex-direction: column-reverse;
 }
 
 /* https://css-tricks.com/responsive-data-tables/ */
@@ -908,6 +923,22 @@ table.responsive td:before
 {
     padding-top: 0;
     padding-bottom: 0;
+}
+.autoreverse-order
+{
+    transform: rotate(180deg);
+}
+.autoreverse-order > *
+{
+    transform: rotate(180deg);
+}
+.autoreverse-flexorder-rows
+{
+    flex-direction: row-reverse;
+}
+.autoreverse-flexorder
+{
+    flex-direction: column-reverse;
 }
 
 }
