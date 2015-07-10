@@ -984,6 +984,7 @@ only screen and (max-width: 760px),
         /*width: 50%;*/
         padding-left: 30% !important;
         padding-right: 15% !important;
+        min-height: 2em;
     }
 
     table.responsive.rtl td,
@@ -1002,7 +1003,7 @@ only screen and (max-width: 760px),
         width: 25%; 
         white-space: nowrap;
         overflow: hidden;
-        text-align: left;
+        text-align: right;
         text-overflow: ellipsis;
         /* add the Label */
         content: attr(data-column);
@@ -1011,7 +1012,7 @@ only screen and (max-width: 760px),
     table.responsive.rtl td:before 
         { 
         left: auto; right: 0;
-        text-align: right;
+        text-align: left;
     }
 }
 
