@@ -563,11 +563,12 @@ table.responsive tr
     position: relative;
     box-sizing:padding-box;
 }
-table.responsive td:before 
+table.responsive tbody td:before 
 { 
     /* as a responsive table header */
     position: absolute;
     box-sizing:padding-box;
+    height: 100%;
     display: none;
 }
 
@@ -995,7 +996,7 @@ only screen and (max-width: 760px),
         padding-right: 30% !important;
     }
 
-    table.responsive td:before 
+    table.responsive tbody td:before
         { 
         /* Now like a table header */
         display: block;
@@ -1009,7 +1010,7 @@ only screen and (max-width: 760px),
         content: attr(data-column);
     }
     
-    table.responsive.rtl td:before 
+    table.responsive.rtl tbody td:before 
         { 
         left: auto; right: 0;
         text-align: left;
