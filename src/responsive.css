@@ -59,6 +59,7 @@ html
     word-wrap: break-word;
     z-index: 1;
     float: left;
+    max-width: 100%;
     /*font-size: 100%;*/ /* responsive font size */
 }
 /* http://www.impressivewebs.com/css3-transitions-without-hover/ */
