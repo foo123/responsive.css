@@ -1019,6 +1019,7 @@ only screen and (max-width: 760px),
 }
 
 /* clearfix container hack */
+.fluid.col-1-1:after,
 .clearfloat:after 
 {
     position: relative;
