@@ -8,10 +8,10 @@ rem #
 rem ###################################################
 
 rem to use the python build tool do (the dependencies file is passed as argument):
-rem python %BUILDTOOLS%\Beeld.py --config ".\beeld.config" --compiler cssmin --tasks build
+rem python %BUILDTOOLS%\Beeld.py --config ".\beeld.config" --compiler cssmin --tasks build_bundle
 
 rem to use the php build tool do (the dependencies file is passed as argument):
-rem php -f %BUILDTOOLS%\Beeld.php -- --config=".\beeld.config" --compiler=cssmin --tasks=build
+rem php -f %BUILDTOOLS%\Beeld.php -- --config=".\beeld.config" --compiler=cssmin --tasks=build_bundle
 
 rem to use the node build tool do (the dependencies file is passed as argument):
-node %BUILDTOOLS%\Beeld.js --config ".\beeld.config" --compiler cssmin --tasks build
+node %BUILDTOOLS%\Beeld.js --config ".\beeld.config" --compiler cssmin --tasks build_bundle
