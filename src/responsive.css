@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/**
+/*
 * 
 * Responsive "Object-Oriented-like" Columns CSS framework
 * ======================
@@ -7,11 +6,10 @@
 * based on :
 * 
 * * gridiculous CSS framework
-* * various StackOverflow / SmashingCoding / ListApart / JSFiddle etc.. answers
+* * various CSS Tricks / StackOverflow / SmashingCoding / ListApart / JSFiddle etc.. answers
 * * some custom ideas
 * 
-**/
-
+*/
 html
 {
     font-size: 100%;    
@@ -1019,30 +1017,11 @@ only screen and (max-width: 760px),
 }
 
 /* clearfix container hack */
+/* https://css-tricks.com/snippets/css/clear-fix/ */
 .fluid.col-1-1:after,
 .clearfloat:after 
 {
-    position: relative;
-    content: " " !important;
-    display: block !important;
-    clear: both !important;
-    float: none;
-    visibility: hidden !important;
-    font-size:1px !important;
-    width:0 !important;
-    height: 0 !important;
-    padding:0 !important;
-    margin:0 !important;
-}
-.clearfloat
-{
-    display: inline-block;
-}
-* html .clearfloat
-{
-    height: 1%;
-}
-.clearfloat
-{
-    display: block;
+    content: "";
+    display: table;
+    clear: both;
 }
