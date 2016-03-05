@@ -575,24 +575,9 @@ table.responsive tbody td:before
 ------------------------------------------------------------ */
 /* =Media query for 960 Screens - sets nested grids to 100%
 -------------------------------------------------------------- */
-/*@media only screen and (max-width:960px){
-}*/
-/* =Media query for iPad and tablets
--------------------------------------------------------------- */
-/*@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait){
-}*/
-/* =Media query for smaller tablets and larger handheld devices
--------------------------------------------------------------- */
-/*@media handheld, only screen and (max-width: 600px), only screen and (max-device-width: 600px) and (orientation:portrait){
-}*/
-/* =Media query for iPhone and smaller handheld devices
--------------------------------------------------------------- */
-/*@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px){
-}*/
-
-/*@media screen and (max-width:640px) {*/
-@media all and (max-width: 800px)
+@media all and (max-width:800px)
 {
+/*.responsive-960*/
 
 /*.fluid:not(.preserve, .float-left, .float-right, .autohide)*/
 /*.fluid:not(.preserve),
@@ -601,7 +586,7 @@ table.responsive tbody td:before
 .fluid.autofloat-none:not(.autoadjust),
 .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
 {
-    display: block;
+    display:block;
     float:none;
     clear:both;
     margin-left:auto;
@@ -612,7 +597,7 @@ table.responsive tbody td:before
 {
     float:none;
     clear:both;
-    width: 100%;
+    width:100%;
 }
 .fluid.autocol-1-2,
 .fluid.autocol-2-4,
@@ -621,326 +606,1661 @@ table.responsive tbody td:before
 .fluid.autocol-5-10,
 .fluid.autocol-6-12
 {
-    width: 50%;
+    width:50%;
 }
 .fluid.autocol-1-3,
 .fluid.autocol-2-6,
 .fluid.autocol-3-9,
 .fluid.autocol-4-12
 {
-    width: 33.333%;
+    width:33.333%;
 }
 .fluid.autocol-2-3,
 .fluid.autocol-4-6,
 .fluid.autocol-6-9,
 .fluid.autocol-8-12
 {
-    width: 66.666%;
+    width:66.666%;
 }
 .fluid.autocol-1-4,
 .fluid.autocol-2-8,
 .fluid.autocol-3-12
 {
-    width: 25%;
+    width:25%;
 }
 .fluid.autocol-3-4,
 .fluid.autocol-6-8,
 .fluid.autocol-9-12
 {
-    width: 75%;
+    width:75%;
 }
 .fluid.autocol-1-5,
 .fluid.autocol-2-10 
 {
-    width: 20%;
+    width:20%;
 }
 .fluid.autocol-2-5,
 .fluid.autocol-4-10
 {
-    width: 40%;
+    width:40%;
 }
 .fluid.autocol-3-5,
 .fluid.autocol-6-10
 {
-    width: 60%;
+    width:60%;
 }
 .fluid.autocol-4-5,
 .fluid.autocol-8-10
 {
-    width: 80%;
+    width:80%;
 }
 .fluid.autocol-1-6,
 .fluid.autocol-2-12
 {
-    width: 16.666%;
+    width:16.666%;
 }
 .fluid.autocol-5-6,
 .fluid.autocol-10-12
 {
-    width: 83.333%;
+    width:83.333%;
 }
 .fluid.autocol-1-7
 {
-    width: 14.286%;
+    width:14.286%;
 }
 .fluid.autocol-2-7
 {
-    width: 28.571%;
+    width:28.571%;
 }
 .fluid.autocol-3-7
 {
-    width: 42.857%;
+    width:42.857%;
 }
 .fluid.autocol-4-7
 {
-    width: 57.142%;
+    width:57.142%;
 }
 .fluid.autocol-5-7
 {
-    width: 71.428%;
+    width:71.428%;
 }
 .fluid.autocol-6-7
 {
-    width: 85.714%;
+    width:85.714%;
 }
 .fluid.autocol-1-8
 {
-    width: 12.5%;
+    width:12.5%;
 }
 .fluid.autocol-3-8
 {
-    width: 37.5%;
+    width:37.5%;
 }
 .fluid.autocol-5-8
 {
-    width: 62.5%;
+    width:62.5%;
 }
 .fluid.autocol-7-8
 {
-    width: 87.5%;
+    width:87.5%;
 }
 .fluid.autocol-1-9
 {
-    width: 11.11%;
+    width:11.11%;
 }
 .fluid.autocol-2-9
 {
-    width: 22.22%;
+    width:22.22%;
 }
 .fluid.autocol-4-9
 {
-    width: 44.44%;
+    width:44.44%;
 }
 .fluid.autocol-5-9
 {
-    width: 55.55%;
+    width:55.55%;
 }
 .fluid.autocol-7-9
 {
-    width: 77.77%;
+    width:77.77%;
 }
 .fluid.autocol-8-9
 {
-    width: 99.99%;
+    width:99.99%;
 }
 .fluid.autocol-1-10
 {
-    width: 10%;
+    width:10%;
 }
 .fluid.autocol-3-10
 {
-    width: 30%;
+    width:30%;
 }
 .fluid.autocol-6-10
 {
-    width: 60%;
+    width:60%;
 }
 .fluid.autocol-7-10
 {
-    width: 70%;
+    width:70%;
 }
 .fluid.autocol-9-10
 {
-    width: 90%;
+    width:90%;
 }
 .fluid.autocol-1-12
 {
-    width: 8.333%;
+    width:8.333%;
 }
 .fluid.autocol-5-12
 {
-    width: 41.666%;
+    width:41.666%;
 }
 .fluid.autocol-7-12
 {
-    width: 58.333%;
+    width:58.333%;
 }
 .fluid.autocol-11-12
 {
-    width: 91.666%;
+    width:91.666%;
 }
 .autorelative
 {
-    position: relative;
+    position:relative;
 }
 .autoabsolute
 {
-    position: absolute;
+    position:absolute;
 }
 .autovisible
 {
-    visibility: visible;
+    visibility:visible;
 }
 .autohidden
 {
-    visibility: hidden;
+    visibility:hidden;
 }
 .autoscroll-x
 {
-    overflow-x: auto;
+    overflow-x:auto;
 }
 .autoscroll-y
 {
-    overflow-y: auto;
+    overflow-y:auto;
 }
 .autowidth
 {
-    width: 100% !important;
+    width:100% !important;
 }
 .autowidth-reset
 {
-    width: 0 !important;
+    width:0 !important;
 }
 .autoheight-reset
 {
-    height: 0;
+    height:0;
 }
 .autoheight
 {
-    height: auto;
+    height:auto;
 }
 .autobreak
 {
-    display: block;
-    width: 1px;
-    height: 1px;
-    float: none;
-    clear: both;
+    display:block;
+    width:1px;
+    height:1px;
+    float:none;
+    clear:both;
 }
 .autounbreak
 {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    float: left;
-    clear: none;
+    display:inline-block;
+    width:0;
+    height:0;
+    float:left;
+    clear:none;
 }
 .autounbreak.right,
 .autounbreak.float-right
 {
-    float: right;
+    float:right;
 }
 .autohide
 {
-    display: none !important;
+    display:none !important;
 }
 .autoshow 
 {
-    display: block;
+    display:block;
 }
 .autoinline
 {
-    display: inline-block;
+    display:inline-block;
 }
 .autoblock
 {
-    display: block;
+    display:block;
 }
 .autotext-left
 {
-    text-align: left;
+    text-align:left;
 }
 .autotext-right
 {
-    text-align: right;
+    text-align:right;
 }
 .autotext-center
 {
-    text-align: center;
+    text-align:center;
 }
 .autotext-justify
 {
-    text-align: justify;
+    text-align:justify;
 }
 .autofloat-left
 {
-    float: left;
+    float:left;
 }
 .autofloat-right
 {
-    float: right;
+    float:right;
 }
 .autofloat-none
 {
-    float: none;
+    float:none;
 }
 .autoclear-left
 {
-    clear: left;
+    clear:left;
 }
 .autoclear-right
 {
-    clear: right;
+    clear:right;
 }
 .autoclear-both
 {
-    clear: both;
+    clear:both;
 }
 .automargin-reset
 {
-    margin: 0 !important;
+    margin:0 !important;
 }
 .automargin-reset-h
 {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
 }
 .automargin-reset-v
 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin-top:0 !important;
+    margin-bottom:0 !important;
 }
 .autopadding-reset
 {
-    padding: 0 !important;
+    padding:0 !important;
 }
 .autopadding-reset-h
 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
 }
 .autopadding-reset-v
 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
 }
 .autoreverse-order
 {
-    transform: rotate(180deg);
+    transform:rotate(180deg);
 }
 .autoreverse-order > *
 {
-    transform: rotate(180deg);
+    transform:rotate(180deg);
 }
 .autoreverse-flexorder-rows
 {
-    flex-direction: row-reverse;
+    flex-direction:row-reverse;
 }
 .autoreverse-flexorder
 {
-    flex-direction: column-reverse;
+    flex-direction:column-reverse;
+}
 }
 
+/* =Media query for iPad and tablets
+-------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait)
+{
+.responsive-768-portrait  .fluid.autofloat-none:not(.autoadjust),
+.responsive-768-portrait  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
+.responsive-768-portrait.fluid.autofloat-none:not(.autoadjust),
+.responsive-768-portrait.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
+{
+    display:block;
+    float:none;
+    clear:both;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+.responsive-768-portrait  .fluid.autocol-1-1,
+.responsive-768-portrait.fluid.autocol-1-1
+{
+    float:none;
+    clear:both;
+    width:100%;
+}
+.responsive-768-portrait  .fluid.autocol-1-2,
+.responsive-768-portrait  .fluid.autocol-2-4,
+.responsive-768-portrait  .fluid.autocol-3-6,
+.responsive-768-portrait  .fluid.autocol-4-8,
+.responsive-768-portrait  .fluid.autocol-5-10,
+.responsive-768-portrait  .fluid.autocol-6-12,
+.responsive-768-portrait.fluid.autocol-1-2,
+.responsive-768-portrait.fluid.autocol-2-4,
+.responsive-768-portrait.fluid.autocol-3-6,
+.responsive-768-portrait.fluid.autocol-4-8,
+.responsive-768-portrait.fluid.autocol-5-10,
+.responsive-768-portrait.fluid.autocol-6-12
+{
+    width:50%;
+}
+.responsive-768-portrait  .fluid.autocol-1-3,
+.responsive-768-portrait  .fluid.autocol-2-6,
+.responsive-768-portrait  .fluid.autocol-3-9,
+.responsive-768-portrait  .fluid.autocol-4-12,
+.responsive-768-portrait.fluid.autocol-1-3,
+.responsive-768-portrait.fluid.autocol-2-6,
+.responsive-768-portrait.fluid.autocol-3-9,
+.responsive-768-portrait.fluid.autocol-4-12
+{
+    width:33.333%;
+}
+.responsive-768-portrait  .fluid.autocol-2-3,
+.responsive-768-portrait  .fluid.autocol-4-6,
+.responsive-768-portrait  .fluid.autocol-6-9,
+.responsive-768-portrait  .fluid.autocol-8-12,
+.responsive-768-portrait.fluid.autocol-2-3,
+.responsive-768-portrait.fluid.autocol-4-6,
+.responsive-768-portrait.fluid.autocol-6-9,
+.responsive-768-portrait.fluid.autocol-8-12
+{
+    width:66.666%;
+}
+.responsive-768-portrait  .fluid.autocol-1-4,
+.responsive-768-portrait  .fluid.autocol-2-8,
+.responsive-768-portrait  .fluid.autocol-3-12,
+.responsive-768-portrait.fluid.autocol-1-4,
+.responsive-768-portrait.fluid.autocol-2-8,
+.responsive-768-portrait.fluid.autocol-3-12
+{
+    width:25%;
+}
+.responsive-768-portrait  .fluid.autocol-3-4,
+.responsive-768-portrait  .fluid.autocol-6-8,
+.responsive-768-portrait  .fluid.autocol-9-12,
+.responsive-768-portrait.fluid.autocol-3-4,
+.responsive-768-portrait.fluid.autocol-6-8,
+.responsive-768-portrait.fluid.autocol-9-12
+{
+    width:75%;
+}
+.responsive-768-portrait  .fluid.autocol-1-5,
+.responsive-768-portrait  .fluid.autocol-2-10,
+.responsive-768-portrait.fluid.autocol-1-5,
+.responsive-768-portrait.fluid.autocol-2-10 
+{
+    width:20%;
+}
+.responsive-768-portrait  .fluid.autocol-2-5,
+.responsive-768-portrait  .fluid.autocol-4-10,
+.responsive-768-portrait.fluid.autocol-2-5,
+.responsive-768-portrait.fluid.autocol-4-10
+{
+    width:40%;
+}
+.responsive-768-portrait  .fluid.autocol-3-5,
+.responsive-768-portrait  .fluid.autocol-6-10,
+.responsive-768-portrait.fluid.autocol-3-5,
+.responsive-768-portrait.fluid.autocol-6-10
+{
+    width:60%;
+}
+.responsive-768-portrait  .fluid.autocol-4-5,
+.responsive-768-portrait  .fluid.autocol-8-10,
+.responsive-768-portrait.fluid.autocol-4-5,
+.responsive-768-portrait.fluid.autocol-8-10
+{
+    width:80%;
+}
+.responsive-768-portrait  .fluid.autocol-1-6,
+.responsive-768-portrait  .fluid.autocol-2-12,
+.responsive-768-portrait.fluid.autocol-1-6,
+.responsive-768-portrait.fluid.autocol-2-12
+{
+    width:16.666%;
+}
+.responsive-768-portrait  .fluid.autocol-5-6,
+.responsive-768-portrait  .fluid.autocol-10-12,
+.responsive-768-portrait.fluid.autocol-5-6,
+.responsive-768-portrait.fluid.autocol-10-12
+{
+    width:83.333%;
+}
+.responsive-768-portrait  .fluid.autocol-1-7,
+.responsive-768-portrait.fluid.autocol-1-7
+{
+    width:14.286%;
+}
+.responsive-768-portrait  .fluid.autocol-2-7,
+.responsive-768-portrait.fluid.autocol-2-7
+{
+    width:28.571%;
+}
+.responsive-768-portrait   .fluid.autocol-3-7,
+.responsive-768-portrait.fluid.autocol-3-7
+{
+    width:42.857%;
+}
+.responsive-768-portrait   .fluid.autocol-4-7,
+.responsive-768-portrait.fluid.autocol-4-7
+{
+    width:57.142%;
+}
+.responsive-768-portrait   .fluid.autocol-5-7,
+.responsive-768-portrait.fluid.autocol-5-7
+{
+    width:71.428%;
+}
+.responsive-768-portrait   .fluid.autocol-6-7,
+.responsive-768-portrait.fluid.autocol-6-7
+{
+    width:85.714%;
+}
+.responsive-768-portrait   .fluid.autocol-1-8,
+.responsive-768-portrait.fluid.autocol-1-8
+{
+    width:12.5%;
+}
+.responsive-768-portrait   .fluid.autocol-3-8,
+.responsive-768-portrait.fluid.autocol-3-8
+{
+    width:37.5%;
+}
+.responsive-768-portrait   .fluid.autocol-5-8,
+.responsive-768-portrait.fluid.autocol-5-8
+{
+    width:62.5%;
+}
+.responsive-768-portrait   .fluid.autocol-7-8,
+.responsive-768-portrait.fluid.autocol-7-8
+{
+    width:87.5%;
+}
+.responsive-768-portrait  .fluid.autocol-1-9,
+.responsive-768-portrait.fluid.autocol-1-9
+{
+    width:11.11%;
+}
+.responsive-768-portrait   .fluid.autocol-2-9,
+.responsive-768-portrait.fluid.autocol-2-9
+{
+    width:22.22%;
+}
+.responsive-768-portrait  .fluid.autocol-4-9,
+.responsive-768-portrait.fluid.autocol-4-9
+{
+    width:44.44%;
+}
+.responsive-768-portrait  .fluid.autocol-5-9,
+.responsive-768-portrait.fluid.autocol-5-9
+{
+    width:55.55%;
+}
+.responsive-768-portrait  .fluid.autocol-7-9,
+.responsive-768-portrait.fluid.autocol-7-9
+{
+    width:77.77%;
+}
+.responsive-768-portrait  .fluid.autocol-8-9,
+.responsive-768-portrait.fluid.autocol-8-9
+{
+    width:99.99%;
+}
+.responsive-768-portrait  .fluid.autocol-1-10,
+.responsive-768-portrait.fluid.autocol-1-10
+{
+    width:10%;
+}
+.responsive-768-portrait  .fluid.autocol-3-10,
+.responsive-768-portrait.fluid.autocol-3-10
+{
+    width:30%;
+}
+.responsive-768-portrait  .fluid.autocol-6-10,
+.responsive-768-portrait.fluid.autocol-6-10
+{
+    width:60%;
+}
+.responsive-768-portrait  .fluid.autocol-7-10,
+.responsive-768-portrait.fluid.autocol-7-10
+{
+    width:70%;
+}
+.responsive-768-portrait  .fluid.autocol-9-10,
+.responsive-768-portrait.fluid.autocol-9-10
+{
+    width:90%;
+}
+.responsive-768-portrait  .fluid.autocol-1-12,
+.responsive-768-portrait.fluid.autocol-1-12
+{
+    width:8.333%;
+}
+.responsive-768-portrait  .fluid.autocol-5-12,
+.responsive-768-portrait.fluid.autocol-5-12
+{
+    width:41.666%;
+}
+.responsive-768-portrait  .fluid.autocol-7-12,
+.responsive-768-portrait.fluid.autocol-7-12
+{
+    width:58.333%;
+}
+.responsive-768-portrait  .fluid.autocol-11-12,
+.responsive-768-portrait.fluid.autocol-11-12
+{
+    width:91.666%;
+}
+.responsive-768-portrait  .autorelative,
+.responsive-768-portrait.autorelative
+{
+    position:relative;
+}
+.responsive-768-portrait  .autoabsolute,
+.responsive-768-portrait.autoabsolute
+{
+    position:absolute;
+}
+.responsive-768-portrait  .autovisible,
+.responsive-768-portrait.autovisible
+{
+    visibility:visible;
+}
+.responsive-768-portrait  .autohidden,
+.responsive-768-portrait.autohidden
+{
+    visibility:hidden;
+}
+.responsive-768-portrait  .autoscroll-x,
+.responsive-768-portrait.autoscroll-x
+{
+    overflow-x:auto;
+}
+.responsive-768-portrait  .autoscroll-y,
+.responsive-768-portrait.autoscroll-y
+{
+    overflow-y:auto;
+}
+.responsive-768-portrait  .autowidth,
+.responsive-768-portrait.autowidth
+{
+    width:100% !important;
+}
+.responsive-768-portrait  .autowidth-reset,
+.responsive-768-portrait.autowidth-reset
+{
+    width:0 !important;
+}
+.responsive-768-portrait  .autoheight-reset,
+.responsive-768-portrait.autoheight-reset
+{
+    height:0;
+}
+.responsive-768-portrait  .autoheight,
+.responsive-768-portrait.autoheight
+{
+    height:auto;
+}
+.responsive-768-portrait  .autobreak,
+.responsive-768-portrait.autobreak
+{
+    display:block;
+    width:1px;
+    height:1px;
+    float:none;
+    clear:both;
+}
+.responsive-768-portrait  .autounbreak,
+.responsive-768-portrait.autounbreak
+{
+    display:inline-block;
+    width:0;
+    height:0;
+    float:left;
+    clear:none;
+}
+.responsive-768-portrait  .autounbreak.right,
+.responsive-768-portrait  .autounbreak.float-right,
+.responsive-768-portrait.autounbreak.right,
+.responsive-768-portrait.autounbreak.float-right
+{
+    float:right;
+}
+.responsive-768-portrait  .autohide,
+.responsive-768-portrait.autohide
+{
+    display:none !important;
+}
+.responsive-768-portrait  .autoshow,
+.responsive-768-portrait.autoshow 
+{
+    display:block;
+}
+.responsive-768-portrait  .autoinline,
+.responsive-768-portrait.autoinline
+{
+    display:inline-block;
+}
+.responsive-768-portrait  .autoblock,
+.responsive-768-portrait.autoblock
+{
+    display:block;
+}
+.responsive-768-portrait  .autotext-left,
+.responsive-768-portrait.autotext-left
+{
+    text-align:left;
+}
+.responsive-768-portrait  .autotext-right,
+.responsive-768-portrait.autotext-right
+{
+    text-align:right;
+}
+.responsive-768-portrait  .autotext-center,
+.responsive-768-portrait.autotext-center
+{
+    text-align:center;
+}
+.responsive-768-portrait  .autotext-justify,
+.responsive-768-portrait.autotext-justify
+{
+    text-align:justify;
+}
+.responsive-768-portrait  .autofloat-left,
+.responsive-768-portrait.autofloat-left
+{
+    float:left;
+}
+.responsive-768-portrait  .autofloat-right,
+.responsive-768-portrait.autofloat-right
+{
+    float:right;
+}
+.responsive-768-portrait  .autofloat-none,
+.responsive-768-portrait.autofloat-none
+{
+    float:none;
+}
+.responsive-768-portrait  .autoclear-left,
+.responsive-768-portrait.autoclear-left
+{
+    clear:left;
+}
+.responsive-768-portrait  .autoclear-right,
+.responsive-768-portrait.autoclear-right
+{
+    clear:right;
+}
+.responsive-768-portrait  .autoclear-both,
+.responsive-768-portrait.autoclear-both
+{
+    clear:both;
+}
+.responsive-768-portrait  .automargin-reset,
+.responsive-768-portrait.automargin-reset
+{
+    margin:0 !important;
+}
+.responsive-768-portrait  .automargin-reset-h,
+.responsive-768-portrait.automargin-reset-h
+{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+.responsive-768-portrait  .automargin-reset-v,
+.responsive-768-portrait.automargin-reset-v
+{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+}
+.responsive-768-portrait  .autopadding-reset,
+.responsive-768-portrait.autopadding-reset
+{
+    padding:0 !important;
+}
+.responsive-768-portrait  .autopadding-reset-h,
+.responsive-768-portrait.autopadding-reset-h
+{
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+.responsive-768-portrait  .autopadding-reset-v,
+.responsive-768-portrait.autopadding-reset-v
+{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+.responsive-768-portrait  .autoreverse-order,
+.responsive-768-portrait.autoreverse-order
+{
+    transform:rotate(180deg);
+}
+.responsive-768-portrait  .autoreverse-order > *,
+.responsive-768-portrait.autoreverse-order > *
+{
+    transform:rotate(180deg);
+}
+.responsive-768-portrait  .autoreverse-flexorder-rows,
+.responsive-768-portrait.autoreverse-flexorder-rows
+{
+    flex-direction:row-reverse;
+}
+.responsive-768-portrait  .autoreverse-flexorder,
+.responsive-768-portrait.autoreverse-flexorder
+{
+    flex-direction:column-reverse;
+}
+}
+/* =Media query for smaller tablets and larger handheld devices
+-------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) and (orientation:portrait)
+{
+.responsive-640-portrait  .fluid.autofloat-none:not(.autoadjust),
+.responsive-640-portrait  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
+.responsive-640-portrait.fluid.autofloat-none:not(.autoadjust),
+.responsive-640-portrait.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
+{
+    display:block;
+    float:none;
+    clear:both;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+.responsive-640-portrait  .fluid.autocol-1-1,
+.responsive-640-portrait.fluid.autocol-1-1
+{
+    float:none;
+    clear:both;
+    width:100%;
+}
+.responsive-640-portrait  .fluid.autocol-1-2,
+.responsive-640-portrait  .fluid.autocol-2-4,
+.responsive-640-portrait  .fluid.autocol-3-6,
+.responsive-640-portrait  .fluid.autocol-4-8,
+.responsive-640-portrait  .fluid.autocol-5-10,
+.responsive-640-portrait  .fluid.autocol-6-12,
+.responsive-640-portrait.fluid.autocol-1-2,
+.responsive-640-portrait.fluid.autocol-2-4,
+.responsive-640-portrait.fluid.autocol-3-6,
+.responsive-640-portrait.fluid.autocol-4-8,
+.responsive-640-portrait.fluid.autocol-5-10,
+.responsive-640-portrait.fluid.autocol-6-12
+{
+    width:50%;
+}
+.responsive-640-portrait  .fluid.autocol-1-3,
+.responsive-640-portrait  .fluid.autocol-2-6,
+.responsive-640-portrait  .fluid.autocol-3-9,
+.responsive-640-portrait  .fluid.autocol-4-12,
+.responsive-640-portrait.fluid.autocol-1-3,
+.responsive-640-portrait.fluid.autocol-2-6,
+.responsive-640-portrait.fluid.autocol-3-9,
+.responsive-640-portrait.fluid.autocol-4-12
+{
+    width:33.333%;
+}
+.responsive-640-portrait  .fluid.autocol-2-3,
+.responsive-640-portrait  .fluid.autocol-4-6,
+.responsive-640-portrait  .fluid.autocol-6-9,
+.responsive-640-portrait  .fluid.autocol-8-12,
+.responsive-640-portrait.fluid.autocol-2-3,
+.responsive-640-portrait.fluid.autocol-4-6,
+.responsive-640-portrait.fluid.autocol-6-9,
+.responsive-640-portrait.fluid.autocol-8-12
+{
+    width:66.666%;
+}
+.responsive-640-portrait  .fluid.autocol-1-4,
+.responsive-640-portrait  .fluid.autocol-2-8,
+.responsive-640-portrait  .fluid.autocol-3-12,
+.responsive-640-portrait.fluid.autocol-1-4,
+.responsive-640-portrait.fluid.autocol-2-8,
+.responsive-640-portrait.fluid.autocol-3-12
+{
+    width:25%;
+}
+.responsive-640-portrait  .fluid.autocol-3-4,
+.responsive-640-portrait  .fluid.autocol-6-8,
+.responsive-640-portrait  .fluid.autocol-9-12,
+.responsive-640-portrait.fluid.autocol-3-4,
+.responsive-640-portrait.fluid.autocol-6-8,
+.responsive-640-portrait.fluid.autocol-9-12
+{
+    width:75%;
+}
+.responsive-640-portrait  .fluid.autocol-1-5,
+.responsive-640-portrait  .fluid.autocol-2-10,
+.responsive-640-portrait.fluid.autocol-1-5,
+.responsive-640-portrait.fluid.autocol-2-10 
+{
+    width:20%;
+}
+.responsive-640-portrait  .fluid.autocol-2-5,
+.responsive-640-portrait  .fluid.autocol-4-10,
+.responsive-640-portrait.fluid.autocol-2-5,
+.responsive-640-portrait.fluid.autocol-4-10
+{
+    width:40%;
+}
+.responsive-640-portrait  .fluid.autocol-3-5,
+.responsive-640-portrait  .fluid.autocol-6-10,
+.responsive-640-portrait.fluid.autocol-3-5,
+.responsive-640-portrait.fluid.autocol-6-10
+{
+    width:60%;
+}
+.responsive-640-portrait  .fluid.autocol-4-5,
+.responsive-640-portrait  .fluid.autocol-8-10,
+.responsive-640-portrait.fluid.autocol-4-5,
+.responsive-640-portrait.fluid.autocol-8-10
+{
+    width:80%;
+}
+.responsive-640-portrait  .fluid.autocol-1-6,
+.responsive-640-portrait  .fluid.autocol-2-12,
+.responsive-640-portrait.fluid.autocol-1-6,
+.responsive-640-portrait.fluid.autocol-2-12
+{
+    width:16.666%;
+}
+.responsive-640-portrait  .fluid.autocol-5-6,
+.responsive-640-portrait  .fluid.autocol-10-12,
+.responsive-640-portrait.fluid.autocol-5-6,
+.responsive-640-portrait.fluid.autocol-10-12
+{
+    width:83.333%;
+}
+.responsive-640-portrait  .fluid.autocol-1-7,
+.responsive-640-portrait.fluid.autocol-1-7
+{
+    width:14.286%;
+}
+.responsive-640-portrait  .fluid.autocol-2-7,
+.responsive-640-portrait.fluid.autocol-2-7
+{
+    width:28.571%;
+}
+.responsive-640-portrait   .fluid.autocol-3-7,
+.responsive-640-portrait.fluid.autocol-3-7
+{
+    width:42.857%;
+}
+.responsive-640-portrait   .fluid.autocol-4-7,
+.responsive-640-portrait.fluid.autocol-4-7
+{
+    width:57.142%;
+}
+.responsive-640-portrait   .fluid.autocol-5-7,
+.responsive-640-portrait.fluid.autocol-5-7
+{
+    width:71.428%;
+}
+.responsive-640-portrait   .fluid.autocol-6-7,
+.responsive-640-portrait.fluid.autocol-6-7
+{
+    width:85.714%;
+}
+.responsive-640-portrait   .fluid.autocol-1-8,
+.responsive-640-portrait.fluid.autocol-1-8
+{
+    width:12.5%;
+}
+.responsive-640-portrait   .fluid.autocol-3-8,
+.responsive-640-portrait.fluid.autocol-3-8
+{
+    width:37.5%;
+}
+.responsive-640-portrait   .fluid.autocol-5-8,
+.responsive-640-portrait.fluid.autocol-5-8
+{
+    width:62.5%;
+}
+.responsive-640-portrait   .fluid.autocol-7-8,
+.responsive-640-portrait.fluid.autocol-7-8
+{
+    width:87.5%;
+}
+.responsive-640-portrait  .fluid.autocol-1-9,
+.responsive-640-portrait.fluid.autocol-1-9
+{
+    width:11.11%;
+}
+.responsive-640-portrait   .fluid.autocol-2-9,
+.responsive-640-portrait.fluid.autocol-2-9
+{
+    width:22.22%;
+}
+.responsive-640-portrait  .fluid.autocol-4-9,
+.responsive-640-portrait.fluid.autocol-4-9
+{
+    width:44.44%;
+}
+.responsive-640-portrait  .fluid.autocol-5-9,
+.responsive-640-portrait.fluid.autocol-5-9
+{
+    width:55.55%;
+}
+.responsive-640-portrait  .fluid.autocol-7-9,
+.responsive-640-portrait.fluid.autocol-7-9
+{
+    width:77.77%;
+}
+.responsive-640-portrait  .fluid.autocol-8-9,
+.responsive-640-portrait.fluid.autocol-8-9
+{
+    width:99.99%;
+}
+.responsive-640-portrait  .fluid.autocol-1-10,
+.responsive-640-portrait.fluid.autocol-1-10
+{
+    width:10%;
+}
+.responsive-640-portrait  .fluid.autocol-3-10,
+.responsive-640-portrait.fluid.autocol-3-10
+{
+    width:30%;
+}
+.responsive-640-portrait  .fluid.autocol-6-10,
+.responsive-640-portrait.fluid.autocol-6-10
+{
+    width:60%;
+}
+.responsive-640-portrait  .fluid.autocol-7-10,
+.responsive-640-portrait.fluid.autocol-7-10
+{
+    width:70%;
+}
+.responsive-640-portrait  .fluid.autocol-9-10,
+.responsive-640-portrait.fluid.autocol-9-10
+{
+    width:90%;
+}
+.responsive-640-portrait  .fluid.autocol-1-12,
+.responsive-640-portrait.fluid.autocol-1-12
+{
+    width:8.333%;
+}
+.responsive-640-portrait  .fluid.autocol-5-12,
+.responsive-640-portrait.fluid.autocol-5-12
+{
+    width:41.666%;
+}
+.responsive-640-portrait  .fluid.autocol-7-12,
+.responsive-640-portrait.fluid.autocol-7-12
+{
+    width:58.333%;
+}
+.responsive-640-portrait  .fluid.autocol-11-12,
+.responsive-640-portrait.fluid.autocol-11-12
+{
+    width:91.666%;
+}
+.responsive-640-portrait  .autorelative,
+.responsive-640-portrait.autorelative
+{
+    position:relative;
+}
+.responsive-640-portrait  .autoabsolute,
+.responsive-640-portrait.autoabsolute
+{
+    position:absolute;
+}
+.responsive-640-portrait  .autovisible,
+.responsive-640-portrait.autovisible
+{
+    visibility:visible;
+}
+.responsive-640-portrait  .autohidden,
+.responsive-640-portrait.autohidden
+{
+    visibility:hidden;
+}
+.responsive-640-portrait  .autoscroll-x,
+.responsive-640-portrait.autoscroll-x
+{
+    overflow-x:auto;
+}
+.responsive-640-portrait  .autoscroll-y,
+.responsive-640-portrait.autoscroll-y
+{
+    overflow-y:auto;
+}
+.responsive-640-portrait  .autowidth,
+.responsive-640-portrait.autowidth
+{
+    width:100% !important;
+}
+.responsive-640-portrait  .autowidth-reset,
+.responsive-640-portrait.autowidth-reset
+{
+    width:0 !important;
+}
+.responsive-640-portrait  .autoheight-reset,
+.responsive-640-portrait.autoheight-reset
+{
+    height:0;
+}
+.responsive-640-portrait  .autoheight,
+.responsive-640-portrait.autoheight
+{
+    height:auto;
+}
+.responsive-640-portrait  .autobreak,
+.responsive-640-portrait.autobreak
+{
+    display:block;
+    width:1px;
+    height:1px;
+    float:none;
+    clear:both;
+}
+.responsive-640-portrait  .autounbreak,
+.responsive-640-portrait.autounbreak
+{
+    display:inline-block;
+    width:0;
+    height:0;
+    float:left;
+    clear:none;
+}
+.responsive-640-portrait  .autounbreak.right,
+.responsive-640-portrait  .autounbreak.float-right,
+.responsive-640-portrait.autounbreak.right,
+.responsive-640-portrait.autounbreak.float-right
+{
+    float:right;
+}
+.responsive-640-portrait  .autohide,
+.responsive-640-portrait.autohide
+{
+    display:none !important;
+}
+.responsive-640-portrait  .autoshow,
+.responsive-640-portrait.autoshow 
+{
+    display:block;
+}
+.responsive-640-portrait  .autoinline,
+.responsive-640-portrait.autoinline
+{
+    display:inline-block;
+}
+.responsive-640-portrait  .autoblock,
+.responsive-640-portrait.autoblock
+{
+    display:block;
+}
+.responsive-640-portrait  .autotext-left,
+.responsive-640-portrait.autotext-left
+{
+    text-align:left;
+}
+.responsive-640-portrait  .autotext-right,
+.responsive-640-portrait.autotext-right
+{
+    text-align:right;
+}
+.responsive-640-portrait  .autotext-center,
+.responsive-640-portrait.autotext-center
+{
+    text-align:center;
+}
+.responsive-640-portrait  .autotext-justify,
+.responsive-640-portrait.autotext-justify
+{
+    text-align:justify;
+}
+.responsive-640-portrait  .autofloat-left,
+.responsive-640-portrait.autofloat-left
+{
+    float:left;
+}
+.responsive-640-portrait  .autofloat-right,
+.responsive-640-portrait.autofloat-right
+{
+    float:right;
+}
+.responsive-640-portrait  .autofloat-none,
+.responsive-640-portrait.autofloat-none
+{
+    float:none;
+}
+.responsive-640-portrait  .autoclear-left,
+.responsive-640-portrait.autoclear-left
+{
+    clear:left;
+}
+.responsive-640-portrait  .autoclear-right,
+.responsive-640-portrait.autoclear-right
+{
+    clear:right;
+}
+.responsive-640-portrait  .autoclear-both,
+.responsive-640-portrait.autoclear-both
+{
+    clear:both;
+}
+.responsive-640-portrait  .automargin-reset,
+.responsive-640-portrait.automargin-reset
+{
+    margin:0 !important;
+}
+.responsive-640-portrait  .automargin-reset-h,
+.responsive-640-portrait.automargin-reset-h
+{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+.responsive-640-portrait  .automargin-reset-v,
+.responsive-640-portrait.automargin-reset-v
+{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+}
+.responsive-640-portrait  .autopadding-reset,
+.responsive-640-portrait.autopadding-reset
+{
+    padding:0 !important;
+}
+.responsive-640-portrait  .autopadding-reset-h,
+.responsive-640-portrait.autopadding-reset-h
+{
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+.responsive-640-portrait  .autopadding-reset-v,
+.responsive-640-portrait.autopadding-reset-v
+{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+.responsive-640-portrait  .autoreverse-order,
+.responsive-640-portrait.autoreverse-order
+{
+    transform:rotate(180deg);
+}
+.responsive-640-portrait  .autoreverse-order > *,
+.responsive-640-portrait.autoreverse-order > *
+{
+    transform:rotate(180deg);
+}
+.responsive-640-portrait  .autoreverse-flexorder-rows,
+.responsive-640-portrait.autoreverse-flexorder-rows
+{
+    flex-direction:row-reverse;
+}
+.responsive-640-portrait  .autoreverse-flexorder,
+.responsive-640-portrait.autoreverse-flexorder
+{
+    flex-direction:column-reverse;
+}
+}
+/* =Media query for iPhone and smaller handheld devices
+-------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)
+{
+.responsive-480  .fluid.autofloat-none:not(.autoadjust),
+.responsive-480  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
+.responsive-480.fluid.autofloat-none:not(.autoadjust),
+.responsive-480.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
+{
+    display:block;
+    float:none;
+    clear:both;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+.responsive-480  .fluid.autocol-1-1,
+.responsive-480.fluid.autocol-1-1
+{
+    float:none;
+    clear:both;
+    width:100%;
+}
+.responsive-480  .fluid.autocol-1-2,
+.responsive-480  .fluid.autocol-2-4,
+.responsive-480  .fluid.autocol-3-6,
+.responsive-480  .fluid.autocol-4-8,
+.responsive-480  .fluid.autocol-5-10,
+.responsive-480  .fluid.autocol-6-12,
+.responsive-480.fluid.autocol-1-2,
+.responsive-480.fluid.autocol-2-4,
+.responsive-480.fluid.autocol-3-6,
+.responsive-480.fluid.autocol-4-8,
+.responsive-480.fluid.autocol-5-10,
+.responsive-480.fluid.autocol-6-12
+{
+    width:50%;
+}
+.responsive-480  .fluid.autocol-1-3,
+.responsive-480  .fluid.autocol-2-6,
+.responsive-480  .fluid.autocol-3-9,
+.responsive-480  .fluid.autocol-4-12,
+.responsive-480.fluid.autocol-1-3,
+.responsive-480.fluid.autocol-2-6,
+.responsive-480.fluid.autocol-3-9,
+.responsive-480.fluid.autocol-4-12
+{
+    width:33.333%;
+}
+.responsive-480  .fluid.autocol-2-3,
+.responsive-480  .fluid.autocol-4-6,
+.responsive-480  .fluid.autocol-6-9,
+.responsive-480  .fluid.autocol-8-12,
+.responsive-480.fluid.autocol-2-3,
+.responsive-480.fluid.autocol-4-6,
+.responsive-480.fluid.autocol-6-9,
+.responsive-480.fluid.autocol-8-12
+{
+    width:66.666%;
+}
+.responsive-480  .fluid.autocol-1-4,
+.responsive-480  .fluid.autocol-2-8,
+.responsive-480  .fluid.autocol-3-12,
+.responsive-480.fluid.autocol-1-4,
+.responsive-480.fluid.autocol-2-8,
+.responsive-480.fluid.autocol-3-12
+{
+    width:25%;
+}
+.responsive-480  .fluid.autocol-3-4,
+.responsive-480  .fluid.autocol-6-8,
+.responsive-480  .fluid.autocol-9-12,
+.responsive-480.fluid.autocol-3-4,
+.responsive-480.fluid.autocol-6-8,
+.responsive-480.fluid.autocol-9-12
+{
+    width:75%;
+}
+.responsive-480  .fluid.autocol-1-5,
+.responsive-480  .fluid.autocol-2-10,
+.responsive-480.fluid.autocol-1-5,
+.responsive-480.fluid.autocol-2-10 
+{
+    width:20%;
+}
+.responsive-480  .fluid.autocol-2-5,
+.responsive-480  .fluid.autocol-4-10,
+.responsive-480.fluid.autocol-2-5,
+.responsive-480.fluid.autocol-4-10
+{
+    width:40%;
+}
+.responsive-480  .fluid.autocol-3-5,
+.responsive-480  .fluid.autocol-6-10,
+.responsive-480.fluid.autocol-3-5,
+.responsive-480.fluid.autocol-6-10
+{
+    width:60%;
+}
+.responsive-480  .fluid.autocol-4-5,
+.responsive-480  .fluid.autocol-8-10,
+.responsive-480.fluid.autocol-4-5,
+.responsive-480.fluid.autocol-8-10
+{
+    width:80%;
+}
+.responsive-480  .fluid.autocol-1-6,
+.responsive-480  .fluid.autocol-2-12,
+.responsive-480.fluid.autocol-1-6,
+.responsive-480.fluid.autocol-2-12
+{
+    width:16.666%;
+}
+.responsive-480  .fluid.autocol-5-6,
+.responsive-480  .fluid.autocol-10-12,
+.responsive-480.fluid.autocol-5-6,
+.responsive-480.fluid.autocol-10-12
+{
+    width:83.333%;
+}
+.responsive-480  .fluid.autocol-1-7,
+.responsive-480.fluid.autocol-1-7
+{
+    width:14.286%;
+}
+.responsive-480  .fluid.autocol-2-7,
+.responsive-480.fluid.autocol-2-7
+{
+    width:28.571%;
+}
+.responsive-480   .fluid.autocol-3-7,
+.responsive-480.fluid.autocol-3-7
+{
+    width:42.857%;
+}
+.responsive-480   .fluid.autocol-4-7,
+.responsive-480.fluid.autocol-4-7
+{
+    width:57.142%;
+}
+.responsive-480   .fluid.autocol-5-7,
+.responsive-480.fluid.autocol-5-7
+{
+    width:71.428%;
+}
+.responsive-480   .fluid.autocol-6-7,
+.responsive-480.fluid.autocol-6-7
+{
+    width:85.714%;
+}
+.responsive-480   .fluid.autocol-1-8,
+.responsive-480.fluid.autocol-1-8
+{
+    width:12.5%;
+}
+.responsive-480   .fluid.autocol-3-8,
+.responsive-480.fluid.autocol-3-8
+{
+    width:37.5%;
+}
+.responsive-480   .fluid.autocol-5-8,
+.responsive-480.fluid.autocol-5-8
+{
+    width:62.5%;
+}
+.responsive-480   .fluid.autocol-7-8,
+.responsive-480.fluid.autocol-7-8
+{
+    width:87.5%;
+}
+.responsive-480  .fluid.autocol-1-9,
+.responsive-480.fluid.autocol-1-9
+{
+    width:11.11%;
+}
+.responsive-480   .fluid.autocol-2-9,
+.responsive-480.fluid.autocol-2-9
+{
+    width:22.22%;
+}
+.responsive-480  .fluid.autocol-4-9,
+.responsive-480.fluid.autocol-4-9
+{
+    width:44.44%;
+}
+.responsive-480  .fluid.autocol-5-9,
+.responsive-480.fluid.autocol-5-9
+{
+    width:55.55%;
+}
+.responsive-480  .fluid.autocol-7-9,
+.responsive-480.fluid.autocol-7-9
+{
+    width:77.77%;
+}
+.responsive-480  .fluid.autocol-8-9,
+.responsive-480.fluid.autocol-8-9
+{
+    width:99.99%;
+}
+.responsive-480  .fluid.autocol-1-10,
+.responsive-480.fluid.autocol-1-10
+{
+    width:10%;
+}
+.responsive-480  .fluid.autocol-3-10,
+.responsive-480.fluid.autocol-3-10
+{
+    width:30%;
+}
+.responsive-480  .fluid.autocol-6-10,
+.responsive-480.fluid.autocol-6-10
+{
+    width:60%;
+}
+.responsive-480  .fluid.autocol-7-10,
+.responsive-480.fluid.autocol-7-10
+{
+    width:70%;
+}
+.responsive-480  .fluid.autocol-9-10,
+.responsive-480.fluid.autocol-9-10
+{
+    width:90%;
+}
+.responsive-480  .fluid.autocol-1-12,
+.responsive-480.fluid.autocol-1-12
+{
+    width:8.333%;
+}
+.responsive-480  .fluid.autocol-5-12,
+.responsive-480.fluid.autocol-5-12
+{
+    width:41.666%;
+}
+.responsive-480  .fluid.autocol-7-12,
+.responsive-480.fluid.autocol-7-12
+{
+    width:58.333%;
+}
+.responsive-480  .fluid.autocol-11-12,
+.responsive-480.fluid.autocol-11-12
+{
+    width:91.666%;
+}
+.responsive-480  .autorelative,
+.responsive-480.autorelative
+{
+    position:relative;
+}
+.responsive-480  .autoabsolute,
+.responsive-480.autoabsolute
+{
+    position:absolute;
+}
+.responsive-480  .autovisible,
+.responsive-480.autovisible
+{
+    visibility:visible;
+}
+.responsive-480  .autohidden,
+.responsive-480.autohidden
+{
+    visibility:hidden;
+}
+.responsive-480  .autoscroll-x,
+.responsive-480.autoscroll-x
+{
+    overflow-x:auto;
+}
+.responsive-480  .autoscroll-y,
+.responsive-480.autoscroll-y
+{
+    overflow-y:auto;
+}
+.responsive-480  .autowidth,
+.responsive-480.autowidth
+{
+    width:100% !important;
+}
+.responsive-480  .autowidth-reset,
+.responsive-480.autowidth-reset
+{
+    width:0 !important;
+}
+.responsive-480  .autoheight-reset,
+.responsive-480.autoheight-reset
+{
+    height:0;
+}
+.responsive-480  .autoheight,
+.responsive-480.autoheight
+{
+    height:auto;
+}
+.responsive-480  .autobreak,
+.responsive-480.autobreak
+{
+    display:block;
+    width:1px;
+    height:1px;
+    float:none;
+    clear:both;
+}
+.responsive-480  .autounbreak,
+.responsive-480.autounbreak
+{
+    display:inline-block;
+    width:0;
+    height:0;
+    float:left;
+    clear:none;
+}
+.responsive-480  .autounbreak.right,
+.responsive-480  .autounbreak.float-right,
+.responsive-480.autounbreak.right,
+.responsive-480.autounbreak.float-right
+{
+    float:right;
+}
+.responsive-480  .autohide,
+.responsive-480.autohide
+{
+    display:none !important;
+}
+.responsive-480  .autoshow,
+.responsive-480.autoshow 
+{
+    display:block;
+}
+.responsive-480  .autoinline,
+.responsive-480.autoinline
+{
+    display:inline-block;
+}
+.responsive-480  .autoblock,
+.responsive-480.autoblock
+{
+    display:block;
+}
+.responsive-480  .autotext-left,
+.responsive-480.autotext-left
+{
+    text-align:left;
+}
+.responsive-480  .autotext-right,
+.responsive-480.autotext-right
+{
+    text-align:right;
+}
+.responsive-480  .autotext-center,
+.responsive-480.autotext-center
+{
+    text-align:center;
+}
+.responsive-480  .autotext-justify,
+.responsive-480.autotext-justify
+{
+    text-align:justify;
+}
+.responsive-480  .autofloat-left,
+.responsive-480.autofloat-left
+{
+    float:left;
+}
+.responsive-480  .autofloat-right,
+.responsive-480.autofloat-right
+{
+    float:right;
+}
+.responsive-480  .autofloat-none,
+.responsive-480.autofloat-none
+{
+    float:none;
+}
+.responsive-480  .autoclear-left,
+.responsive-480.autoclear-left
+{
+    clear:left;
+}
+.responsive-480  .autoclear-right,
+.responsive-480.autoclear-right
+{
+    clear:right;
+}
+.responsive-480  .autoclear-both,
+.responsive-480.autoclear-both
+{
+    clear:both;
+}
+.responsive-480  .automargin-reset,
+.responsive-480.automargin-reset
+{
+    margin:0 !important;
+}
+.responsive-480  .automargin-reset-h,
+.responsive-480.automargin-reset-h
+{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+.responsive-480  .automargin-reset-v,
+.responsive-480.automargin-reset-v
+{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+}
+.responsive-480  .autopadding-reset,
+.responsive-480.autopadding-reset
+{
+    padding:0 !important;
+}
+.responsive-480  .autopadding-reset-h,
+.responsive-480.autopadding-reset-h
+{
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+.responsive-480  .autopadding-reset-v,
+.responsive-480.autopadding-reset-v
+{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+.responsive-480  .autoreverse-order,
+.responsive-480.autoreverse-order
+{
+    transform:rotate(180deg);
+}
+.responsive-480  .autoreverse-order > *,
+.responsive-480.autoreverse-order > *
+{
+    transform:rotate(180deg);
+}
+.responsive-480  .autoreverse-flexorder-rows,
+.responsive-480.autoreverse-flexorder-rows
+{
+    flex-direction:row-reverse;
+}
+.responsive-480  .autoreverse-flexorder,
+.responsive-480.autoreverse-flexorder
+{
+    flex-direction:column-reverse;
+}
 }
 
 /* 
