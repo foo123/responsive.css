@@ -575,7 +575,7 @@ table.responsive tbody td:before
 ------------------------------------------------------------ */
 /* =Media query for 960 Screens - sets nested grids to 100%
 -------------------------------------------------------------- */
-@media all and (max-width:800px)
+@media all and (max-width:50em)
 {
 /*.responsive-960*/
 
@@ -929,7 +929,7 @@ table.responsive tbody td:before
 
 /* =Media query for iPad and tablets
 -------------------------------------------------------------- */
-@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait)
+@media handheld, only screen and (max-width: 48em), only screen and (max-device-width: 48em) and (orientation:portrait)
 {
 .responsive-768-portrait  .fluid.autofloat-none:not(.autoadjust),
 .responsive-768-portrait  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
@@ -1374,7 +1374,7 @@ table.responsive tbody td:before
 }
 /* =Media query for smaller tablets and larger handheld devices
 -------------------------------------------------------------- */
-@media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) and (orientation:portrait)
+@media handheld, only screen and (max-width: 40em), only screen and (max-device-width: 40em) and (orientation:portrait)
 {
 .responsive-640-portrait  .fluid.autofloat-none:not(.autoadjust),
 .responsive-640-portrait  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
@@ -1819,7 +1819,7 @@ table.responsive tbody td:before
 }
 /* =Media query for iPhone and smaller handheld devices
 -------------------------------------------------------------- */
-@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)
+@media handheld, only screen and (max-width: 30em), only screen and (max-device-width: 30em)
 {
 .responsive-480  .fluid.autofloat-none:not(.autoadjust),
 .responsive-480  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
@@ -2267,10 +2267,13 @@ table.responsive tbody td:before
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
 and also iPads specifically.
+
+http://purecss.io/grids/ and http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#relative
+for relative lengths (i.e em instead of px) in media queries, 1em = 16px
 */
 @media 
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
+only screen and (max-width: 47.5em),
+(min-device-width: 48em) and (max-device-width: 64em)  {
     /* Force table to not be like tables anymore */
     table.responsive,
     table.responsive thead,
@@ -2338,7 +2341,7 @@ only screen and (max-width: 760px),
 
 /* clearfix container hack */
 /* https://css-tricks.com/snippets/css/clear-fix/ */
-.fluid.col-1-1:after,
+.fluid:after,
 .clearfloat:after 
 {
     content: "";

@@ -992,7 +992,7 @@ table.responsive tbody td:before
 
 
 
-@media all and (max-width:800px)
+@media all and (max-width:50em)
 {
 
 
@@ -1359,7 +1359,7 @@ table.responsive tbody td:before
 }
 
 
-@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait)
+@media handheld, only screen and (max-width: 48em), only screen and (max-device-width: 48em) and (orientation:portrait)
 {
 .responsive-768-portrait  .fluid.autofloat-none:not(.autoadjust),
 .responsive-768-portrait  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
@@ -1819,7 +1819,7 @@ table.responsive tbody td:before
 }
 }
 
-@media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) and (orientation:portrait)
+@media handheld, only screen and (max-width: 40em), only screen and (max-device-width: 40em) and (orientation:portrait)
 {
 .responsive-640-portrait  .fluid.autofloat-none:not(.autoadjust),
 .responsive-640-portrait  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
@@ -2279,7 +2279,7 @@ table.responsive tbody td:before
 }
 }
 
-@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)
+@media handheld, only screen and (max-width: 30em), only screen and (max-device-width: 30em)
 {
 .responsive-480  .fluid.autofloat-none:not(.autoadjust),
 .responsive-480  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
@@ -2741,8 +2741,8 @@ table.responsive tbody td:before
 
 
 @media 
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
+only screen and (max-width: 47.5em),
+(min-device-width: 48em) and (max-device-width: 64em)  {
     
     table.responsive,
     table.responsive thead,
@@ -2822,7 +2822,7 @@ only screen and (max-width: 760px),
 
 
 
-.fluid.col-1-1:after,
+.fluid:after,
 .clearfloat:after 
 {
     content: "";
