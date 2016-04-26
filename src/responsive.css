@@ -10,77 +10,10 @@
 * * some custom ideas
 * 
 */
+
 html
 {
     font-size: 100%;    
-}
-
-/* Column Classes
------------------------------------------------------------- */
-/* app-like panels */
-/* http://blog.stevensanderson.com/2011/10/05/full-height-app-layouts-a-css-trick-to-make-it-easier/ */
-.row, 
-.col 
-{ 
-    position: absolute; 
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    z-index:1;
-    /*font-size: 100%;*/ /* responsive font size */
-    overflow: hidden; 
-}
-.row
- { 
-    left: 0; 
-    right: 0; 
-}
-.col 
-{ 
-    top: 0; 
-    bottom: 0; 
-}
-.flu
-{
-    position:relative;
-    box-sizing:border-box;
-}
-/* responsive/fluid columns */
-.fluid
-{
-    position:relative;
-    display:inline-block;
-    /* use border-box model, so padding is included and does not break columns */
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
-    word-wrap: break-word;
-    z-index: 1;
-    float: left;
-    max-width: 100%;
-    /*font-size: 100%;*/ /* responsive font size */
-}
-/* http://www.impressivewebs.com/css3-transitions-without-hover/ */
-.fluid-animated
-{
-    transition: width 2s ease;  
-}
-
-.fluid-animated2
-{
-    transition: width 2s ease, height 2s ease;  
-}
-
-/*  Responsive images, videos */
-.fluid img,
-.fluid video,
-table.responsive img,
-table.responsive video
-{
-    position: relative;
-    max-width: 100%;
-    height: auto;
-    box-sizing: border-box;
 }
 
 /* http://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
@@ -88,7 +21,7 @@ table.responsive video
 .aspect
 {
     margin: 0;
-    padding:0;
+    padding: 0;
     display: block;
     width: 100%;
     height: 0;
@@ -119,27 +52,54 @@ table.responsive video
     padding-bottom: 200%;
 }
 
+
+/* Column Classes
+------------------------------------------------------------ */
+.flu
+{
+    position: relative;
+    box-sizing: border-box;
+}
+/* responsive/fluid columns */
+/* http://www.impressivewebs.com/css3-transitions-without-hover/ */
+.fluid-animated
+{
+    transition: width 2s ease;  
+}
+
+.fluid-animated2
+{
+    transition: width 2s ease, height 2s ease;  
+}
+
+.fluid
+{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    z-index: 1;
+    float: left;
+    max-width: 100%;
+}
+/*  Responsive images, videos */
+.fluid img,
+.fluid video,
+table.responsive img,
+table.responsive video
+{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
 .col-1-1
 {
     width: 100%;
 }
-.fluid.col-1-1
-{
-    float:none;
-    clear:both;
-    /*display:block;*/
-}
-
-.fluid.col-1-1.left,
-.fluid.col-1-1.right
-{
-    width: 100%;
-    padding:0;
-    float:none;
-    clear:both;
-    /*display:block;*/
-}
-
 .col-1-2,
 .col-2-4,
 .col-3-6,
@@ -154,14 +114,14 @@ table.responsive video
 .col-3-9,
 .col-4-12
 {
-    width: 33.333%;
+    width: 33.33%;
 }
 .col-2-3,
 .col-4-6,
 .col-6-9,
 .col-8-12
 {
-    width: 66.666%;
+    width: 66.66%;
 }
 .col-1-4,
 .col-2-8,
@@ -198,36 +158,36 @@ table.responsive video
 .col-1-6,
 .col-2-12
 {
-    width: 16.666%;
+    width: 16.66%;
 }
 .col-5-6,
 .col-10-12
 {
-    width: 83.333%;
+    width: 83.33%;
 }
 .col-1-7
 {
-    width: 14.286%;
+    width: 14.28%;
 }
 .col-2-7
 {
-    width: 28.571%;
+    width: 28.57%;
 }
 .col-3-7
 {
-    width: 42.857%;
+    width: 42.85%;
 }
 .col-4-7
 {
-    width: 57.142%;
+    width: 57.14%;
 }
 .col-5-7
 {
-    width: 71.428%;
+    width: 71.42%;
 }
 .col-6-7
 {
-    width: 85.714%;
+    width: 85.71%;
 }
 .col-1-8
 {
@@ -267,7 +227,7 @@ table.responsive video
 }
 .col-8-9
 {
-    width: 99.99%;
+    width: 88.88%;
 }
 .col-1-10
 {
@@ -291,52 +251,33 @@ table.responsive video
 }
 .col-1-12
 {
-    width: 8.333%;
+    width: 8.33%;
 }
 .col-5-12
 {
-    width: 41.666%;
+    width: 41.66%;
 }
 .col-7-12
 {
-    width: 58.333%;
+    width: 58.33%;
 }
 .col-11-12
 {
-    width: 91.666%;
+    width: 91.66%;
 }
 
-.left
+.fluid.col-1-1
 {
-    float: left;
+    float: none;
+    clear: both;
 }
-.first.left 
+.fluid.col-1-1.float-left,
+.fluid.col-1-1.float-right
 {
-    clear: left;
-}
-.last.left 
-{
-    clear: right;
-}
-.right
-{
-    float: right;
-}
-.first.right 
-{
-    clear: right;
-}
-.last.right 
-{
-    clear: left;
-}
-
-.first.float-left,
-.first.float-right,
-.last.float-left,
-.last.float-right
-{
-    clear: none;
+    width: 100%;
+    padding: 0;
+    float: none;
+    clear: both;
 }
 
 /* styles as classes abbreviations */
@@ -455,7 +396,6 @@ table.responsive video
     float: left;
     clear: none;
 }
-.unbreak.right,
 .unbreak.float-right
 {
     float: right;
@@ -503,7 +443,7 @@ table.responsive video
     left: 0;
     top: 0;
     right: 0;
-    float:left;
+    float: left;
     margin: auto;
 }
 .center-transform /* needs width/height to be set */
@@ -549,7 +489,7 @@ table.responsive video
 table.responsive
 { 
     position: relative;
-    box-sizing:padding-box;
+    box-sizing: padding-box;
     border-collapse: collapse; 
     width: 100%;
 }
@@ -560,44 +500,42 @@ table.responsive td,
 table.responsive tr 
 { 
     position: relative;
-    box-sizing:padding-box;
+    box-sizing: padding-box;
 }
 table.responsive tbody td:before 
 { 
     /* as a responsive table header */
     position: absolute;
-    box-sizing:padding-box;
+    box-sizing: padding-box;
     height: 100%;
     display: none;
 }
 
+/* 
+http://purecss.io/grids/ and http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#relative
+for relative lengths (i.e em instead of px) in media queries, 1em = 16px
+*/
 /* Media Queries
 ------------------------------------------------------------ */
 /* =Media query for 960 Screens - sets nested grids to 100%
 -------------------------------------------------------------- */
-@media all and (max-width:50em)
+@media all and (max-width:60em)
 {
-/*.responsive-960*/
-
-/*.fluid:not(.preserve, .float-left, .float-right, .autohide)*/
-/*.fluid:not(.preserve),
-.fluid:not(.float-left),
-.fluid:not(.float-right)*/
 .fluid.autofloat-none:not(.autoadjust),
 .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
 {
-    display:block;
-    float:none;
-    clear:both;
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 .fluid.autocol-1-1
 {
-    float:none;
-    clear:both;
-    width:100%;
+    float: none;
+    clear: both;
+    width: 100%;
 }
 .fluid.autocol-1-2,
 .fluid.autocol-2-4,
@@ -606,327 +544,880 @@ table.responsive tbody td:before
 .fluid.autocol-5-10,
 .fluid.autocol-6-12
 {
-    width:50%;
+    width: 50%;
 }
 .fluid.autocol-1-3,
 .fluid.autocol-2-6,
 .fluid.autocol-3-9,
 .fluid.autocol-4-12
 {
-    width:33.333%;
+    width: 33.33%;
 }
 .fluid.autocol-2-3,
 .fluid.autocol-4-6,
 .fluid.autocol-6-9,
 .fluid.autocol-8-12
 {
-    width:66.666%;
+    width: 66.66%;
 }
 .fluid.autocol-1-4,
 .fluid.autocol-2-8,
 .fluid.autocol-3-12
 {
-    width:25%;
+    width: 25%;
 }
 .fluid.autocol-3-4,
 .fluid.autocol-6-8,
 .fluid.autocol-9-12
 {
-    width:75%;
+    width: 75%;
 }
 .fluid.autocol-1-5,
 .fluid.autocol-2-10 
 {
-    width:20%;
+    width: 20%;
 }
 .fluid.autocol-2-5,
 .fluid.autocol-4-10
 {
-    width:40%;
+    width: 40%;
 }
 .fluid.autocol-3-5,
 .fluid.autocol-6-10
 {
-    width:60%;
+    width: 60%;
 }
 .fluid.autocol-4-5,
 .fluid.autocol-8-10
 {
-    width:80%;
+    width: 80%;
 }
 .fluid.autocol-1-6,
 .fluid.autocol-2-12
 {
-    width:16.666%;
+    width: 16.66%;
 }
 .fluid.autocol-5-6,
 .fluid.autocol-10-12
 {
-    width:83.333%;
+    width: 83.33%;
 }
 .fluid.autocol-1-7
 {
-    width:14.286%;
+    width: 14.28%;
 }
 .fluid.autocol-2-7
 {
-    width:28.571%;
+    width: 28.57%;
 }
 .fluid.autocol-3-7
 {
-    width:42.857%;
+    width: 42.85%;
 }
 .fluid.autocol-4-7
 {
-    width:57.142%;
+    width: 57.14%;
 }
 .fluid.autocol-5-7
 {
-    width:71.428%;
+    width: 71.42%;
 }
 .fluid.autocol-6-7
 {
-    width:85.714%;
+    width: 85.71%;
 }
 .fluid.autocol-1-8
 {
-    width:12.5%;
+    width: 12.5%;
 }
 .fluid.autocol-3-8
 {
-    width:37.5%;
+    width: 37.5%;
 }
 .fluid.autocol-5-8
 {
-    width:62.5%;
+    width: 62.5%;
 }
 .fluid.autocol-7-8
 {
-    width:87.5%;
+    width: 87.5%;
 }
 .fluid.autocol-1-9
 {
-    width:11.11%;
+    width: 11.11%;
 }
 .fluid.autocol-2-9
 {
-    width:22.22%;
+    width: 22.22%;
 }
 .fluid.autocol-4-9
 {
-    width:44.44%;
+    width: 44.44%;
 }
 .fluid.autocol-5-9
 {
-    width:55.55%;
+    width: 55.55%;
 }
 .fluid.autocol-7-9
 {
-    width:77.77%;
+    width: 77.77%;
 }
 .fluid.autocol-8-9
 {
-    width:99.99%;
+    width: 88.88%;
 }
 .fluid.autocol-1-10
 {
-    width:10%;
+    width: 10%;
 }
 .fluid.autocol-3-10
 {
-    width:30%;
+    width: 30%;
 }
 .fluid.autocol-6-10
 {
-    width:60%;
+    width: 60%;
 }
 .fluid.autocol-7-10
 {
-    width:70%;
+    width: 70%;
 }
 .fluid.autocol-9-10
 {
-    width:90%;
+    width: 90%;
 }
 .fluid.autocol-1-12
 {
-    width:8.333%;
+    width: 8.33%;
 }
 .fluid.autocol-5-12
 {
-    width:41.666%;
+    width: 41.66%;
 }
 .fluid.autocol-7-12
 {
-    width:58.333%;
+    width: 58.33%;
 }
 .fluid.autocol-11-12
 {
-    width:91.666%;
+    width: 91.66%;
 }
 .autorelative
 {
-    position:relative;
+    position: relative;
 }
 .autoabsolute
 {
-    position:absolute;
+    position: absolute;
 }
 .autovisible
 {
-    visibility:visible;
+    visibility: visible;
 }
 .autohidden
 {
-    visibility:hidden;
+    visibility: hidden;
 }
 .autoscroll-x
 {
-    overflow-x:auto;
+    overflow-x: auto;
 }
 .autoscroll-y
 {
-    overflow-y:auto;
+    overflow-y: auto;
 }
 .autowidth
 {
-    width:100% !important;
+    width: 100% !important;
 }
 .autowidth-reset
 {
-    width:0 !important;
+    width: 0 !important;
 }
 .autoheight-reset
 {
-    height:0;
+    height: 0;
 }
 .autoheight
 {
-    height:auto;
+    height: auto;
 }
 .autobreak
 {
-    display:block;
-    width:1px;
-    height:1px;
-    float:none;
-    clear:both;
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
 }
 .autounbreak
 {
-    display:inline-block;
-    width:0;
-    height:0;
-    float:left;
-    clear:none;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
 }
-.autounbreak.right,
 .autounbreak.float-right
 {
-    float:right;
+    float: right;
 }
 .autohide
 {
-    display:none !important;
+    display: none !important;
 }
-.autoshow 
+.autoshow ,
+.autoblock
 {
-    display:block;
+    display: block;
 }
 .autoinline
 {
-    display:inline-block;
-}
-.autoblock
-{
-    display:block;
+    display: inline-block;
 }
 .autotext-left
 {
-    text-align:left;
+    text-align: left;
 }
 .autotext-right
 {
-    text-align:right;
+    text-align: right;
 }
 .autotext-center
 {
-    text-align:center;
+    text-align: center;
 }
 .autotext-justify
 {
-    text-align:justify;
+    text-align: justify;
 }
 .autofloat-left
 {
-    float:left;
+    float: left;
 }
 .autofloat-right
 {
-    float:right;
+    float: right;
 }
 .autofloat-none
 {
-    float:none;
+    float: none;
 }
 .autoclear-left
 {
-    clear:left;
+    clear: left;
 }
 .autoclear-right
 {
-    clear:right;
+    clear: right;
 }
 .autoclear-both
 {
-    clear:both;
+    clear: both;
 }
 .automargin-reset
 {
-    margin:0 !important;
+    margin: 0 !important;
 }
 .automargin-reset-h
 {
-    margin-left:0 !important;
-    margin-right:0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 .automargin-reset-v
 {
-    margin-top:0 !important;
-    margin-bottom:0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 .autopadding-reset
 {
-    padding:0 !important;
+    padding: 0 !important;
 }
 .autopadding-reset-h
 {
-    padding-left:0 !important;
-    padding-right:0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 .autopadding-reset-v
 {
-    padding-top:0 !important;
-    padding-bottom:0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 .autoreverse-order
 {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 .autoreverse-order > *
 {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 .autoreverse-flexorder-rows
 {
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
 }
 .autoreverse-flexorder
 {
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
+}
+/* Force table to not be like tables anymore */
+table.responsive,
+table.responsive thead,
+table.responsive tbody, 
+table.responsive tr,
+table.responsive th, 
+table.responsive td
+{ 
+    display: block; 
+    width: 100%; 
+}
+/* Hide table headers (but not display: none;, for accessibility) */
+table.responsive thead tr 
+{ 
+    position: absolute;
+    top: -9999px; left: -9999px;
+}
+table.responsive tr 
+{ 
+    margin-bottom: 1px; 
+}
+table.responsive td,
+table.responsive.dataTable tbody td 
+{ 
+    box-sizing: border-box;
+    /*width: 50%;*/
+    padding-left: 30% !important;
+    padding-right: 15% !important;
+    min-height: 2em;
+}
+table.responsive.rtl td,
+table.responsive.rtl.dataTable tbody td 
+{ 
+    padding-left: 15% !important;
+    padding-right: 30% !important;
+}
+table.responsive tbody td:before
+{ 
+    display: block;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    content: attr(data-column);
+}
+table.responsive.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
 }
 }
-
+/* =Media query for smaller screens
+-------------------------------------------------------------- */
+@media only screen and (max-width: 64em), only screen and (max-device-width: 64em)
+{
+.responsive-1024  .fluid.autofloat-none:not(.autoadjust),
+.responsive-1024  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
+.responsive-1024.fluid.autofloat-none:not(.autoadjust),
+.responsive-1024.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
+{
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.responsive-1024  .fluid.autocol-1-1,
+.responsive-1024.fluid.autocol-1-1
+{
+    float: none;
+    clear: both;
+    width: 100%;
+}
+.responsive-1024  .fluid.autocol-1-2,
+.responsive-1024  .fluid.autocol-2-4,
+.responsive-1024  .fluid.autocol-3-6,
+.responsive-1024  .fluid.autocol-4-8,
+.responsive-1024  .fluid.autocol-5-10,
+.responsive-1024  .fluid.autocol-6-12,
+.responsive-1024.fluid.autocol-1-2,
+.responsive-1024.fluid.autocol-2-4,
+.responsive-1024.fluid.autocol-3-6,
+.responsive-1024.fluid.autocol-4-8,
+.responsive-1024.fluid.autocol-5-10,
+.responsive-1024.fluid.autocol-6-12
+{
+    width: 50%;
+}
+.responsive-1024  .fluid.autocol-1-3,
+.responsive-1024  .fluid.autocol-2-6,
+.responsive-1024  .fluid.autocol-3-9,
+.responsive-1024  .fluid.autocol-4-12,
+.responsive-1024.fluid.autocol-1-3,
+.responsive-1024.fluid.autocol-2-6,
+.responsive-1024.fluid.autocol-3-9,
+.responsive-1024.fluid.autocol-4-12
+{
+    width: 33.33%;
+}
+.responsive-1024  .fluid.autocol-2-3,
+.responsive-1024  .fluid.autocol-4-6,
+.responsive-1024  .fluid.autocol-6-9,
+.responsive-1024  .fluid.autocol-8-12,
+.responsive-1024.fluid.autocol-2-3,
+.responsive-1024.fluid.autocol-4-6,
+.responsive-1024.fluid.autocol-6-9,
+.responsive-1024.fluid.autocol-8-12
+{
+    width: 66.66%;
+}
+.responsive-1024  .fluid.autocol-1-4,
+.responsive-1024  .fluid.autocol-2-8,
+.responsive-1024  .fluid.autocol-3-12,
+.responsive-1024.fluid.autocol-1-4,
+.responsive-1024.fluid.autocol-2-8,
+.responsive-1024.fluid.autocol-3-12
+{
+    width: 25%;
+}
+.responsive-1024  .fluid.autocol-3-4,
+.responsive-1024  .fluid.autocol-6-8,
+.responsive-1024  .fluid.autocol-9-12,
+.responsive-1024.fluid.autocol-3-4,
+.responsive-1024.fluid.autocol-6-8,
+.responsive-1024.fluid.autocol-9-12
+{
+    width: 75%;
+}
+.responsive-1024  .fluid.autocol-1-5,
+.responsive-1024  .fluid.autocol-2-10,
+.responsive-1024.fluid.autocol-1-5,
+.responsive-1024.fluid.autocol-2-10 
+{
+    width: 20%;
+}
+.responsive-1024  .fluid.autocol-2-5,
+.responsive-1024  .fluid.autocol-4-10,
+.responsive-1024.fluid.autocol-2-5,
+.responsive-1024.fluid.autocol-4-10
+{
+    width: 40%;
+}
+.responsive-1024  .fluid.autocol-3-5,
+.responsive-1024  .fluid.autocol-6-10,
+.responsive-1024.fluid.autocol-3-5,
+.responsive-1024.fluid.autocol-6-10
+{
+    width: 60%;
+}
+.responsive-1024  .fluid.autocol-4-5,
+.responsive-1024  .fluid.autocol-8-10,
+.responsive-1024.fluid.autocol-4-5,
+.responsive-1024.fluid.autocol-8-10
+{
+    width: 80%;
+}
+.responsive-1024  .fluid.autocol-1-6,
+.responsive-1024  .fluid.autocol-2-12,
+.responsive-1024.fluid.autocol-1-6,
+.responsive-1024.fluid.autocol-2-12
+{
+    width: 16.66%;
+}
+.responsive-1024  .fluid.autocol-5-6,
+.responsive-1024  .fluid.autocol-10-12,
+.responsive-1024.fluid.autocol-5-6,
+.responsive-1024.fluid.autocol-10-12
+{
+    width: 83.33%;
+}
+.responsive-1024  .fluid.autocol-1-7,
+.responsive-1024.fluid.autocol-1-7
+{
+    width: 14.28%;
+}
+.responsive-1024  .fluid.autocol-2-7,
+.responsive-1024.fluid.autocol-2-7
+{
+    width: 28.57%;
+}
+.responsive-1024   .fluid.autocol-3-7,
+.responsive-1024.fluid.autocol-3-7
+{
+    width: 42.85%;
+}
+.responsive-1024   .fluid.autocol-4-7,
+.responsive-1024.fluid.autocol-4-7
+{
+    width: 57.14%;
+}
+.responsive-1024   .fluid.autocol-5-7,
+.responsive-1024.fluid.autocol-5-7
+{
+    width: 71.42%;
+}
+.responsive-1024   .fluid.autocol-6-7,
+.responsive-1024.fluid.autocol-6-7
+{
+    width: 85.71%;
+}
+.responsive-1024   .fluid.autocol-1-8,
+.responsive-1024.fluid.autocol-1-8
+{
+    width: 12.5%;
+}
+.responsive-1024   .fluid.autocol-3-8,
+.responsive-1024.fluid.autocol-3-8
+{
+    width: 37.5%;
+}
+.responsive-1024   .fluid.autocol-5-8,
+.responsive-1024.fluid.autocol-5-8
+{
+    width: 62.5%;
+}
+.responsive-1024   .fluid.autocol-7-8,
+.responsive-1024.fluid.autocol-7-8
+{
+    width: 87.5%;
+}
+.responsive-1024  .fluid.autocol-1-9,
+.responsive-1024.fluid.autocol-1-9
+{
+    width: 11.11%;
+}
+.responsive-1024   .fluid.autocol-2-9,
+.responsive-1024.fluid.autocol-2-9
+{
+    width: 22.22%;
+}
+.responsive-1024  .fluid.autocol-4-9,
+.responsive-1024.fluid.autocol-4-9
+{
+    width: 44.44%;
+}
+.responsive-1024  .fluid.autocol-5-9,
+.responsive-1024.fluid.autocol-5-9
+{
+    width: 55.55%;
+}
+.responsive-1024  .fluid.autocol-7-9,
+.responsive-1024.fluid.autocol-7-9
+{
+    width: 77.77%;
+}
+.responsive-1024  .fluid.autocol-8-9,
+.responsive-1024.fluid.autocol-8-9
+{
+    width: 88.88%;
+}
+.responsive-1024  .fluid.autocol-1-10,
+.responsive-1024.fluid.autocol-1-10
+{
+    width: 10%;
+}
+.responsive-1024  .fluid.autocol-3-10,
+.responsive-1024.fluid.autocol-3-10
+{
+    width: 30%;
+}
+.responsive-1024  .fluid.autocol-6-10,
+.responsive-1024.fluid.autocol-6-10
+{
+    width: 60%;
+}
+.responsive-1024  .fluid.autocol-7-10,
+.responsive-1024.fluid.autocol-7-10
+{
+    width: 70%;
+}
+.responsive-1024  .fluid.autocol-9-10,
+.responsive-1024.fluid.autocol-9-10
+{
+    width: 90%;
+}
+.responsive-1024  .fluid.autocol-1-12,
+.responsive-1024.fluid.autocol-1-12
+{
+    width: 8.33%;
+}
+.responsive-1024  .fluid.autocol-5-12,
+.responsive-1024.fluid.autocol-5-12
+{
+    width: 41.66%;
+}
+.responsive-1024  .fluid.autocol-7-12,
+.responsive-1024.fluid.autocol-7-12
+{
+    width: 58.33%;
+}
+.responsive-1024  .fluid.autocol-11-12,
+.responsive-1024.fluid.autocol-11-12
+{
+    width: 91.66%;
+}
+.responsive-1024  .autorelative,
+.responsive-1024.autorelative
+{
+    position: relative;
+}
+.responsive-1024  .autoabsolute,
+.responsive-1024.autoabsolute
+{
+    position: absolute;
+}
+.responsive-1024  .autovisible,
+.responsive-1024.autovisible
+{
+    visibility: visible;
+}
+.responsive-1024  .autohidden,
+.responsive-1024.autohidden
+{
+    visibility: hidden;
+}
+.responsive-1024  .autoscroll-x,
+.responsive-1024.autoscroll-x
+{
+    overflow-x: auto;
+}
+.responsive-1024  .autoscroll-y,
+.responsive-1024.autoscroll-y
+{
+    overflow-y: auto;
+}
+.responsive-1024  .autowidth,
+.responsive-1024.autowidth
+{
+    width: 100% !important;
+}
+.responsive-1024  .autowidth-reset,
+.responsive-1024.autowidth-reset
+{
+    width: 0 !important;
+}
+.responsive-1024  .autoheight-reset,
+.responsive-1024.autoheight-reset
+{
+    height: 0;
+}
+.responsive-1024  .autoheight,
+.responsive-1024.autoheight
+{
+    height: auto;
+}
+.responsive-1024  .autobreak,
+.responsive-1024.autobreak
+{
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
+}
+.responsive-1024  .autounbreak,
+.responsive-1024.autounbreak
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
+}
+.responsive-1024  .autounbreak.right,
+.responsive-1024  .autounbreak.float-right,
+.responsive-1024.autounbreak.right,
+.responsive-1024.autounbreak.float-right
+{
+    float: right;
+}
+.responsive-1024  .autohide,
+.responsive-1024.autohide
+{
+    display: none !important;
+}
+.responsive-1024  .autoshow,
+.responsive-1024.autoshow ,
+.responsive-1024  .autoblock,
+.responsive-1024.autoblock
+{
+    display: block;
+}
+.responsive-1024  .autoinline,
+.responsive-1024.autoinline
+{
+    display: inline-block;
+}
+.responsive-1024  .autotext-left,
+.responsive-1024.autotext-left
+{
+    text-align: left;
+}
+.responsive-1024  .autotext-right,
+.responsive-1024.autotext-right
+{
+    text-align: right;
+}
+.responsive-1024  .autotext-center,
+.responsive-1024.autotext-center
+{
+    text-align: center;
+}
+.responsive-1024  .autotext-justify,
+.responsive-1024.autotext-justify
+{
+    text-align: justify;
+}
+.responsive-1024  .autofloat-left,
+.responsive-1024.autofloat-left
+{
+    float: left;
+}
+.responsive-1024  .autofloat-right,
+.responsive-1024.autofloat-right
+{
+    float: right;
+}
+.responsive-1024  .autofloat-none,
+.responsive-1024.autofloat-none
+{
+    float: none;
+}
+.responsive-1024  .autoclear-left,
+.responsive-1024.autoclear-left
+{
+    clear: left;
+}
+.responsive-1024  .autoclear-right,
+.responsive-1024.autoclear-right
+{
+    clear: right;
+}
+.responsive-1024  .autoclear-both,
+.responsive-1024.autoclear-both
+{
+    clear: both;
+}
+.responsive-1024  .automargin-reset,
+.responsive-1024.automargin-reset
+{
+    margin: 0 !important;
+}
+.responsive-1024  .automargin-reset-h,
+.responsive-1024.automargin-reset-h
+{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.responsive-1024  .automargin-reset-v,
+.responsive-1024.automargin-reset-v
+{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.responsive-1024  .autopadding-reset,
+.responsive-1024.autopadding-reset
+{
+    padding: 0 !important;
+}
+.responsive-1024  .autopadding-reset-h,
+.responsive-1024.autopadding-reset-h
+{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.responsive-1024  .autopadding-reset-v,
+.responsive-1024.autopadding-reset-v
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.responsive-1024  .autoreverse-order,
+.responsive-1024.autoreverse-order
+{
+    transform: rotate(180deg);
+}
+.responsive-1024  .autoreverse-order > *,
+.responsive-1024.autoreverse-order > *
+{
+    transform: rotate(180deg);
+}
+.responsive-1024  .autoreverse-flexorder-rows,
+.responsive-1024.autoreverse-flexorder-rows
+{
+    flex-direction: row-reverse;
+}
+.responsive-1024  .autoreverse-flexorder,
+.responsive-1024.autoreverse-flexorder
+{
+    flex-direction: column-reverse;
+}
+.responsive-1024  table.responsive,
+.responsive-1024  table.responsive thead,
+.responsive-1024  table.responsive tbody, 
+.responsive-1024  table.responsive tr,
+.responsive-1024  table.responsive th, 
+.responsive-1024  table.responsive td,
+table.responsive.responsive-1024,
+table.responsive.responsive-1024 thead,
+table.responsive.responsive-1024 tbody, 
+table.responsive.responsive-1024 tr,
+table.responsive.responsive-1024 th, 
+table.responsive.responsive-1024 td
+{ 
+    display: block; 
+    width: 100%; 
+}
+.responsive-1024  table.responsive thead tr,
+table.responsive.responsive-1024 thead tr 
+{ 
+    position: absolute;
+    top: -9999px; left: -9999px;
+}
+.responsive-1024  table.responsive tr,
+table.responsive.responsive-1024 tr 
+{ 
+    margin-bottom: 1px; 
+}
+.responsive-1024  table.responsive td,
+.responsive-1024  table.responsive.dataTable tbody td,
+table.responsive.responsive-1024 td,
+table.responsive.responsive-1024.dataTable tbody td 
+{ 
+    box-sizing: border-box;
+    /*width: 50%;*/
+    padding-left: 30% !important;
+    padding-right: 15% !important;
+    min-height: 2em;
+}
+.responsive-1024  table.responsive.rtl td,
+.responsive-1024  table.responsive.rtl.dataTable tbody td,
+table.responsive.responsive-1024.rtl td,
+table.responsive.responsive-1024.rtl.dataTable tbody td 
+{ 
+    padding-left: 15% !important;
+    padding-right: 30% !important;
+}
+.responsive-1024  table.responsive tbody td:before,
+table.responsive.responsive-1024 tbody td:before
+{ 
+    display: block;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    content: attr(data-column);
+}
+.responsive-1024  table.responsive.rtl tbody td:before,
+table.responsive.responsive-1024.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
+}
+}
 /* =Media query for iPad and tablets
 -------------------------------------------------------------- */
 @media handheld, only screen and (max-width: 48em), only screen and (max-device-width: 48em) and (orientation:portrait)
@@ -936,19 +1427,19 @@ table.responsive tbody td:before
 .responsive-768-portrait.fluid.autofloat-none:not(.autoadjust),
 .responsive-768-portrait.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
 {
-    display:block;
-    float:none;
-    clear:both;
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 .responsive-768-portrait  .fluid.autocol-1-1,
 .responsive-768-portrait.fluid.autocol-1-1
 {
-    float:none;
-    clear:both;
-    width:100%;
+    float: none;
+    clear: both;
+    width: 100%;
 }
 .responsive-768-portrait  .fluid.autocol-1-2,
 .responsive-768-portrait  .fluid.autocol-2-4,
@@ -963,7 +1454,7 @@ table.responsive tbody td:before
 .responsive-768-portrait.fluid.autocol-5-10,
 .responsive-768-portrait.fluid.autocol-6-12
 {
-    width:50%;
+    width: 50%;
 }
 .responsive-768-portrait  .fluid.autocol-1-3,
 .responsive-768-portrait  .fluid.autocol-2-6,
@@ -974,7 +1465,7 @@ table.responsive tbody td:before
 .responsive-768-portrait.fluid.autocol-3-9,
 .responsive-768-portrait.fluid.autocol-4-12
 {
-    width:33.333%;
+    width: 33.33%;
 }
 .responsive-768-portrait  .fluid.autocol-2-3,
 .responsive-768-portrait  .fluid.autocol-4-6,
@@ -985,7 +1476,7 @@ table.responsive tbody td:before
 .responsive-768-portrait.fluid.autocol-6-9,
 .responsive-768-portrait.fluid.autocol-8-12
 {
-    width:66.666%;
+    width: 66.66%;
 }
 .responsive-768-portrait  .fluid.autocol-1-4,
 .responsive-768-portrait  .fluid.autocol-2-8,
@@ -994,7 +1485,7 @@ table.responsive tbody td:before
 .responsive-768-portrait.fluid.autocol-2-8,
 .responsive-768-portrait.fluid.autocol-3-12
 {
-    width:25%;
+    width: 25%;
 }
 .responsive-768-portrait  .fluid.autocol-3-4,
 .responsive-768-portrait  .fluid.autocol-6-8,
@@ -1003,373 +1494,434 @@ table.responsive tbody td:before
 .responsive-768-portrait.fluid.autocol-6-8,
 .responsive-768-portrait.fluid.autocol-9-12
 {
-    width:75%;
+    width: 75%;
 }
 .responsive-768-portrait  .fluid.autocol-1-5,
 .responsive-768-portrait  .fluid.autocol-2-10,
 .responsive-768-portrait.fluid.autocol-1-5,
 .responsive-768-portrait.fluid.autocol-2-10 
 {
-    width:20%;
+    width: 20%;
 }
 .responsive-768-portrait  .fluid.autocol-2-5,
 .responsive-768-portrait  .fluid.autocol-4-10,
 .responsive-768-portrait.fluid.autocol-2-5,
 .responsive-768-portrait.fluid.autocol-4-10
 {
-    width:40%;
+    width: 40%;
 }
 .responsive-768-portrait  .fluid.autocol-3-5,
 .responsive-768-portrait  .fluid.autocol-6-10,
 .responsive-768-portrait.fluid.autocol-3-5,
 .responsive-768-portrait.fluid.autocol-6-10
 {
-    width:60%;
+    width: 60%;
 }
 .responsive-768-portrait  .fluid.autocol-4-5,
 .responsive-768-portrait  .fluid.autocol-8-10,
 .responsive-768-portrait.fluid.autocol-4-5,
 .responsive-768-portrait.fluid.autocol-8-10
 {
-    width:80%;
+    width: 80%;
 }
 .responsive-768-portrait  .fluid.autocol-1-6,
 .responsive-768-portrait  .fluid.autocol-2-12,
 .responsive-768-portrait.fluid.autocol-1-6,
 .responsive-768-portrait.fluid.autocol-2-12
 {
-    width:16.666%;
+    width: 16.66%;
 }
 .responsive-768-portrait  .fluid.autocol-5-6,
 .responsive-768-portrait  .fluid.autocol-10-12,
 .responsive-768-portrait.fluid.autocol-5-6,
 .responsive-768-portrait.fluid.autocol-10-12
 {
-    width:83.333%;
+    width: 83.33%;
 }
 .responsive-768-portrait  .fluid.autocol-1-7,
 .responsive-768-portrait.fluid.autocol-1-7
 {
-    width:14.286%;
+    width: 14.28%;
 }
 .responsive-768-portrait  .fluid.autocol-2-7,
 .responsive-768-portrait.fluid.autocol-2-7
 {
-    width:28.571%;
+    width: 28.57%;
 }
 .responsive-768-portrait   .fluid.autocol-3-7,
 .responsive-768-portrait.fluid.autocol-3-7
 {
-    width:42.857%;
+    width: 42.85%;
 }
 .responsive-768-portrait   .fluid.autocol-4-7,
 .responsive-768-portrait.fluid.autocol-4-7
 {
-    width:57.142%;
+    width: 57.14%;
 }
 .responsive-768-portrait   .fluid.autocol-5-7,
 .responsive-768-portrait.fluid.autocol-5-7
 {
-    width:71.428%;
+    width: 71.42%;
 }
 .responsive-768-portrait   .fluid.autocol-6-7,
 .responsive-768-portrait.fluid.autocol-6-7
 {
-    width:85.714%;
+    width: 85.71%;
 }
 .responsive-768-portrait   .fluid.autocol-1-8,
 .responsive-768-portrait.fluid.autocol-1-8
 {
-    width:12.5%;
+    width: 12.5%;
 }
 .responsive-768-portrait   .fluid.autocol-3-8,
 .responsive-768-portrait.fluid.autocol-3-8
 {
-    width:37.5%;
+    width: 37.5%;
 }
 .responsive-768-portrait   .fluid.autocol-5-8,
 .responsive-768-portrait.fluid.autocol-5-8
 {
-    width:62.5%;
+    width: 62.5%;
 }
 .responsive-768-portrait   .fluid.autocol-7-8,
 .responsive-768-portrait.fluid.autocol-7-8
 {
-    width:87.5%;
+    width: 87.5%;
 }
 .responsive-768-portrait  .fluid.autocol-1-9,
 .responsive-768-portrait.fluid.autocol-1-9
 {
-    width:11.11%;
+    width: 11.11%;
 }
 .responsive-768-portrait   .fluid.autocol-2-9,
 .responsive-768-portrait.fluid.autocol-2-9
 {
-    width:22.22%;
+    width: 22.22%;
 }
 .responsive-768-portrait  .fluid.autocol-4-9,
 .responsive-768-portrait.fluid.autocol-4-9
 {
-    width:44.44%;
+    width: 44.44%;
 }
 .responsive-768-portrait  .fluid.autocol-5-9,
 .responsive-768-portrait.fluid.autocol-5-9
 {
-    width:55.55%;
+    width: 55.55%;
 }
 .responsive-768-portrait  .fluid.autocol-7-9,
 .responsive-768-portrait.fluid.autocol-7-9
 {
-    width:77.77%;
+    width: 77.77%;
 }
 .responsive-768-portrait  .fluid.autocol-8-9,
 .responsive-768-portrait.fluid.autocol-8-9
 {
-    width:99.99%;
+    width: 88.88%;
 }
 .responsive-768-portrait  .fluid.autocol-1-10,
 .responsive-768-portrait.fluid.autocol-1-10
 {
-    width:10%;
+    width: 10%;
 }
 .responsive-768-portrait  .fluid.autocol-3-10,
 .responsive-768-portrait.fluid.autocol-3-10
 {
-    width:30%;
+    width: 30%;
 }
 .responsive-768-portrait  .fluid.autocol-6-10,
 .responsive-768-portrait.fluid.autocol-6-10
 {
-    width:60%;
+    width: 60%;
 }
 .responsive-768-portrait  .fluid.autocol-7-10,
 .responsive-768-portrait.fluid.autocol-7-10
 {
-    width:70%;
+    width: 70%;
 }
 .responsive-768-portrait  .fluid.autocol-9-10,
 .responsive-768-portrait.fluid.autocol-9-10
 {
-    width:90%;
+    width: 90%;
 }
 .responsive-768-portrait  .fluid.autocol-1-12,
 .responsive-768-portrait.fluid.autocol-1-12
 {
-    width:8.333%;
+    width: 8.33%;
 }
 .responsive-768-portrait  .fluid.autocol-5-12,
 .responsive-768-portrait.fluid.autocol-5-12
 {
-    width:41.666%;
+    width: 41.66%;
 }
 .responsive-768-portrait  .fluid.autocol-7-12,
 .responsive-768-portrait.fluid.autocol-7-12
 {
-    width:58.333%;
+    width: 58.33%;
 }
 .responsive-768-portrait  .fluid.autocol-11-12,
 .responsive-768-portrait.fluid.autocol-11-12
 {
-    width:91.666%;
+    width: 91.66%;
 }
 .responsive-768-portrait  .autorelative,
 .responsive-768-portrait.autorelative
 {
-    position:relative;
+    position: relative;
 }
 .responsive-768-portrait  .autoabsolute,
 .responsive-768-portrait.autoabsolute
 {
-    position:absolute;
+    position: absolute;
 }
 .responsive-768-portrait  .autovisible,
 .responsive-768-portrait.autovisible
 {
-    visibility:visible;
+    visibility: visible;
 }
 .responsive-768-portrait  .autohidden,
 .responsive-768-portrait.autohidden
 {
-    visibility:hidden;
+    visibility: hidden;
 }
 .responsive-768-portrait  .autoscroll-x,
 .responsive-768-portrait.autoscroll-x
 {
-    overflow-x:auto;
+    overflow-x: auto;
 }
 .responsive-768-portrait  .autoscroll-y,
 .responsive-768-portrait.autoscroll-y
 {
-    overflow-y:auto;
+    overflow-y: auto;
 }
 .responsive-768-portrait  .autowidth,
 .responsive-768-portrait.autowidth
 {
-    width:100% !important;
+    width: 100% !important;
 }
 .responsive-768-portrait  .autowidth-reset,
 .responsive-768-portrait.autowidth-reset
 {
-    width:0 !important;
+    width: 0 !important;
 }
 .responsive-768-portrait  .autoheight-reset,
 .responsive-768-portrait.autoheight-reset
 {
-    height:0;
+    height: 0;
 }
 .responsive-768-portrait  .autoheight,
 .responsive-768-portrait.autoheight
 {
-    height:auto;
+    height: auto;
 }
 .responsive-768-portrait  .autobreak,
 .responsive-768-portrait.autobreak
 {
-    display:block;
-    width:1px;
-    height:1px;
-    float:none;
-    clear:both;
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
 }
 .responsive-768-portrait  .autounbreak,
 .responsive-768-portrait.autounbreak
 {
-    display:inline-block;
-    width:0;
-    height:0;
-    float:left;
-    clear:none;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
 }
 .responsive-768-portrait  .autounbreak.right,
 .responsive-768-portrait  .autounbreak.float-right,
 .responsive-768-portrait.autounbreak.right,
 .responsive-768-portrait.autounbreak.float-right
 {
-    float:right;
+    float: right;
 }
 .responsive-768-portrait  .autohide,
 .responsive-768-portrait.autohide
 {
-    display:none !important;
+    display: none !important;
 }
 .responsive-768-portrait  .autoshow,
-.responsive-768-portrait.autoshow 
+.responsive-768-portrait.autoshow ,
+.responsive-768-portrait  .autoblock,
+.responsive-768-portrait.autoblock
 {
-    display:block;
+    display: block;
 }
 .responsive-768-portrait  .autoinline,
 .responsive-768-portrait.autoinline
 {
-    display:inline-block;
-}
-.responsive-768-portrait  .autoblock,
-.responsive-768-portrait.autoblock
-{
-    display:block;
+    display: inline-block;
 }
 .responsive-768-portrait  .autotext-left,
 .responsive-768-portrait.autotext-left
 {
-    text-align:left;
+    text-align: left;
 }
 .responsive-768-portrait  .autotext-right,
 .responsive-768-portrait.autotext-right
 {
-    text-align:right;
+    text-align: right;
 }
 .responsive-768-portrait  .autotext-center,
 .responsive-768-portrait.autotext-center
 {
-    text-align:center;
+    text-align: center;
 }
 .responsive-768-portrait  .autotext-justify,
 .responsive-768-portrait.autotext-justify
 {
-    text-align:justify;
+    text-align: justify;
 }
 .responsive-768-portrait  .autofloat-left,
 .responsive-768-portrait.autofloat-left
 {
-    float:left;
+    float: left;
 }
 .responsive-768-portrait  .autofloat-right,
 .responsive-768-portrait.autofloat-right
 {
-    float:right;
+    float: right;
 }
 .responsive-768-portrait  .autofloat-none,
 .responsive-768-portrait.autofloat-none
 {
-    float:none;
+    float: none;
 }
 .responsive-768-portrait  .autoclear-left,
 .responsive-768-portrait.autoclear-left
 {
-    clear:left;
+    clear: left;
 }
 .responsive-768-portrait  .autoclear-right,
 .responsive-768-portrait.autoclear-right
 {
-    clear:right;
+    clear: right;
 }
 .responsive-768-portrait  .autoclear-both,
 .responsive-768-portrait.autoclear-both
 {
-    clear:both;
+    clear: both;
 }
 .responsive-768-portrait  .automargin-reset,
 .responsive-768-portrait.automargin-reset
 {
-    margin:0 !important;
+    margin: 0 !important;
 }
 .responsive-768-portrait  .automargin-reset-h,
 .responsive-768-portrait.automargin-reset-h
 {
-    margin-left:0 !important;
-    margin-right:0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 .responsive-768-portrait  .automargin-reset-v,
 .responsive-768-portrait.automargin-reset-v
 {
-    margin-top:0 !important;
-    margin-bottom:0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 .responsive-768-portrait  .autopadding-reset,
 .responsive-768-portrait.autopadding-reset
 {
-    padding:0 !important;
+    padding: 0 !important;
 }
 .responsive-768-portrait  .autopadding-reset-h,
 .responsive-768-portrait.autopadding-reset-h
 {
-    padding-left:0 !important;
-    padding-right:0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 .responsive-768-portrait  .autopadding-reset-v,
 .responsive-768-portrait.autopadding-reset-v
 {
-    padding-top:0 !important;
-    padding-bottom:0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 .responsive-768-portrait  .autoreverse-order,
 .responsive-768-portrait.autoreverse-order
 {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 .responsive-768-portrait  .autoreverse-order > *,
 .responsive-768-portrait.autoreverse-order > *
 {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 .responsive-768-portrait  .autoreverse-flexorder-rows,
 .responsive-768-portrait.autoreverse-flexorder-rows
 {
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
 }
 .responsive-768-portrait  .autoreverse-flexorder,
 .responsive-768-portrait.autoreverse-flexorder
 {
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
+}
+.responsive-768-portrait  table.responsive,
+.responsive-768-portrait  table.responsive thead,
+.responsive-768-portrait  table.responsive tbody, 
+.responsive-768-portrait  table.responsive tr,
+.responsive-768-portrait  table.responsive th, 
+.responsive-768-portrait  table.responsive td,
+table.responsive.responsive-768-portrait,
+table.responsive.responsive-768-portrait thead,
+table.responsive.responsive-768-portrait tbody, 
+table.responsive.responsive-768-portrait tr,
+table.responsive.responsive-768-portrait th, 
+table.responsive.responsive-768-portrait td
+{ 
+    display: block; 
+    width: 100%; 
+}
+.responsive-768-portrait  table.responsive thead tr,
+table.responsive.responsive-768-portrait thead tr 
+{ 
+    position: absolute;
+    top: -9999px; left: -9999px;
+}
+.responsive-768-portrait  table.responsive tr,
+table.responsive.responsive-768-portrait tr 
+{ 
+    margin-bottom: 1px; 
+}
+.responsive-768-portrait  table.responsive td,
+.responsive-768-portrait  table.responsive.dataTable tbody td,
+table.responsive.responsive-768-portrait td,
+table.responsive.responsive-768-portrait.dataTable tbody td 
+{ 
+    box-sizing: border-box;
+    /*width: 50%;*/
+    padding-left: 30% !important;
+    padding-right: 15% !important;
+    min-height: 2em;
+}
+.responsive-768-portrait  table.responsive.rtl td,
+.responsive-768-portrait  table.responsive.rtl.dataTable tbody td,
+table.responsive.responsive-768-portrait.rtl td,
+table.responsive.responsive-768-portrait.rtl.dataTable tbody td 
+{ 
+    padding-left: 15% !important;
+    padding-right: 30% !important;
+}
+.responsive-768-portrait  table.responsive tbody td:before,
+table.responsive.responsive-768-portrait tbody td:before
+{ 
+    display: block;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    content: attr(data-column);
+}
+.responsive-768-portrait  table.responsive.rtl tbody td:before,
+table.responsive.responsive-768-portrait.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
 }
 }
 /* =Media query for smaller tablets and larger handheld devices
@@ -1381,19 +1933,19 @@ table.responsive tbody td:before
 .responsive-640-portrait.fluid.autofloat-none:not(.autoadjust),
 .responsive-640-portrait.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
 {
-    display:block;
-    float:none;
-    clear:both;
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 .responsive-640-portrait  .fluid.autocol-1-1,
 .responsive-640-portrait.fluid.autocol-1-1
 {
-    float:none;
-    clear:both;
-    width:100%;
+    float: none;
+    clear: both;
+    width: 100%;
 }
 .responsive-640-portrait  .fluid.autocol-1-2,
 .responsive-640-portrait  .fluid.autocol-2-4,
@@ -1408,7 +1960,7 @@ table.responsive tbody td:before
 .responsive-640-portrait.fluid.autocol-5-10,
 .responsive-640-portrait.fluid.autocol-6-12
 {
-    width:50%;
+    width: 50%;
 }
 .responsive-640-portrait  .fluid.autocol-1-3,
 .responsive-640-portrait  .fluid.autocol-2-6,
@@ -1419,7 +1971,7 @@ table.responsive tbody td:before
 .responsive-640-portrait.fluid.autocol-3-9,
 .responsive-640-portrait.fluid.autocol-4-12
 {
-    width:33.333%;
+    width: 33.33%;
 }
 .responsive-640-portrait  .fluid.autocol-2-3,
 .responsive-640-portrait  .fluid.autocol-4-6,
@@ -1430,7 +1982,7 @@ table.responsive tbody td:before
 .responsive-640-portrait.fluid.autocol-6-9,
 .responsive-640-portrait.fluid.autocol-8-12
 {
-    width:66.666%;
+    width: 66.66%;
 }
 .responsive-640-portrait  .fluid.autocol-1-4,
 .responsive-640-portrait  .fluid.autocol-2-8,
@@ -1439,7 +1991,7 @@ table.responsive tbody td:before
 .responsive-640-portrait.fluid.autocol-2-8,
 .responsive-640-portrait.fluid.autocol-3-12
 {
-    width:25%;
+    width: 25%;
 }
 .responsive-640-portrait  .fluid.autocol-3-4,
 .responsive-640-portrait  .fluid.autocol-6-8,
@@ -1448,373 +2000,434 @@ table.responsive tbody td:before
 .responsive-640-portrait.fluid.autocol-6-8,
 .responsive-640-portrait.fluid.autocol-9-12
 {
-    width:75%;
+    width: 75%;
 }
 .responsive-640-portrait  .fluid.autocol-1-5,
 .responsive-640-portrait  .fluid.autocol-2-10,
 .responsive-640-portrait.fluid.autocol-1-5,
 .responsive-640-portrait.fluid.autocol-2-10 
 {
-    width:20%;
+    width: 20%;
 }
 .responsive-640-portrait  .fluid.autocol-2-5,
 .responsive-640-portrait  .fluid.autocol-4-10,
 .responsive-640-portrait.fluid.autocol-2-5,
 .responsive-640-portrait.fluid.autocol-4-10
 {
-    width:40%;
+    width: 40%;
 }
 .responsive-640-portrait  .fluid.autocol-3-5,
 .responsive-640-portrait  .fluid.autocol-6-10,
 .responsive-640-portrait.fluid.autocol-3-5,
 .responsive-640-portrait.fluid.autocol-6-10
 {
-    width:60%;
+    width: 60%;
 }
 .responsive-640-portrait  .fluid.autocol-4-5,
 .responsive-640-portrait  .fluid.autocol-8-10,
 .responsive-640-portrait.fluid.autocol-4-5,
 .responsive-640-portrait.fluid.autocol-8-10
 {
-    width:80%;
+    width: 80%;
 }
 .responsive-640-portrait  .fluid.autocol-1-6,
 .responsive-640-portrait  .fluid.autocol-2-12,
 .responsive-640-portrait.fluid.autocol-1-6,
 .responsive-640-portrait.fluid.autocol-2-12
 {
-    width:16.666%;
+    width: 16.66%;
 }
 .responsive-640-portrait  .fluid.autocol-5-6,
 .responsive-640-portrait  .fluid.autocol-10-12,
 .responsive-640-portrait.fluid.autocol-5-6,
 .responsive-640-portrait.fluid.autocol-10-12
 {
-    width:83.333%;
+    width: 83.33%;
 }
 .responsive-640-portrait  .fluid.autocol-1-7,
 .responsive-640-portrait.fluid.autocol-1-7
 {
-    width:14.286%;
+    width: 14.28%;
 }
 .responsive-640-portrait  .fluid.autocol-2-7,
 .responsive-640-portrait.fluid.autocol-2-7
 {
-    width:28.571%;
+    width: 28.57%;
 }
 .responsive-640-portrait   .fluid.autocol-3-7,
 .responsive-640-portrait.fluid.autocol-3-7
 {
-    width:42.857%;
+    width: 42.85%;
 }
 .responsive-640-portrait   .fluid.autocol-4-7,
 .responsive-640-portrait.fluid.autocol-4-7
 {
-    width:57.142%;
+    width: 57.14%;
 }
 .responsive-640-portrait   .fluid.autocol-5-7,
 .responsive-640-portrait.fluid.autocol-5-7
 {
-    width:71.428%;
+    width: 71.42%;
 }
 .responsive-640-portrait   .fluid.autocol-6-7,
 .responsive-640-portrait.fluid.autocol-6-7
 {
-    width:85.714%;
+    width: 85.71%;
 }
 .responsive-640-portrait   .fluid.autocol-1-8,
 .responsive-640-portrait.fluid.autocol-1-8
 {
-    width:12.5%;
+    width: 12.5%;
 }
 .responsive-640-portrait   .fluid.autocol-3-8,
 .responsive-640-portrait.fluid.autocol-3-8
 {
-    width:37.5%;
+    width: 37.5%;
 }
 .responsive-640-portrait   .fluid.autocol-5-8,
 .responsive-640-portrait.fluid.autocol-5-8
 {
-    width:62.5%;
+    width: 62.5%;
 }
 .responsive-640-portrait   .fluid.autocol-7-8,
 .responsive-640-portrait.fluid.autocol-7-8
 {
-    width:87.5%;
+    width: 87.5%;
 }
 .responsive-640-portrait  .fluid.autocol-1-9,
 .responsive-640-portrait.fluid.autocol-1-9
 {
-    width:11.11%;
+    width: 11.11%;
 }
 .responsive-640-portrait   .fluid.autocol-2-9,
 .responsive-640-portrait.fluid.autocol-2-9
 {
-    width:22.22%;
+    width: 22.22%;
 }
 .responsive-640-portrait  .fluid.autocol-4-9,
 .responsive-640-portrait.fluid.autocol-4-9
 {
-    width:44.44%;
+    width: 44.44%;
 }
 .responsive-640-portrait  .fluid.autocol-5-9,
 .responsive-640-portrait.fluid.autocol-5-9
 {
-    width:55.55%;
+    width: 55.55%;
 }
 .responsive-640-portrait  .fluid.autocol-7-9,
 .responsive-640-portrait.fluid.autocol-7-9
 {
-    width:77.77%;
+    width: 77.77%;
 }
 .responsive-640-portrait  .fluid.autocol-8-9,
 .responsive-640-portrait.fluid.autocol-8-9
 {
-    width:99.99%;
+    width: 88.88%;
 }
 .responsive-640-portrait  .fluid.autocol-1-10,
 .responsive-640-portrait.fluid.autocol-1-10
 {
-    width:10%;
+    width: 10%;
 }
 .responsive-640-portrait  .fluid.autocol-3-10,
 .responsive-640-portrait.fluid.autocol-3-10
 {
-    width:30%;
+    width: 30%;
 }
 .responsive-640-portrait  .fluid.autocol-6-10,
 .responsive-640-portrait.fluid.autocol-6-10
 {
-    width:60%;
+    width: 60%;
 }
 .responsive-640-portrait  .fluid.autocol-7-10,
 .responsive-640-portrait.fluid.autocol-7-10
 {
-    width:70%;
+    width: 70%;
 }
 .responsive-640-portrait  .fluid.autocol-9-10,
 .responsive-640-portrait.fluid.autocol-9-10
 {
-    width:90%;
+    width: 90%;
 }
 .responsive-640-portrait  .fluid.autocol-1-12,
 .responsive-640-portrait.fluid.autocol-1-12
 {
-    width:8.333%;
+    width: 8.33%;
 }
 .responsive-640-portrait  .fluid.autocol-5-12,
 .responsive-640-portrait.fluid.autocol-5-12
 {
-    width:41.666%;
+    width: 41.66%;
 }
 .responsive-640-portrait  .fluid.autocol-7-12,
 .responsive-640-portrait.fluid.autocol-7-12
 {
-    width:58.333%;
+    width: 58.33%;
 }
 .responsive-640-portrait  .fluid.autocol-11-12,
 .responsive-640-portrait.fluid.autocol-11-12
 {
-    width:91.666%;
+    width: 91.66%;
 }
 .responsive-640-portrait  .autorelative,
 .responsive-640-portrait.autorelative
 {
-    position:relative;
+    position: relative;
 }
 .responsive-640-portrait  .autoabsolute,
 .responsive-640-portrait.autoabsolute
 {
-    position:absolute;
+    position: absolute;
 }
 .responsive-640-portrait  .autovisible,
 .responsive-640-portrait.autovisible
 {
-    visibility:visible;
+    visibility: visible;
 }
 .responsive-640-portrait  .autohidden,
 .responsive-640-portrait.autohidden
 {
-    visibility:hidden;
+    visibility: hidden;
 }
 .responsive-640-portrait  .autoscroll-x,
 .responsive-640-portrait.autoscroll-x
 {
-    overflow-x:auto;
+    overflow-x: auto;
 }
 .responsive-640-portrait  .autoscroll-y,
 .responsive-640-portrait.autoscroll-y
 {
-    overflow-y:auto;
+    overflow-y: auto;
 }
 .responsive-640-portrait  .autowidth,
 .responsive-640-portrait.autowidth
 {
-    width:100% !important;
+    width: 100% !important;
 }
 .responsive-640-portrait  .autowidth-reset,
 .responsive-640-portrait.autowidth-reset
 {
-    width:0 !important;
+    width: 0 !important;
 }
 .responsive-640-portrait  .autoheight-reset,
 .responsive-640-portrait.autoheight-reset
 {
-    height:0;
+    height: 0;
 }
 .responsive-640-portrait  .autoheight,
 .responsive-640-portrait.autoheight
 {
-    height:auto;
+    height: auto;
 }
 .responsive-640-portrait  .autobreak,
 .responsive-640-portrait.autobreak
 {
-    display:block;
-    width:1px;
-    height:1px;
-    float:none;
-    clear:both;
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
 }
 .responsive-640-portrait  .autounbreak,
 .responsive-640-portrait.autounbreak
 {
-    display:inline-block;
-    width:0;
-    height:0;
-    float:left;
-    clear:none;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
 }
 .responsive-640-portrait  .autounbreak.right,
 .responsive-640-portrait  .autounbreak.float-right,
 .responsive-640-portrait.autounbreak.right,
 .responsive-640-portrait.autounbreak.float-right
 {
-    float:right;
+    float: right;
 }
 .responsive-640-portrait  .autohide,
 .responsive-640-portrait.autohide
 {
-    display:none !important;
+    display: none !important;
 }
 .responsive-640-portrait  .autoshow,
-.responsive-640-portrait.autoshow 
+.responsive-640-portrait.autoshow ,
+.responsive-640-portrait  .autoblock,
+.responsive-640-portrait.autoblock
 {
-    display:block;
+    display: block;
 }
 .responsive-640-portrait  .autoinline,
 .responsive-640-portrait.autoinline
 {
-    display:inline-block;
-}
-.responsive-640-portrait  .autoblock,
-.responsive-640-portrait.autoblock
-{
-    display:block;
+    display: inline-block;
 }
 .responsive-640-portrait  .autotext-left,
 .responsive-640-portrait.autotext-left
 {
-    text-align:left;
+    text-align: left;
 }
 .responsive-640-portrait  .autotext-right,
 .responsive-640-portrait.autotext-right
 {
-    text-align:right;
+    text-align: right;
 }
 .responsive-640-portrait  .autotext-center,
 .responsive-640-portrait.autotext-center
 {
-    text-align:center;
+    text-align: center;
 }
 .responsive-640-portrait  .autotext-justify,
 .responsive-640-portrait.autotext-justify
 {
-    text-align:justify;
+    text-align: justify;
 }
 .responsive-640-portrait  .autofloat-left,
 .responsive-640-portrait.autofloat-left
 {
-    float:left;
+    float: left;
 }
 .responsive-640-portrait  .autofloat-right,
 .responsive-640-portrait.autofloat-right
 {
-    float:right;
+    float: right;
 }
 .responsive-640-portrait  .autofloat-none,
 .responsive-640-portrait.autofloat-none
 {
-    float:none;
+    float: none;
 }
 .responsive-640-portrait  .autoclear-left,
 .responsive-640-portrait.autoclear-left
 {
-    clear:left;
+    clear: left;
 }
 .responsive-640-portrait  .autoclear-right,
 .responsive-640-portrait.autoclear-right
 {
-    clear:right;
+    clear: right;
 }
 .responsive-640-portrait  .autoclear-both,
 .responsive-640-portrait.autoclear-both
 {
-    clear:both;
+    clear: both;
 }
 .responsive-640-portrait  .automargin-reset,
 .responsive-640-portrait.automargin-reset
 {
-    margin:0 !important;
+    margin: 0 !important;
 }
 .responsive-640-portrait  .automargin-reset-h,
 .responsive-640-portrait.automargin-reset-h
 {
-    margin-left:0 !important;
-    margin-right:0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 .responsive-640-portrait  .automargin-reset-v,
 .responsive-640-portrait.automargin-reset-v
 {
-    margin-top:0 !important;
-    margin-bottom:0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 .responsive-640-portrait  .autopadding-reset,
 .responsive-640-portrait.autopadding-reset
 {
-    padding:0 !important;
+    padding: 0 !important;
 }
 .responsive-640-portrait  .autopadding-reset-h,
 .responsive-640-portrait.autopadding-reset-h
 {
-    padding-left:0 !important;
-    padding-right:0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 .responsive-640-portrait  .autopadding-reset-v,
 .responsive-640-portrait.autopadding-reset-v
 {
-    padding-top:0 !important;
-    padding-bottom:0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 .responsive-640-portrait  .autoreverse-order,
 .responsive-640-portrait.autoreverse-order
 {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 .responsive-640-portrait  .autoreverse-order > *,
 .responsive-640-portrait.autoreverse-order > *
 {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 .responsive-640-portrait  .autoreverse-flexorder-rows,
 .responsive-640-portrait.autoreverse-flexorder-rows
 {
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
 }
 .responsive-640-portrait  .autoreverse-flexorder,
 .responsive-640-portrait.autoreverse-flexorder
 {
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
+}
+.responsive-640-portrait  table.responsive,
+.responsive-640-portrait  table.responsive thead,
+.responsive-640-portrait  table.responsive tbody, 
+.responsive-640-portrait  table.responsive tr,
+.responsive-640-portrait  table.responsive th, 
+.responsive-640-portrait  table.responsive td,
+table.responsive.responsive-640-portrait,
+table.responsive.responsive-640-portrait thead,
+table.responsive.responsive-640-portrait tbody, 
+table.responsive.responsive-640-portrait tr,
+table.responsive.responsive-640-portrait th, 
+table.responsive.responsive-640-portrait td
+{ 
+    display: block; 
+    width: 100%; 
+}
+.responsive-640-portrait  table.responsive thead tr,
+table.responsive.responsive-640-portrait thead tr 
+{ 
+    position: absolute;
+    top: -9999px; left: -9999px;
+}
+.responsive-640-portrait  table.responsive tr,
+table.responsive.responsive-640-portrait tr 
+{ 
+    margin-bottom: 1px; 
+}
+.responsive-640-portrait  table.responsive td,
+.responsive-640-portrait  table.responsive.dataTable tbody td,
+table.responsive.responsive-640-portrait td,
+table.responsive.responsive-640-portrait.dataTable tbody td 
+{ 
+    box-sizing: border-box;
+    /*width: 50%;*/
+    padding-left: 30% !important;
+    padding-right: 15% !important;
+    min-height: 2em;
+}
+.responsive-640-portrait  table.responsive.rtl td,
+.responsive-640-portrait  table.responsive.rtl.dataTable tbody td,
+table.responsive.responsive-640-portrait.rtl td,
+table.responsive.responsive-640-portrait.rtl.dataTable tbody td 
+{ 
+    padding-left: 15% !important;
+    padding-right: 30% !important;
+}
+.responsive-640-portrait  table.responsive tbody td:before,
+table.responsive.responsive-640-portrait tbody td:before
+{ 
+    display: block;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    content: attr(data-column);
+}
+.responsive-640-portrait  table.responsive.rtl tbody td:before,
+table.responsive.responsive-640-portrait.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
 }
 }
 /* =Media query for iPhone and smaller handheld devices
@@ -1826,19 +2439,19 @@ table.responsive tbody td:before
 .responsive-480.fluid.autofloat-none:not(.autoadjust),
 .responsive-480.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
 {
-    display:block;
-    float:none;
-    clear:both;
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 .responsive-480  .fluid.autocol-1-1,
 .responsive-480.fluid.autocol-1-1
 {
-    float:none;
-    clear:both;
-    width:100%;
+    float: none;
+    clear: both;
+    width: 100%;
 }
 .responsive-480  .fluid.autocol-1-2,
 .responsive-480  .fluid.autocol-2-4,
@@ -1853,7 +2466,7 @@ table.responsive tbody td:before
 .responsive-480.fluid.autocol-5-10,
 .responsive-480.fluid.autocol-6-12
 {
-    width:50%;
+    width: 50%;
 }
 .responsive-480  .fluid.autocol-1-3,
 .responsive-480  .fluid.autocol-2-6,
@@ -1864,7 +2477,7 @@ table.responsive tbody td:before
 .responsive-480.fluid.autocol-3-9,
 .responsive-480.fluid.autocol-4-12
 {
-    width:33.333%;
+    width: 33.33%;
 }
 .responsive-480  .fluid.autocol-2-3,
 .responsive-480  .fluid.autocol-4-6,
@@ -1875,7 +2488,7 @@ table.responsive tbody td:before
 .responsive-480.fluid.autocol-6-9,
 .responsive-480.fluid.autocol-8-12
 {
-    width:66.666%;
+    width: 66.66%;
 }
 .responsive-480  .fluid.autocol-1-4,
 .responsive-480  .fluid.autocol-2-8,
@@ -1884,7 +2497,7 @@ table.responsive tbody td:before
 .responsive-480.fluid.autocol-2-8,
 .responsive-480.fluid.autocol-3-12
 {
-    width:25%;
+    width: 25%;
 }
 .responsive-480  .fluid.autocol-3-4,
 .responsive-480  .fluid.autocol-6-8,
@@ -1893,450 +2506,435 @@ table.responsive tbody td:before
 .responsive-480.fluid.autocol-6-8,
 .responsive-480.fluid.autocol-9-12
 {
-    width:75%;
+    width: 75%;
 }
 .responsive-480  .fluid.autocol-1-5,
 .responsive-480  .fluid.autocol-2-10,
 .responsive-480.fluid.autocol-1-5,
 .responsive-480.fluid.autocol-2-10 
 {
-    width:20%;
+    width: 20%;
 }
 .responsive-480  .fluid.autocol-2-5,
 .responsive-480  .fluid.autocol-4-10,
 .responsive-480.fluid.autocol-2-5,
 .responsive-480.fluid.autocol-4-10
 {
-    width:40%;
+    width: 40%;
 }
 .responsive-480  .fluid.autocol-3-5,
 .responsive-480  .fluid.autocol-6-10,
 .responsive-480.fluid.autocol-3-5,
 .responsive-480.fluid.autocol-6-10
 {
-    width:60%;
+    width: 60%;
 }
 .responsive-480  .fluid.autocol-4-5,
 .responsive-480  .fluid.autocol-8-10,
 .responsive-480.fluid.autocol-4-5,
 .responsive-480.fluid.autocol-8-10
 {
-    width:80%;
+    width: 80%;
 }
 .responsive-480  .fluid.autocol-1-6,
 .responsive-480  .fluid.autocol-2-12,
 .responsive-480.fluid.autocol-1-6,
 .responsive-480.fluid.autocol-2-12
 {
-    width:16.666%;
+    width: 16.66%;
 }
 .responsive-480  .fluid.autocol-5-6,
 .responsive-480  .fluid.autocol-10-12,
 .responsive-480.fluid.autocol-5-6,
 .responsive-480.fluid.autocol-10-12
 {
-    width:83.333%;
+    width: 83.33%;
 }
 .responsive-480  .fluid.autocol-1-7,
 .responsive-480.fluid.autocol-1-7
 {
-    width:14.286%;
+    width: 14.28%;
 }
 .responsive-480  .fluid.autocol-2-7,
 .responsive-480.fluid.autocol-2-7
 {
-    width:28.571%;
+    width: 28.57%;
 }
 .responsive-480   .fluid.autocol-3-7,
 .responsive-480.fluid.autocol-3-7
 {
-    width:42.857%;
+    width: 42.85%;
 }
 .responsive-480   .fluid.autocol-4-7,
 .responsive-480.fluid.autocol-4-7
 {
-    width:57.142%;
+    width: 57.14%;
 }
 .responsive-480   .fluid.autocol-5-7,
 .responsive-480.fluid.autocol-5-7
 {
-    width:71.428%;
+    width: 71.42%;
 }
 .responsive-480   .fluid.autocol-6-7,
 .responsive-480.fluid.autocol-6-7
 {
-    width:85.714%;
+    width: 85.71%;
 }
 .responsive-480   .fluid.autocol-1-8,
 .responsive-480.fluid.autocol-1-8
 {
-    width:12.5%;
+    width: 12.5%;
 }
 .responsive-480   .fluid.autocol-3-8,
 .responsive-480.fluid.autocol-3-8
 {
-    width:37.5%;
+    width: 37.5%;
 }
 .responsive-480   .fluid.autocol-5-8,
 .responsive-480.fluid.autocol-5-8
 {
-    width:62.5%;
+    width: 62.5%;
 }
 .responsive-480   .fluid.autocol-7-8,
 .responsive-480.fluid.autocol-7-8
 {
-    width:87.5%;
+    width: 87.5%;
 }
 .responsive-480  .fluid.autocol-1-9,
 .responsive-480.fluid.autocol-1-9
 {
-    width:11.11%;
+    width: 11.11%;
 }
 .responsive-480   .fluid.autocol-2-9,
 .responsive-480.fluid.autocol-2-9
 {
-    width:22.22%;
+    width: 22.22%;
 }
 .responsive-480  .fluid.autocol-4-9,
 .responsive-480.fluid.autocol-4-9
 {
-    width:44.44%;
+    width: 44.44%;
 }
 .responsive-480  .fluid.autocol-5-9,
 .responsive-480.fluid.autocol-5-9
 {
-    width:55.55%;
+    width: 55.55%;
 }
 .responsive-480  .fluid.autocol-7-9,
 .responsive-480.fluid.autocol-7-9
 {
-    width:77.77%;
+    width: 77.77%;
 }
 .responsive-480  .fluid.autocol-8-9,
 .responsive-480.fluid.autocol-8-9
 {
-    width:99.99%;
+    width: 88.88%;
 }
 .responsive-480  .fluid.autocol-1-10,
 .responsive-480.fluid.autocol-1-10
 {
-    width:10%;
+    width: 10%;
 }
 .responsive-480  .fluid.autocol-3-10,
 .responsive-480.fluid.autocol-3-10
 {
-    width:30%;
+    width: 30%;
 }
 .responsive-480  .fluid.autocol-6-10,
 .responsive-480.fluid.autocol-6-10
 {
-    width:60%;
+    width: 60%;
 }
 .responsive-480  .fluid.autocol-7-10,
 .responsive-480.fluid.autocol-7-10
 {
-    width:70%;
+    width: 70%;
 }
 .responsive-480  .fluid.autocol-9-10,
 .responsive-480.fluid.autocol-9-10
 {
-    width:90%;
+    width: 90%;
 }
 .responsive-480  .fluid.autocol-1-12,
 .responsive-480.fluid.autocol-1-12
 {
-    width:8.333%;
+    width: 8.33%;
 }
 .responsive-480  .fluid.autocol-5-12,
 .responsive-480.fluid.autocol-5-12
 {
-    width:41.666%;
+    width: 41.66%;
 }
 .responsive-480  .fluid.autocol-7-12,
 .responsive-480.fluid.autocol-7-12
 {
-    width:58.333%;
+    width: 58.33%;
 }
 .responsive-480  .fluid.autocol-11-12,
 .responsive-480.fluid.autocol-11-12
 {
-    width:91.666%;
+    width: 91.66%;
 }
 .responsive-480  .autorelative,
 .responsive-480.autorelative
 {
-    position:relative;
+    position: relative;
 }
 .responsive-480  .autoabsolute,
 .responsive-480.autoabsolute
 {
-    position:absolute;
+    position: absolute;
 }
 .responsive-480  .autovisible,
 .responsive-480.autovisible
 {
-    visibility:visible;
+    visibility: visible;
 }
 .responsive-480  .autohidden,
 .responsive-480.autohidden
 {
-    visibility:hidden;
+    visibility: hidden;
 }
 .responsive-480  .autoscroll-x,
 .responsive-480.autoscroll-x
 {
-    overflow-x:auto;
+    overflow-x: auto;
 }
 .responsive-480  .autoscroll-y,
 .responsive-480.autoscroll-y
 {
-    overflow-y:auto;
+    overflow-y: auto;
 }
 .responsive-480  .autowidth,
 .responsive-480.autowidth
 {
-    width:100% !important;
+    width: 100% !important;
 }
 .responsive-480  .autowidth-reset,
 .responsive-480.autowidth-reset
 {
-    width:0 !important;
+    width: 0 !important;
 }
 .responsive-480  .autoheight-reset,
 .responsive-480.autoheight-reset
 {
-    height:0;
+    height: 0;
 }
 .responsive-480  .autoheight,
 .responsive-480.autoheight
 {
-    height:auto;
+    height: auto;
 }
 .responsive-480  .autobreak,
 .responsive-480.autobreak
 {
-    display:block;
-    width:1px;
-    height:1px;
-    float:none;
-    clear:both;
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
 }
 .responsive-480  .autounbreak,
 .responsive-480.autounbreak
 {
-    display:inline-block;
-    width:0;
-    height:0;
-    float:left;
-    clear:none;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
 }
 .responsive-480  .autounbreak.right,
 .responsive-480  .autounbreak.float-right,
 .responsive-480.autounbreak.right,
 .responsive-480.autounbreak.float-right
 {
-    float:right;
+    float: right;
 }
 .responsive-480  .autohide,
 .responsive-480.autohide
 {
-    display:none !important;
+    display: none !important;
 }
 .responsive-480  .autoshow,
-.responsive-480.autoshow 
+.responsive-480.autoshow ,
+.responsive-480  .autoblock,
+.responsive-480.autoblock
 {
-    display:block;
+    display: block;
 }
 .responsive-480  .autoinline,
 .responsive-480.autoinline
 {
-    display:inline-block;
-}
-.responsive-480  .autoblock,
-.responsive-480.autoblock
-{
-    display:block;
+    display: inline-block;
 }
 .responsive-480  .autotext-left,
 .responsive-480.autotext-left
 {
-    text-align:left;
+    text-align: left;
 }
 .responsive-480  .autotext-right,
 .responsive-480.autotext-right
 {
-    text-align:right;
+    text-align: right;
 }
 .responsive-480  .autotext-center,
 .responsive-480.autotext-center
 {
-    text-align:center;
+    text-align: center;
 }
 .responsive-480  .autotext-justify,
 .responsive-480.autotext-justify
 {
-    text-align:justify;
+    text-align: justify;
 }
 .responsive-480  .autofloat-left,
 .responsive-480.autofloat-left
 {
-    float:left;
+    float: left;
 }
 .responsive-480  .autofloat-right,
 .responsive-480.autofloat-right
 {
-    float:right;
+    float: right;
 }
 .responsive-480  .autofloat-none,
 .responsive-480.autofloat-none
 {
-    float:none;
+    float: none;
 }
 .responsive-480  .autoclear-left,
 .responsive-480.autoclear-left
 {
-    clear:left;
+    clear: left;
 }
 .responsive-480  .autoclear-right,
 .responsive-480.autoclear-right
 {
-    clear:right;
+    clear: right;
 }
 .responsive-480  .autoclear-both,
 .responsive-480.autoclear-both
 {
-    clear:both;
+    clear: both;
 }
 .responsive-480  .automargin-reset,
 .responsive-480.automargin-reset
 {
-    margin:0 !important;
+    margin: 0 !important;
 }
 .responsive-480  .automargin-reset-h,
 .responsive-480.automargin-reset-h
 {
-    margin-left:0 !important;
-    margin-right:0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 .responsive-480  .automargin-reset-v,
 .responsive-480.automargin-reset-v
 {
-    margin-top:0 !important;
-    margin-bottom:0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 .responsive-480  .autopadding-reset,
 .responsive-480.autopadding-reset
 {
-    padding:0 !important;
+    padding: 0 !important;
 }
 .responsive-480  .autopadding-reset-h,
 .responsive-480.autopadding-reset-h
 {
-    padding-left:0 !important;
-    padding-right:0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 .responsive-480  .autopadding-reset-v,
 .responsive-480.autopadding-reset-v
 {
-    padding-top:0 !important;
-    padding-bottom:0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 .responsive-480  .autoreverse-order,
 .responsive-480.autoreverse-order
 {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 .responsive-480  .autoreverse-order > *,
 .responsive-480.autoreverse-order > *
 {
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 .responsive-480  .autoreverse-flexorder-rows,
 .responsive-480.autoreverse-flexorder-rows
 {
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
 }
 .responsive-480  .autoreverse-flexorder,
 .responsive-480.autoreverse-flexorder
 {
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
 }
+.responsive-480  table.responsive,
+.responsive-480  table.responsive thead,
+.responsive-480  table.responsive tbody, 
+.responsive-480  table.responsive tr,
+.responsive-480  table.responsive th, 
+.responsive-480  table.responsive td,
+table.responsive.responsive-480,
+table.responsive.responsive-480 thead,
+table.responsive.responsive-480 tbody, 
+table.responsive.responsive-480 tr,
+table.responsive.responsive-480 th, 
+table.responsive.responsive-480 td
+{ 
+    display: block; 
+    width: 100%; 
 }
-
-/* 
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-
-http://purecss.io/grids/ and http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/#relative
-for relative lengths (i.e em instead of px) in media queries, 1em = 16px
-*/
-@media 
-only screen and (max-width: 47.5em),
-(min-device-width: 48em) and (max-device-width: 64em)  {
-    /* Force table to not be like tables anymore */
-    table.responsive,
-    table.responsive thead,
-    table.responsive tbody, 
-    table.responsive tr,
-    table.responsive th, 
-    table.responsive td
-        { 
-        display: block; 
-        width: 100%; 
-    }
-
-    /* Hide table headers (but not display: none;, for accessibility) */
-    table.responsive thead tr 
-        { 
-        position: absolute;
-        top: -9999px; left: -9999px;
-    }
-
-    table.responsive tr 
-        { 
-        margin-bottom: 1px; 
-    }
-
-    table.responsive td,
-    /* take care of jquery.dataTables plugin as well */
-    table.responsive.dataTable tbody td 
-        { 
-        /* Behave  like a "row" */
-        box-sizing:border-box;
-        /*width: 50%;*/
-        padding-left: 30% !important;
-        padding-right: 15% !important;
-        min-height: 2em;
-    }
-
-    table.responsive.rtl td,
-    /* take care of jquery.dataTables plugin as well */
-    table.responsive.rtl.dataTable tbody td 
-        { 
-        padding-left: 15% !important;
-        padding-right: 30% !important;
-    }
-
-    table.responsive tbody td:before
-        { 
-        /* Now like a table header */
-        display: block;
-        top: 0; left: 0;
-        width: 25%; 
-        white-space: nowrap;
-        overflow: hidden;
-        text-align: right;
-        text-overflow: ellipsis;
-        /* add the Label */
-        content: attr(data-column);
-    }
-    
-    table.responsive.rtl tbody td:before 
-        { 
-        left: auto; right: 0;
-        text-align: left;
-    }
+.responsive-480  table.responsive thead tr,
+table.responsive.responsive-480 thead tr 
+{ 
+    position: absolute;
+    top: -9999px; left: -9999px;
+}
+.responsive-480  table.responsive tr,
+table.responsive.responsive-480 tr 
+{ 
+    margin-bottom: 1px; 
+}
+.responsive-480  table.responsive td,
+.responsive-480  table.responsive.dataTable tbody td,
+table.responsive.responsive-480 td,
+table.responsive.responsive-480.dataTable tbody td 
+{ 
+    box-sizing: border-box;
+    /*width: 50%;*/
+    padding-left: 30% !important;
+    padding-right: 15% !important;
+    min-height: 2em;
+}
+.responsive-480  table.responsive.rtl td,
+.responsive-480  table.responsive.rtl.dataTable tbody td,
+table.responsive.responsive-480.rtl td,
+table.responsive.responsive-480.rtl.dataTable tbody td 
+{ 
+    padding-left: 15% !important;
+    padding-right: 30% !important;
+}
+.responsive-480  table.responsive tbody td:before,
+table.responsive.responsive-480 tbody td:before
+{ 
+    display: block;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    content: attr(data-column);
+}
+.responsive-480  table.responsive.rtl tbody td:before,
+table.responsive.responsive-480.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
+}
 }
 
 /* clearfix container hack */
