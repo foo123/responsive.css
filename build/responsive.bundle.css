@@ -1868,6 +1868,1064 @@ table.responsive.responsive-1024.rtl tbody td:before
 }
 }
 
+@media only screen and (max-width: 54em), only screen and (max-device-width: 54em)
+{
+.responsive-864  .fluid.autofloat-none:not(.autoadjust),
+.responsive-864  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
+.responsive-864.fluid.autofloat-none:not(.autoadjust),
+.responsive-864.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
+{
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.responsive-864  .fluid.autocol-1-1,
+.responsive-864.fluid.autocol-1-1
+{
+    float: none;
+    clear: both;
+    width: 100%;
+}
+.responsive-864  .fluid.autocol-1-2,
+.responsive-864  .fluid.autocol-2-4,
+.responsive-864  .fluid.autocol-3-6,
+.responsive-864  .fluid.autocol-4-8,
+.responsive-864  .fluid.autocol-5-10,
+.responsive-864  .fluid.autocol-6-12,
+.responsive-864.fluid.autocol-1-2,
+.responsive-864.fluid.autocol-2-4,
+.responsive-864.fluid.autocol-3-6,
+.responsive-864.fluid.autocol-4-8,
+.responsive-864.fluid.autocol-5-10,
+.responsive-864.fluid.autocol-6-12
+{
+    width: 50%;
+}
+.responsive-864  .fluid.autocol-1-3,
+.responsive-864  .fluid.autocol-2-6,
+.responsive-864  .fluid.autocol-3-9,
+.responsive-864  .fluid.autocol-4-12,
+.responsive-864.fluid.autocol-1-3,
+.responsive-864.fluid.autocol-2-6,
+.responsive-864.fluid.autocol-3-9,
+.responsive-864.fluid.autocol-4-12
+{
+    width: 33.33%;
+}
+.responsive-864  .fluid.autocol-2-3,
+.responsive-864  .fluid.autocol-4-6,
+.responsive-864  .fluid.autocol-6-9,
+.responsive-864  .fluid.autocol-8-12,
+.responsive-864.fluid.autocol-2-3,
+.responsive-864.fluid.autocol-4-6,
+.responsive-864.fluid.autocol-6-9,
+.responsive-864.fluid.autocol-8-12
+{
+    width: 66.66%;
+}
+.responsive-864  .fluid.autocol-1-4,
+.responsive-864  .fluid.autocol-2-8,
+.responsive-864  .fluid.autocol-3-12,
+.responsive-864.fluid.autocol-1-4,
+.responsive-864.fluid.autocol-2-8,
+.responsive-864.fluid.autocol-3-12
+{
+    width: 25%;
+}
+.responsive-864  .fluid.autocol-3-4,
+.responsive-864  .fluid.autocol-6-8,
+.responsive-864  .fluid.autocol-9-12,
+.responsive-864.fluid.autocol-3-4,
+.responsive-864.fluid.autocol-6-8,
+.responsive-864.fluid.autocol-9-12
+{
+    width: 75%;
+}
+.responsive-864  .fluid.autocol-1-5,
+.responsive-864  .fluid.autocol-2-10,
+.responsive-864.fluid.autocol-1-5,
+.responsive-864.fluid.autocol-2-10 
+{
+    width: 20%;
+}
+.responsive-864  .fluid.autocol-2-5,
+.responsive-864  .fluid.autocol-4-10,
+.responsive-864.fluid.autocol-2-5,
+.responsive-864.fluid.autocol-4-10
+{
+    width: 40%;
+}
+.responsive-864  .fluid.autocol-3-5,
+.responsive-864  .fluid.autocol-6-10,
+.responsive-864.fluid.autocol-3-5,
+.responsive-864.fluid.autocol-6-10
+{
+    width: 60%;
+}
+.responsive-864  .fluid.autocol-4-5,
+.responsive-864  .fluid.autocol-8-10,
+.responsive-864.fluid.autocol-4-5,
+.responsive-864.fluid.autocol-8-10
+{
+    width: 80%;
+}
+.responsive-864  .fluid.autocol-1-6,
+.responsive-864  .fluid.autocol-2-12,
+.responsive-864.fluid.autocol-1-6,
+.responsive-864.fluid.autocol-2-12
+{
+    width: 16.66%;
+}
+.responsive-864  .fluid.autocol-5-6,
+.responsive-864  .fluid.autocol-10-12,
+.responsive-864.fluid.autocol-5-6,
+.responsive-864.fluid.autocol-10-12
+{
+    width: 83.33%;
+}
+.responsive-864  .fluid.autocol-1-7,
+.responsive-864.fluid.autocol-1-7
+{
+    width: 14.28%;
+}
+.responsive-864  .fluid.autocol-2-7,
+.responsive-864.fluid.autocol-2-7
+{
+    width: 28.57%;
+}
+.responsive-864   .fluid.autocol-3-7,
+.responsive-864.fluid.autocol-3-7
+{
+    width: 42.85%;
+}
+.responsive-864   .fluid.autocol-4-7,
+.responsive-864.fluid.autocol-4-7
+{
+    width: 57.14%;
+}
+.responsive-864   .fluid.autocol-5-7,
+.responsive-864.fluid.autocol-5-7
+{
+    width: 71.42%;
+}
+.responsive-864   .fluid.autocol-6-7,
+.responsive-864.fluid.autocol-6-7
+{
+    width: 85.71%;
+}
+.responsive-864   .fluid.autocol-1-8,
+.responsive-864.fluid.autocol-1-8
+{
+    width: 12.5%;
+}
+.responsive-864   .fluid.autocol-3-8,
+.responsive-864.fluid.autocol-3-8
+{
+    width: 37.5%;
+}
+.responsive-864   .fluid.autocol-5-8,
+.responsive-864.fluid.autocol-5-8
+{
+    width: 62.5%;
+}
+.responsive-864   .fluid.autocol-7-8,
+.responsive-864.fluid.autocol-7-8
+{
+    width: 87.5%;
+}
+.responsive-864  .fluid.autocol-1-9,
+.responsive-864.fluid.autocol-1-9
+{
+    width: 11.11%;
+}
+.responsive-864   .fluid.autocol-2-9,
+.responsive-864.fluid.autocol-2-9
+{
+    width: 22.22%;
+}
+.responsive-864  .fluid.autocol-4-9,
+.responsive-864.fluid.autocol-4-9
+{
+    width: 44.44%;
+}
+.responsive-864  .fluid.autocol-5-9,
+.responsive-864.fluid.autocol-5-9
+{
+    width: 55.55%;
+}
+.responsive-864  .fluid.autocol-7-9,
+.responsive-864.fluid.autocol-7-9
+{
+    width: 77.77%;
+}
+.responsive-864  .fluid.autocol-8-9,
+.responsive-864.fluid.autocol-8-9
+{
+    width: 88.88%;
+}
+.responsive-864  .fluid.autocol-1-10,
+.responsive-864.fluid.autocol-1-10
+{
+    width: 10%;
+}
+.responsive-864  .fluid.autocol-3-10,
+.responsive-864.fluid.autocol-3-10
+{
+    width: 30%;
+}
+.responsive-864  .fluid.autocol-6-10,
+.responsive-864.fluid.autocol-6-10
+{
+    width: 60%;
+}
+.responsive-864  .fluid.autocol-7-10,
+.responsive-864.fluid.autocol-7-10
+{
+    width: 70%;
+}
+.responsive-864  .fluid.autocol-9-10,
+.responsive-864.fluid.autocol-9-10
+{
+    width: 90%;
+}
+.responsive-864  .fluid.autocol-1-12,
+.responsive-864.fluid.autocol-1-12
+{
+    width: 8.33%;
+}
+.responsive-864  .fluid.autocol-5-12,
+.responsive-864.fluid.autocol-5-12
+{
+    width: 41.66%;
+}
+.responsive-864  .fluid.autocol-7-12,
+.responsive-864.fluid.autocol-7-12
+{
+    width: 58.33%;
+}
+.responsive-864  .fluid.autocol-11-12,
+.responsive-864.fluid.autocol-11-12
+{
+    width: 91.66%;
+}
+.responsive-864  .autorelative,
+.responsive-864.autorelative
+{
+    position: relative;
+}
+.responsive-864  .autoabsolute,
+.responsive-864.autoabsolute
+{
+    position: absolute;
+}
+.responsive-864  .autovisible,
+.responsive-864.autovisible
+{
+    visibility: visible;
+}
+.responsive-864  .autohidden,
+.responsive-864.autohidden
+{
+    visibility: hidden;
+}
+.responsive-864  .autoscroll-x,
+.responsive-864.autoscroll-x
+{
+    overflow-x: auto;
+}
+.responsive-864  .autoscroll-y,
+.responsive-864.autoscroll-y
+{
+    overflow-y: auto;
+}
+.responsive-864  .autowidth,
+.responsive-864.autowidth
+{
+    width: 100% !important;
+}
+.responsive-864  .autowidth-reset,
+.responsive-864.autowidth-reset
+{
+    width: 0 !important;
+}
+.responsive-864  .autoheight-reset,
+.responsive-864.autoheight-reset
+{
+    height: 0;
+}
+.responsive-864  .autoheight,
+.responsive-864.autoheight
+{
+    height: auto;
+}
+.responsive-864  .autobreak,
+.responsive-864.autobreak
+{
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
+}
+.responsive-864  .autounbreak,
+.responsive-864.autounbreak
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
+}
+.responsive-864  .autounbreak.right,
+.responsive-864  .autounbreak.float-right,
+.responsive-864.autounbreak.right,
+.responsive-864.autounbreak.float-right
+{
+    float: right;
+}
+.responsive-864  .autohide,
+.responsive-864.autohide
+{
+    display: none !important;
+}
+.responsive-864  .autoshow,
+.responsive-864.autoshow ,
+.responsive-864  .autoblock,
+.responsive-864.autoblock
+{
+    display: block;
+}
+.responsive-864  .autoinline,
+.responsive-864.autoinline
+{
+    display: inline-block;
+}
+.responsive-864  .autotext-left,
+.responsive-864.autotext-left
+{
+    text-align: left;
+}
+.responsive-864  .autotext-right,
+.responsive-864.autotext-right
+{
+    text-align: right;
+}
+.responsive-864  .autotext-center,
+.responsive-864.autotext-center
+{
+    text-align: center;
+}
+.responsive-864  .autotext-justify,
+.responsive-864.autotext-justify
+{
+    text-align: justify;
+}
+.responsive-864  .autofloat-left,
+.responsive-864.autofloat-left
+{
+    float: left;
+}
+.responsive-864  .autofloat-right,
+.responsive-864.autofloat-right
+{
+    float: right;
+}
+.responsive-864  .autofloat-none,
+.responsive-864.autofloat-none
+{
+    float: none;
+}
+.responsive-864  .autoclear-left,
+.responsive-864.autoclear-left
+{
+    clear: left;
+}
+.responsive-864  .autoclear-right,
+.responsive-864.autoclear-right
+{
+    clear: right;
+}
+.responsive-864  .autoclear-both,
+.responsive-864.autoclear-both
+{
+    clear: both;
+}
+.responsive-864  .automargin-reset,
+.responsive-864.automargin-reset
+{
+    margin: 0 !important;
+}
+.responsive-864  .automargin-reset-h,
+.responsive-864.automargin-reset-h
+{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.responsive-864  .automargin-reset-v,
+.responsive-864.automargin-reset-v
+{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.responsive-864  .autopadding-reset,
+.responsive-864.autopadding-reset
+{
+    padding: 0 !important;
+}
+.responsive-864  .autopadding-reset-h,
+.responsive-864.autopadding-reset-h
+{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.responsive-864  .autopadding-reset-v,
+.responsive-864.autopadding-reset-v
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.responsive-864  .autoreverse-order,
+.responsive-864.autoreverse-order
+{
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+}
+.responsive-864  .autoreverse-order > *,
+.responsive-864.autoreverse-order > *
+{
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+}
+.responsive-864  .autoreverse-flexorder-rows,
+.responsive-864.autoreverse-flexorder-rows
+{
+    flex-direction: row-reverse;
+}
+.responsive-864  .autoreverse-flexorder,
+.responsive-864.autoreverse-flexorder
+{
+    flex-direction: column-reverse;
+}
+.responsive-864  table.responsive,
+.responsive-864  table.responsive thead,
+.responsive-864  table.responsive tbody, 
+.responsive-864  table.responsive tr,
+.responsive-864  table.responsive th, 
+.responsive-864  table.responsive td,
+table.responsive.responsive-864,
+table.responsive.responsive-864 thead,
+table.responsive.responsive-864 tbody, 
+table.responsive.responsive-864 tr,
+table.responsive.responsive-864 th, 
+table.responsive.responsive-864 td
+{ 
+    display: block; 
+    width: 100%; 
+}
+.responsive-864  table.responsive thead tr,
+table.responsive.responsive-864 thead tr 
+{ 
+    position: absolute;
+    top: -9999px; left: -9999px;
+}
+.responsive-864  table.responsive tr,
+table.responsive.responsive-864 tr 
+{ 
+    margin-bottom: 1px; 
+}
+.responsive-864  table.responsive td,
+.responsive-864  table.responsive.dataTable tbody td,
+table.responsive.responsive-864 td,
+table.responsive.responsive-864.dataTable tbody td 
+{ 
+    -webkit-box-sizing: border-box;
+ 
+    -moz-box-sizing: border-box;
+ 
+    -ms-box-sizing: border-box;
+ 
+    -o-box-sizing: border-box;
+ 
+    box-sizing: border-box;
+    
+    padding-left: 30% !important;
+    padding-right: 15% !important;
+    min-height: 2em;
+}
+.responsive-864  table.responsive.rtl td,
+.responsive-864  table.responsive.rtl.dataTable tbody td,
+table.responsive.responsive-864.rtl td,
+table.responsive.responsive-864.rtl.dataTable tbody td 
+{ 
+    padding-left: 15% !important;
+    padding-right: 30% !important;
+}
+.responsive-864  table.responsive tbody td:before,
+table.responsive.responsive-864 tbody td:before
+{ 
+    display: block;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    content: attr(data-column);
+}
+.responsive-864  table.responsive.rtl tbody td:before,
+table.responsive.responsive-864.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
+}
+}
+
+@media only screen and (max-width: 48em), only screen and (max-device-width: 48em)
+{
+.responsive-768  .fluid.autofloat-none:not(.autoadjust),
+.responsive-768  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
+.responsive-768.fluid.autofloat-none:not(.autoadjust),
+.responsive-768.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
+{
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.responsive-768  .fluid.autocol-1-1,
+.responsive-768.fluid.autocol-1-1
+{
+    float: none;
+    clear: both;
+    width: 100%;
+}
+.responsive-768  .fluid.autocol-1-2,
+.responsive-768  .fluid.autocol-2-4,
+.responsive-768  .fluid.autocol-3-6,
+.responsive-768  .fluid.autocol-4-8,
+.responsive-768  .fluid.autocol-5-10,
+.responsive-768  .fluid.autocol-6-12,
+.responsive-768.fluid.autocol-1-2,
+.responsive-768.fluid.autocol-2-4,
+.responsive-768.fluid.autocol-3-6,
+.responsive-768.fluid.autocol-4-8,
+.responsive-768.fluid.autocol-5-10,
+.responsive-768.fluid.autocol-6-12
+{
+    width: 50%;
+}
+.responsive-768  .fluid.autocol-1-3,
+.responsive-768  .fluid.autocol-2-6,
+.responsive-768  .fluid.autocol-3-9,
+.responsive-768  .fluid.autocol-4-12,
+.responsive-768.fluid.autocol-1-3,
+.responsive-768.fluid.autocol-2-6,
+.responsive-768.fluid.autocol-3-9,
+.responsive-768.fluid.autocol-4-12
+{
+    width: 33.33%;
+}
+.responsive-768  .fluid.autocol-2-3,
+.responsive-768  .fluid.autocol-4-6,
+.responsive-768  .fluid.autocol-6-9,
+.responsive-768  .fluid.autocol-8-12,
+.responsive-768.fluid.autocol-2-3,
+.responsive-768.fluid.autocol-4-6,
+.responsive-768.fluid.autocol-6-9,
+.responsive-768.fluid.autocol-8-12
+{
+    width: 66.66%;
+}
+.responsive-768  .fluid.autocol-1-4,
+.responsive-768  .fluid.autocol-2-8,
+.responsive-768  .fluid.autocol-3-12,
+.responsive-768.fluid.autocol-1-4,
+.responsive-768.fluid.autocol-2-8,
+.responsive-768.fluid.autocol-3-12
+{
+    width: 25%;
+}
+.responsive-768  .fluid.autocol-3-4,
+.responsive-768  .fluid.autocol-6-8,
+.responsive-768  .fluid.autocol-9-12,
+.responsive-768.fluid.autocol-3-4,
+.responsive-768.fluid.autocol-6-8,
+.responsive-768.fluid.autocol-9-12
+{
+    width: 75%;
+}
+.responsive-768  .fluid.autocol-1-5,
+.responsive-768  .fluid.autocol-2-10,
+.responsive-768.fluid.autocol-1-5,
+.responsive-768.fluid.autocol-2-10 
+{
+    width: 20%;
+}
+.responsive-768  .fluid.autocol-2-5,
+.responsive-768  .fluid.autocol-4-10,
+.responsive-768.fluid.autocol-2-5,
+.responsive-768.fluid.autocol-4-10
+{
+    width: 40%;
+}
+.responsive-768  .fluid.autocol-3-5,
+.responsive-768  .fluid.autocol-6-10,
+.responsive-768.fluid.autocol-3-5,
+.responsive-768.fluid.autocol-6-10
+{
+    width: 60%;
+}
+.responsive-768  .fluid.autocol-4-5,
+.responsive-768  .fluid.autocol-8-10,
+.responsive-768.fluid.autocol-4-5,
+.responsive-768.fluid.autocol-8-10
+{
+    width: 80%;
+}
+.responsive-768  .fluid.autocol-1-6,
+.responsive-768  .fluid.autocol-2-12,
+.responsive-768.fluid.autocol-1-6,
+.responsive-768.fluid.autocol-2-12
+{
+    width: 16.66%;
+}
+.responsive-768  .fluid.autocol-5-6,
+.responsive-768  .fluid.autocol-10-12,
+.responsive-768.fluid.autocol-5-6,
+.responsive-768.fluid.autocol-10-12
+{
+    width: 83.33%;
+}
+.responsive-768  .fluid.autocol-1-7,
+.responsive-768.fluid.autocol-1-7
+{
+    width: 14.28%;
+}
+.responsive-768  .fluid.autocol-2-7,
+.responsive-768.fluid.autocol-2-7
+{
+    width: 28.57%;
+}
+.responsive-768   .fluid.autocol-3-7,
+.responsive-768.fluid.autocol-3-7
+{
+    width: 42.85%;
+}
+.responsive-768   .fluid.autocol-4-7,
+.responsive-768.fluid.autocol-4-7
+{
+    width: 57.14%;
+}
+.responsive-768   .fluid.autocol-5-7,
+.responsive-768.fluid.autocol-5-7
+{
+    width: 71.42%;
+}
+.responsive-768   .fluid.autocol-6-7,
+.responsive-768.fluid.autocol-6-7
+{
+    width: 85.71%;
+}
+.responsive-768   .fluid.autocol-1-8,
+.responsive-768.fluid.autocol-1-8
+{
+    width: 12.5%;
+}
+.responsive-768   .fluid.autocol-3-8,
+.responsive-768.fluid.autocol-3-8
+{
+    width: 37.5%;
+}
+.responsive-768   .fluid.autocol-5-8,
+.responsive-768.fluid.autocol-5-8
+{
+    width: 62.5%;
+}
+.responsive-768   .fluid.autocol-7-8,
+.responsive-768.fluid.autocol-7-8
+{
+    width: 87.5%;
+}
+.responsive-768  .fluid.autocol-1-9,
+.responsive-768.fluid.autocol-1-9
+{
+    width: 11.11%;
+}
+.responsive-768   .fluid.autocol-2-9,
+.responsive-768.fluid.autocol-2-9
+{
+    width: 22.22%;
+}
+.responsive-768  .fluid.autocol-4-9,
+.responsive-768.fluid.autocol-4-9
+{
+    width: 44.44%;
+}
+.responsive-768  .fluid.autocol-5-9,
+.responsive-768.fluid.autocol-5-9
+{
+    width: 55.55%;
+}
+.responsive-768  .fluid.autocol-7-9,
+.responsive-768.fluid.autocol-7-9
+{
+    width: 77.77%;
+}
+.responsive-768  .fluid.autocol-8-9,
+.responsive-768.fluid.autocol-8-9
+{
+    width: 88.88%;
+}
+.responsive-768  .fluid.autocol-1-10,
+.responsive-768.fluid.autocol-1-10
+{
+    width: 10%;
+}
+.responsive-768  .fluid.autocol-3-10,
+.responsive-768.fluid.autocol-3-10
+{
+    width: 30%;
+}
+.responsive-768  .fluid.autocol-6-10,
+.responsive-768.fluid.autocol-6-10
+{
+    width: 60%;
+}
+.responsive-768  .fluid.autocol-7-10,
+.responsive-768.fluid.autocol-7-10
+{
+    width: 70%;
+}
+.responsive-768  .fluid.autocol-9-10,
+.responsive-768.fluid.autocol-9-10
+{
+    width: 90%;
+}
+.responsive-768  .fluid.autocol-1-12,
+.responsive-768.fluid.autocol-1-12
+{
+    width: 8.33%;
+}
+.responsive-768  .fluid.autocol-5-12,
+.responsive-768.fluid.autocol-5-12
+{
+    width: 41.66%;
+}
+.responsive-768  .fluid.autocol-7-12,
+.responsive-768.fluid.autocol-7-12
+{
+    width: 58.33%;
+}
+.responsive-768  .fluid.autocol-11-12,
+.responsive-768.fluid.autocol-11-12
+{
+    width: 91.66%;
+}
+.responsive-768  .autorelative,
+.responsive-768.autorelative
+{
+    position: relative;
+}
+.responsive-768  .autoabsolute,
+.responsive-768.autoabsolute
+{
+    position: absolute;
+}
+.responsive-768  .autovisible,
+.responsive-768.autovisible
+{
+    visibility: visible;
+}
+.responsive-768  .autohidden,
+.responsive-768.autohidden
+{
+    visibility: hidden;
+}
+.responsive-768  .autoscroll-x,
+.responsive-768.autoscroll-x
+{
+    overflow-x: auto;
+}
+.responsive-768  .autoscroll-y,
+.responsive-768.autoscroll-y
+{
+    overflow-y: auto;
+}
+.responsive-768  .autowidth,
+.responsive-768.autowidth
+{
+    width: 100% !important;
+}
+.responsive-768  .autowidth-reset,
+.responsive-768.autowidth-reset
+{
+    width: 0 !important;
+}
+.responsive-768  .autoheight-reset,
+.responsive-768.autoheight-reset
+{
+    height: 0;
+}
+.responsive-768  .autoheight,
+.responsive-768.autoheight
+{
+    height: auto;
+}
+.responsive-768  .autobreak,
+.responsive-768.autobreak
+{
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
+}
+.responsive-768  .autounbreak,
+.responsive-768.autounbreak
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
+}
+.responsive-768  .autounbreak.right,
+.responsive-768  .autounbreak.float-right,
+.responsive-768.autounbreak.right,
+.responsive-768.autounbreak.float-right
+{
+    float: right;
+}
+.responsive-768  .autohide,
+.responsive-768.autohide
+{
+    display: none !important;
+}
+.responsive-768  .autoshow,
+.responsive-768.autoshow ,
+.responsive-768  .autoblock,
+.responsive-768.autoblock
+{
+    display: block;
+}
+.responsive-768  .autoinline,
+.responsive-768.autoinline
+{
+    display: inline-block;
+}
+.responsive-768  .autotext-left,
+.responsive-768.autotext-left
+{
+    text-align: left;
+}
+.responsive-768  .autotext-right,
+.responsive-768.autotext-right
+{
+    text-align: right;
+}
+.responsive-768  .autotext-center,
+.responsive-768.autotext-center
+{
+    text-align: center;
+}
+.responsive-768  .autotext-justify,
+.responsive-768.autotext-justify
+{
+    text-align: justify;
+}
+.responsive-768  .autofloat-left,
+.responsive-768.autofloat-left
+{
+    float: left;
+}
+.responsive-768  .autofloat-right,
+.responsive-768.autofloat-right
+{
+    float: right;
+}
+.responsive-768  .autofloat-none,
+.responsive-768.autofloat-none
+{
+    float: none;
+}
+.responsive-768  .autoclear-left,
+.responsive-768.autoclear-left
+{
+    clear: left;
+}
+.responsive-768  .autoclear-right,
+.responsive-768.autoclear-right
+{
+    clear: right;
+}
+.responsive-768  .autoclear-both,
+.responsive-768.autoclear-both
+{
+    clear: both;
+}
+.responsive-768  .automargin-reset,
+.responsive-768.automargin-reset
+{
+    margin: 0 !important;
+}
+.responsive-768  .automargin-reset-h,
+.responsive-768.automargin-reset-h
+{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.responsive-768  .automargin-reset-v,
+.responsive-768.automargin-reset-v
+{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.responsive-768  .autopadding-reset,
+.responsive-768.autopadding-reset
+{
+    padding: 0 !important;
+}
+.responsive-768  .autopadding-reset-h,
+.responsive-768.autopadding-reset-h
+{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.responsive-768  .autopadding-reset-v,
+.responsive-768.autopadding-reset-v
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.responsive-768  .autoreverse-order,
+.responsive-768.autoreverse-order
+{
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+}
+.responsive-768  .autoreverse-order > *,
+.responsive-768.autoreverse-order > *
+{
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+}
+.responsive-768  .autoreverse-flexorder-rows,
+.responsive-768.autoreverse-flexorder-rows
+{
+    flex-direction: row-reverse;
+}
+.responsive-768  .autoreverse-flexorder,
+.responsive-768.autoreverse-flexorder
+{
+    flex-direction: column-reverse;
+}
+.responsive-768  table.responsive,
+.responsive-768  table.responsive thead,
+.responsive-768  table.responsive tbody, 
+.responsive-768  table.responsive tr,
+.responsive-768  table.responsive th, 
+.responsive-768  table.responsive td,
+table.responsive.responsive-768,
+table.responsive.responsive-768 thead,
+table.responsive.responsive-768 tbody, 
+table.responsive.responsive-768 tr,
+table.responsive.responsive-768 th, 
+table.responsive.responsive-768 td
+{ 
+    display: block; 
+    width: 100%; 
+}
+.responsive-768  table.responsive thead tr,
+table.responsive.responsive-768 thead tr 
+{ 
+    position: absolute;
+    top: -9999px; left: -9999px;
+}
+.responsive-768  table.responsive tr,
+table.responsive.responsive-768 tr 
+{ 
+    margin-bottom: 1px; 
+}
+.responsive-768  table.responsive td,
+.responsive-768  table.responsive.dataTable tbody td,
+table.responsive.responsive-768 td,
+table.responsive.responsive-768.dataTable tbody td 
+{ 
+    -webkit-box-sizing: border-box;
+ 
+    -moz-box-sizing: border-box;
+ 
+    -ms-box-sizing: border-box;
+ 
+    -o-box-sizing: border-box;
+ 
+    box-sizing: border-box;
+    
+    padding-left: 30% !important;
+    padding-right: 15% !important;
+    min-height: 2em;
+}
+.responsive-768  table.responsive.rtl td,
+.responsive-768  table.responsive.rtl.dataTable tbody td,
+table.responsive.responsive-768.rtl td,
+table.responsive.responsive-768.rtl.dataTable tbody td 
+{ 
+    padding-left: 15% !important;
+    padding-right: 30% !important;
+}
+.responsive-768  table.responsive tbody td:before,
+table.responsive.responsive-768 tbody td:before
+{ 
+    display: block;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    content: attr(data-column);
+}
+.responsive-768  table.responsive.rtl tbody td:before,
+table.responsive.responsive-768.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
+}
+}
+
 @media handheld, only screen and (max-width: 48em), only screen and (max-device-width: 48em) and (orientation:portrait)
 {
 .responsive-768-portrait  .fluid.autofloat-none:not(.autoadjust),
@@ -2391,6 +3449,535 @@ table.responsive.responsive-768-portrait tbody td:before
 }
 .responsive-768-portrait  table.responsive.rtl tbody td:before,
 table.responsive.responsive-768-portrait.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
+}
+}
+
+@media only screen and (max-width: 40em), only screen and (max-device-width: 40em)
+{
+.responsive-640  .fluid.autofloat-none:not(.autoadjust),
+.responsive-640  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
+.responsive-640.fluid.autofloat-none:not(.autoadjust),
+.responsive-640.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
+{
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.responsive-640  .fluid.autocol-1-1,
+.responsive-640.fluid.autocol-1-1
+{
+    float: none;
+    clear: both;
+    width: 100%;
+}
+.responsive-640  .fluid.autocol-1-2,
+.responsive-640  .fluid.autocol-2-4,
+.responsive-640  .fluid.autocol-3-6,
+.responsive-640  .fluid.autocol-4-8,
+.responsive-640  .fluid.autocol-5-10,
+.responsive-640  .fluid.autocol-6-12,
+.responsive-640.fluid.autocol-1-2,
+.responsive-640.fluid.autocol-2-4,
+.responsive-640.fluid.autocol-3-6,
+.responsive-640.fluid.autocol-4-8,
+.responsive-640.fluid.autocol-5-10,
+.responsive-640.fluid.autocol-6-12
+{
+    width: 50%;
+}
+.responsive-640  .fluid.autocol-1-3,
+.responsive-640  .fluid.autocol-2-6,
+.responsive-640  .fluid.autocol-3-9,
+.responsive-640  .fluid.autocol-4-12,
+.responsive-640.fluid.autocol-1-3,
+.responsive-640.fluid.autocol-2-6,
+.responsive-640.fluid.autocol-3-9,
+.responsive-640.fluid.autocol-4-12
+{
+    width: 33.33%;
+}
+.responsive-640  .fluid.autocol-2-3,
+.responsive-640  .fluid.autocol-4-6,
+.responsive-640  .fluid.autocol-6-9,
+.responsive-640  .fluid.autocol-8-12,
+.responsive-640.fluid.autocol-2-3,
+.responsive-640.fluid.autocol-4-6,
+.responsive-640.fluid.autocol-6-9,
+.responsive-640.fluid.autocol-8-12
+{
+    width: 66.66%;
+}
+.responsive-640  .fluid.autocol-1-4,
+.responsive-640  .fluid.autocol-2-8,
+.responsive-640  .fluid.autocol-3-12,
+.responsive-640.fluid.autocol-1-4,
+.responsive-640.fluid.autocol-2-8,
+.responsive-640.fluid.autocol-3-12
+{
+    width: 25%;
+}
+.responsive-640  .fluid.autocol-3-4,
+.responsive-640  .fluid.autocol-6-8,
+.responsive-640  .fluid.autocol-9-12,
+.responsive-640.fluid.autocol-3-4,
+.responsive-640.fluid.autocol-6-8,
+.responsive-640.fluid.autocol-9-12
+{
+    width: 75%;
+}
+.responsive-640  .fluid.autocol-1-5,
+.responsive-640  .fluid.autocol-2-10,
+.responsive-640.fluid.autocol-1-5,
+.responsive-640.fluid.autocol-2-10 
+{
+    width: 20%;
+}
+.responsive-640  .fluid.autocol-2-5,
+.responsive-640  .fluid.autocol-4-10,
+.responsive-640.fluid.autocol-2-5,
+.responsive-640.fluid.autocol-4-10
+{
+    width: 40%;
+}
+.responsive-640  .fluid.autocol-3-5,
+.responsive-640  .fluid.autocol-6-10,
+.responsive-640.fluid.autocol-3-5,
+.responsive-640.fluid.autocol-6-10
+{
+    width: 60%;
+}
+.responsive-640  .fluid.autocol-4-5,
+.responsive-640  .fluid.autocol-8-10,
+.responsive-640.fluid.autocol-4-5,
+.responsive-640.fluid.autocol-8-10
+{
+    width: 80%;
+}
+.responsive-640  .fluid.autocol-1-6,
+.responsive-640  .fluid.autocol-2-12,
+.responsive-640.fluid.autocol-1-6,
+.responsive-640.fluid.autocol-2-12
+{
+    width: 16.66%;
+}
+.responsive-640  .fluid.autocol-5-6,
+.responsive-640  .fluid.autocol-10-12,
+.responsive-640.fluid.autocol-5-6,
+.responsive-640.fluid.autocol-10-12
+{
+    width: 83.33%;
+}
+.responsive-640  .fluid.autocol-1-7,
+.responsive-640.fluid.autocol-1-7
+{
+    width: 14.28%;
+}
+.responsive-640  .fluid.autocol-2-7,
+.responsive-640.fluid.autocol-2-7
+{
+    width: 28.57%;
+}
+.responsive-640   .fluid.autocol-3-7,
+.responsive-640.fluid.autocol-3-7
+{
+    width: 42.85%;
+}
+.responsive-640   .fluid.autocol-4-7,
+.responsive-640.fluid.autocol-4-7
+{
+    width: 57.14%;
+}
+.responsive-640   .fluid.autocol-5-7,
+.responsive-640.fluid.autocol-5-7
+{
+    width: 71.42%;
+}
+.responsive-640   .fluid.autocol-6-7,
+.responsive-640.fluid.autocol-6-7
+{
+    width: 85.71%;
+}
+.responsive-640   .fluid.autocol-1-8,
+.responsive-640.fluid.autocol-1-8
+{
+    width: 12.5%;
+}
+.responsive-640   .fluid.autocol-3-8,
+.responsive-640.fluid.autocol-3-8
+{
+    width: 37.5%;
+}
+.responsive-640   .fluid.autocol-5-8,
+.responsive-640.fluid.autocol-5-8
+{
+    width: 62.5%;
+}
+.responsive-640   .fluid.autocol-7-8,
+.responsive-640.fluid.autocol-7-8
+{
+    width: 87.5%;
+}
+.responsive-640  .fluid.autocol-1-9,
+.responsive-640.fluid.autocol-1-9
+{
+    width: 11.11%;
+}
+.responsive-640   .fluid.autocol-2-9,
+.responsive-640.fluid.autocol-2-9
+{
+    width: 22.22%;
+}
+.responsive-640  .fluid.autocol-4-9,
+.responsive-640.fluid.autocol-4-9
+{
+    width: 44.44%;
+}
+.responsive-640  .fluid.autocol-5-9,
+.responsive-640.fluid.autocol-5-9
+{
+    width: 55.55%;
+}
+.responsive-640  .fluid.autocol-7-9,
+.responsive-640.fluid.autocol-7-9
+{
+    width: 77.77%;
+}
+.responsive-640  .fluid.autocol-8-9,
+.responsive-640.fluid.autocol-8-9
+{
+    width: 88.88%;
+}
+.responsive-640  .fluid.autocol-1-10,
+.responsive-640.fluid.autocol-1-10
+{
+    width: 10%;
+}
+.responsive-640  .fluid.autocol-3-10,
+.responsive-640.fluid.autocol-3-10
+{
+    width: 30%;
+}
+.responsive-640  .fluid.autocol-6-10,
+.responsive-640.fluid.autocol-6-10
+{
+    width: 60%;
+}
+.responsive-640  .fluid.autocol-7-10,
+.responsive-640.fluid.autocol-7-10
+{
+    width: 70%;
+}
+.responsive-640  .fluid.autocol-9-10,
+.responsive-640.fluid.autocol-9-10
+{
+    width: 90%;
+}
+.responsive-640  .fluid.autocol-1-12,
+.responsive-640.fluid.autocol-1-12
+{
+    width: 8.33%;
+}
+.responsive-640  .fluid.autocol-5-12,
+.responsive-640.fluid.autocol-5-12
+{
+    width: 41.66%;
+}
+.responsive-640  .fluid.autocol-7-12,
+.responsive-640.fluid.autocol-7-12
+{
+    width: 58.33%;
+}
+.responsive-640  .fluid.autocol-11-12,
+.responsive-640.fluid.autocol-11-12
+{
+    width: 91.66%;
+}
+.responsive-640  .autorelative,
+.responsive-640.autorelative
+{
+    position: relative;
+}
+.responsive-640  .autoabsolute,
+.responsive-640.autoabsolute
+{
+    position: absolute;
+}
+.responsive-640  .autovisible,
+.responsive-640.autovisible
+{
+    visibility: visible;
+}
+.responsive-640  .autohidden,
+.responsive-640.autohidden
+{
+    visibility: hidden;
+}
+.responsive-640  .autoscroll-x,
+.responsive-640.autoscroll-x
+{
+    overflow-x: auto;
+}
+.responsive-640  .autoscroll-y,
+.responsive-640.autoscroll-y
+{
+    overflow-y: auto;
+}
+.responsive-640  .autowidth,
+.responsive-640.autowidth
+{
+    width: 100% !important;
+}
+.responsive-640  .autowidth-reset,
+.responsive-640.autowidth-reset
+{
+    width: 0 !important;
+}
+.responsive-640  .autoheight-reset,
+.responsive-640.autoheight-reset
+{
+    height: 0;
+}
+.responsive-640  .autoheight,
+.responsive-640.autoheight
+{
+    height: auto;
+}
+.responsive-640  .autobreak,
+.responsive-640.autobreak
+{
+    display: block;
+    width: 1px;
+    height: 1px;
+    float: none;
+    clear: both;
+}
+.responsive-640  .autounbreak,
+.responsive-640.autounbreak
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: left;
+    clear: none;
+}
+.responsive-640  .autounbreak.right,
+.responsive-640  .autounbreak.float-right,
+.responsive-640.autounbreak.right,
+.responsive-640.autounbreak.float-right
+{
+    float: right;
+}
+.responsive-640  .autohide,
+.responsive-640.autohide
+{
+    display: none !important;
+}
+.responsive-640  .autoshow,
+.responsive-640.autoshow ,
+.responsive-640  .autoblock,
+.responsive-640.autoblock
+{
+    display: block;
+}
+.responsive-640  .autoinline,
+.responsive-640.autoinline
+{
+    display: inline-block;
+}
+.responsive-640  .autotext-left,
+.responsive-640.autotext-left
+{
+    text-align: left;
+}
+.responsive-640  .autotext-right,
+.responsive-640.autotext-right
+{
+    text-align: right;
+}
+.responsive-640  .autotext-center,
+.responsive-640.autotext-center
+{
+    text-align: center;
+}
+.responsive-640  .autotext-justify,
+.responsive-640.autotext-justify
+{
+    text-align: justify;
+}
+.responsive-640  .autofloat-left,
+.responsive-640.autofloat-left
+{
+    float: left;
+}
+.responsive-640  .autofloat-right,
+.responsive-640.autofloat-right
+{
+    float: right;
+}
+.responsive-640  .autofloat-none,
+.responsive-640.autofloat-none
+{
+    float: none;
+}
+.responsive-640  .autoclear-left,
+.responsive-640.autoclear-left
+{
+    clear: left;
+}
+.responsive-640  .autoclear-right,
+.responsive-640.autoclear-right
+{
+    clear: right;
+}
+.responsive-640  .autoclear-both,
+.responsive-640.autoclear-both
+{
+    clear: both;
+}
+.responsive-640  .automargin-reset,
+.responsive-640.automargin-reset
+{
+    margin: 0 !important;
+}
+.responsive-640  .automargin-reset-h,
+.responsive-640.automargin-reset-h
+{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.responsive-640  .automargin-reset-v,
+.responsive-640.automargin-reset-v
+{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.responsive-640  .autopadding-reset,
+.responsive-640.autopadding-reset
+{
+    padding: 0 !important;
+}
+.responsive-640  .autopadding-reset-h,
+.responsive-640.autopadding-reset-h
+{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.responsive-640  .autopadding-reset-v,
+.responsive-640.autopadding-reset-v
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.responsive-640  .autoreverse-order,
+.responsive-640.autoreverse-order
+{
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+}
+.responsive-640  .autoreverse-order > *,
+.responsive-640.autoreverse-order > *
+{
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    -o-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+}
+.responsive-640  .autoreverse-flexorder-rows,
+.responsive-640.autoreverse-flexorder-rows
+{
+    flex-direction: row-reverse;
+}
+.responsive-640  .autoreverse-flexorder,
+.responsive-640.autoreverse-flexorder
+{
+    flex-direction: column-reverse;
+}
+.responsive-640  table.responsive,
+.responsive-640  table.responsive thead,
+.responsive-640  table.responsive tbody, 
+.responsive-640  table.responsive tr,
+.responsive-640  table.responsive th, 
+.responsive-640  table.responsive td,
+table.responsive.responsive-640,
+table.responsive.responsive-640 thead,
+table.responsive.responsive-640 tbody, 
+table.responsive.responsive-640 tr,
+table.responsive.responsive-640 th, 
+table.responsive.responsive-640 td
+{ 
+    display: block; 
+    width: 100%; 
+}
+.responsive-640  table.responsive thead tr,
+table.responsive.responsive-640 thead tr 
+{ 
+    position: absolute;
+    top: -9999px; left: -9999px;
+}
+.responsive-640  table.responsive tr,
+table.responsive.responsive-640 tr 
+{ 
+    margin-bottom: 1px; 
+}
+.responsive-640  table.responsive td,
+.responsive-640  table.responsive.dataTable tbody td,
+table.responsive.responsive-640 td,
+table.responsive.responsive-640.dataTable tbody td 
+{ 
+    -webkit-box-sizing: border-box;
+ 
+    -moz-box-sizing: border-box;
+ 
+    -ms-box-sizing: border-box;
+ 
+    -o-box-sizing: border-box;
+ 
+    box-sizing: border-box;
+    
+    padding-left: 30% !important;
+    padding-right: 15% !important;
+    min-height: 2em;
+}
+.responsive-640  table.responsive.rtl td,
+.responsive-640  table.responsive.rtl.dataTable tbody td,
+table.responsive.responsive-640.rtl td,
+table.responsive.responsive-640.rtl.dataTable tbody td 
+{ 
+    padding-left: 15% !important;
+    padding-right: 30% !important;
+}
+.responsive-640  table.responsive tbody td:before,
+table.responsive.responsive-640 tbody td:before
+{ 
+    display: block;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    content: attr(data-column);
+}
+.responsive-640  table.responsive.rtl tbody td:before,
+table.responsive.responsive-640.rtl tbody td:before 
 { 
     left: auto; right: 0;
     text-align: left;
