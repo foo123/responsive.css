@@ -486,6 +486,7 @@ table.responsive video
 }
 
 /* https://css-tricks.com/responsive-data-tables/ */
+table.responsive.dataTable,
 table.responsive
 { 
     position: relative;
@@ -493,6 +494,11 @@ table.responsive
     border-collapse: collapse; 
     width: 100%;
 }
+table.responsive.dataTable thead, 
+table.responsive.dataTable tbody, 
+table.responsive.dataTable th, 
+table.responsive.dataTable td, 
+table.responsive.dataTable tr,
 table.responsive thead, 
 table.responsive tbody, 
 table.responsive th, 
@@ -502,13 +508,269 @@ table.responsive tr
     position: relative;
     box-sizing: padding-box;
 }
+table.responsive.dataTable tbody td .data-column,
+table.responsive tbody td .data-column,
+table.responsive.dataTable tbody td:before,
 table.responsive tbody td:before 
 { 
     /* as a responsive table header */
     position: absolute;
     box-sizing: padding-box;
     height: 100%;
+    top: 0; left: 0;
+    width: 25%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
     display: none;
+}
+table.responsive.dataTable tbody td:before,
+table.responsive tbody td:before 
+{ 
+    content: attr(data-column);
+}
+table.responsive.dataTable.rtl tbody td .data-column,
+table.responsive.rtl tbody td .data-column, 
+table.responsive.dataTable.rtl tbody td:before,
+table.responsive.rtl tbody td:before 
+{ 
+    left: auto; right: 0;
+    text-align: left;
+}
+/* cellular / responsive table */
+table.cellular.responsive.dataTable,
+table.cellular.responsive.dataTable thead,
+table.cellular.responsive.dataTable tfoot,
+table.cellular.responsive.dataTable tbody,
+table.cellular.responsive.dataTable tr,
+table.cellular.responsive.dataTable td,
+table.cellular.responsive,
+table.cellular.responsive thead,
+table.cellular.responsive tfoot,
+table.cellular.responsive tbody,
+table.cellular.responsive tr,
+table.cellular.responsive td,
+table.cellular.dataTable,
+table.cellular.dataTable thead,
+table.cellular.dataTable tfoot,
+table.cellular.dataTable tbody,
+table.cellular.dataTable tr,
+table.cellular.dataTable td,
+table.cellular,
+table.cellular thead,
+table.cellular tfoot,
+table.cellular tbody,
+table.cellular tr,
+table.cellular td
+{
+    position: relative !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: inherit !important;
+    width: 100%;
+}
+table.cellular.responsive.dataTable,
+table.cellular.responsive,
+table.cellular.dataTable,
+table.cellular
+{
+    border-collapse: separate !important;
+    width: 100% !important;
+    text-align: left !important;
+}
+table.cellular.responsive.dataTable > thead,
+table.cellular.responsive.dataTable > tfoot,
+table.cellular.responsive.dataTable thead,
+table.cellular.responsive.dataTable tfoot,
+table.cellular.responsive > thead,
+table.cellular.responsive > tfoot,
+table.cellular.responsive thead,
+table.cellular.responsive tfoot,
+table.cellular.dataTable > thead,
+table.cellular.dataTable > tfoot,
+table.cellular.dataTable thead,
+table.cellular.dataTable tfoot,
+table.cellular > thead,
+table.cellular > tfoot,
+table.cellular thead,
+table.cellular tfoot
+{
+    position: absolute !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+    clear: both !important;
+}
+table.cellular.responsive.dataTable > tbody,
+table.cellular.responsive.dataTable tbody,
+table.cellular.responsive > tbody,
+table.cellular.responsive tbody,
+table.cellular.dataTable > tbody,
+table.cellular.dataTable tbody,
+table.cellular > tbody,
+table.cellular tbody
+{
+    float: none !important;
+    clear: both !important;
+}
+table.cellular.responsive.dataTable > tr,
+table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive > tr,
+table.cellular.responsive > tbody > tr,
+table.cellular.dataTable > tr,
+table.cellular.dataTable > tbody > tr,
+table.cellular > tr,
+table.cellular > tbody > tr
+{
+    float: left !important;
+    display: inline-block !important;
+    padding: 5px 1.6em 5px 1px !important;
+    min-height: 100px !important;
+}
+table.cellular.responsive.dataTable > tr > td,
+table.cellular.responsive.dataTable > tbody > tr > td,
+table.cellular.responsive > tr > td,
+table.cellular.responsive > tbody > tr > td,
+table.cellular.dataTable > tr > td,
+table.cellular.dataTable > tbody > tr > td,
+table.cellular > tr > td,
+table.cellular > tbody > tr > td
+{
+    min-height: 2em;
+    padding: 10px !important;
+}
+table.cellular.responsive.dataTable > tr > td .data-column,
+table.cellular.responsive.dataTable > tbody > tr > td .data-column,
+table.cellular.responsive > tr > td .data-column,
+table.cellular.responsive > tbody > tr > td .data-column,
+table.cellular.responsive.dataTable > tr > td:before,
+table.cellular.responsive.dataTable > tbody > tr > td:before,
+table.cellular.responsive > tr > td:before,
+table.cellular.responsive > tbody > tr > td:before,
+table.cellular.dataTable > tr > td .data-column,
+table.cellular.dataTable > tbody > tr > td .data-column,
+table.cellular > tr > td .data-column,
+table.cellular > tbody > tr > td .data-column,
+table.cellular.dataTable > tr > td:before,
+table.cellular.dataTable > tbody > tr > td:before,
+table.cellular > tr > td:before,
+table.cellular > tbody > tr > td:before
+{
+    position: relative;
+    display: inline-block !important;
+    box-sizing: border-box !important;
+    padding: 0; margin: 0; border: 0;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 120px;
+    margin-right: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+table.cellular.responsive.dataTable > tr > td:before,
+table.cellular.responsive.dataTable > tbody > tr > td:before,
+table.cellular.responsive > tr > td:before,
+table.cellular.responsive > tbody > tr > td:before,
+table.cellular.dataTable > tr > td:before,
+table.cellular.dataTable > tbody > tr > td:before,
+table.cellular > tr > td:before,
+table.cellular > tbody > tr > td:before
+{
+    content: attr(data-column);
+}
+table.cellular.responsive.dataTable > tr > td:after,
+table.cellular.responsive.dataTable > tbody > tr > td:after,
+table.cellular.responsive > tr > td:after,
+table.cellular.responsive > tbody > tr > td:after,
+table.cellular.dataTable > tr > td:after,
+table.cellular.dataTable > tbody > tr > td:after,
+table.cellular > tr > td:after,
+table.cellular > tbody > tr > td:after
+{
+    position: absolute;
+    display: block;
+    content: " ";
+    left: 0; bottom: 0;
+    width: 100%; height: 1px;
+}
+table.cellular.responsive.dataTable > tr,
+table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive > tr,
+table.cellular.responsive > tbody > tr,
+table.cellular.responsive.cell-1-1.dataTable > tr,
+table.cellular.responsive.cell-1-1.dataTable > tbody > tr,
+table.cellular.responsive.cell-1-1 > tr,
+table.cellular.responsive.cell-1-1 > tbody > tr,
+table.cellular.dataTable > tr,
+table.cellular.dataTable > tbody > tr,
+table.cellular > tr,
+table.cellular > tbody > tr,
+table.cellular.cell-1-1.dataTable > tr,
+table.cellular.cell-1-1.dataTable > tbody > tr,
+table.cellular.cell-1-1 > tr,
+table.cellular.cell-1-1 > tbody > tr
+{
+    width: 100% !important;
+}
+table.cellular.responsive.cell-1-2.dataTable > tr,
+table.cellular.responsive.cell-1-2.dataTable > tbody > tr,
+table.cellular.responsive.cell-1-2 > tr,
+table.cellular.responsive.cell-1-2 > tbody > tr,
+table.cellular.cell-1-2.dataTable > tr,
+table.cellular.cell-1-2.dataTable > tbody > tr,
+table.cellular.cell-1-2 > tr,
+table.cellular.cell-1-2 > tbody > tr
+{
+    width: 50% !important;
+}
+table.cellular.responsive.cell-1-3.dataTable > tr,
+table.cellular.responsive.cell-1-3.dataTable > tbody > tr,
+table.cellular.responsive.cell-1-3 > tr,
+table.cellular.responsive.cell-1-3 > tbody > tr,
+table.cellular.cell-1-3.dataTable > tr,
+table.cellular.cell-1-3.dataTable > tbody > tr,
+table.cellular.cell-1-3 > tr,
+table.cellular.cell-1-3 > tbody > tr
+{
+    width: 33.33% !important;
+}
+table.cellular.responsive.cell-1-4.dataTable > tr,
+table.cellular.responsive.cell-1-4.dataTable > tbody > tr,
+table.cellular.responsive.cell-1-4 > tr,
+table.cellular.responsive.cell-1-4 > tbody > tr,
+table.cellular.cell-1-4.dataTable > tr,
+table.cellular.cell-1-4.dataTable > tbody > tr,
+table.cellular.cell-1-4 > tr,
+table.cellular.cell-1-4 > tbody > tr
+{
+    width: 25% !important;
+}
+table.cellular.responsive.cell-1-5.dataTable > tr,
+table.cellular.responsive.cell-1-5.dataTable > tbody > tr,
+table.cellular.responsive.cell-1-5 > tr,
+table.cellular.responsive.cell-1-5 > tbody > tr,
+table.cellular.cell-1-5.dataTable > tr,
+table.cellular.cell-1-5.dataTable > tbody > tr,
+table.cellular.cell-1-5 > tr,
+table.cellular.cell-1-5 > tbody > tr
+{
+    width: 20% !important;
+}
+table.cellular.responsive.cell-1-6.dataTable > tr,
+table.cellular.responsive.cell-1-6.dataTable > tbody > tr,
+table.cellular.responsive.cell-1-6 > tr,
+table.cellular.responsive.cell-1-6 > tbody > tr,
+table.cellular.cell-1-6.dataTable > tr,
+table.cellular.cell-1-6.dataTable > tbody > tr,
+table.cellular.cell-1-6 > tr,
+table.cellular.cell-1-6 > tbody > tr
+{
+    width: 16.66% !important;
 }
 
 /* 
@@ -1007,19 +1269,17 @@ table.responsive.responsive-1024.rtl.dataTable tbody td
 table.responsive.responsive-1024 tbody td:before
 { 
     display: block;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    content: attr(data-column);
 }
-.responsive-1024-container  table.responsive.rtl tbody td:before,
-table.responsive.responsive-1024.rtl tbody td:before 
+.responsive-1024-container table.cellular.responsive.dataTable > tbody > tr,
+.responsive-1024-container table.cellular.responsive.dataTable  > tr,
+table.cellular.responsive.dataTable.responsive-1024 > tbody > tr,
+table.cellular.responsive.dataTable.responsive-1024  > tr,
+.responsive-1024-container table.cellular.responsive > tbody > tr,
+.responsive-1024-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-1024 > tbody > tr,
+table.cellular.responsive.responsive-1024  > tr
 { 
-    left: auto; right: 0;
-    text-align: left;
+    width: 100% !important;
 }
 }
 /* =Media query for medium screens
@@ -1513,19 +1773,17 @@ table.responsive.responsive-960.rtl.dataTable tbody td
 table.responsive.responsive-960 tbody td:before
 { 
     display: block;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    content: attr(data-column);
 }
-.responsive-960-container  table.responsive.rtl tbody td:before,
-table.responsive.responsive-960.rtl tbody td:before 
+.responsive-960-container table.cellular.responsive.dataTable > tbody > tr,
+.responsive-960-container table.cellular.responsive.dataTable  > tr,
+table.cellular.responsive.dataTable.responsive-960 > tbody > tr,
+table.cellular.responsive.dataTable.responsive-960  > tr,
+.responsive-960-container table.cellular.responsive > tbody > tr,
+.responsive-960-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-960 > tbody > tr,
+table.cellular.responsive.responsive-960  > tr
 { 
-    left: auto; right: 0;
-    text-align: left;
+    width: 100% !important;
 }
 }
 /* =Media query for smaller screens
@@ -2019,19 +2277,17 @@ table.responsive.responsive-864.rtl.dataTable tbody td
 table.responsive.responsive-864 tbody td:before
 { 
     display: block;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    content: attr(data-column);
 }
-.responsive-864-container  table.responsive.rtl tbody td:before,
-table.responsive.responsive-864.rtl tbody td:before 
+.responsive-864-container table.cellular.responsive.dataTable > tbody > tr,
+.responsive-864-container table.cellular.responsive.dataTable  > tr,
+table.cellular.responsive.dataTable.responsive-864 > tbody > tr,
+table.cellular.responsive.dataTable.responsive-864  > tr,
+.responsive-864-container table.cellular.responsive > tbody > tr,
+.responsive-864-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-864 > tbody > tr,
+table.cellular.responsive.responsive-864  > tr
 { 
-    left: auto; right: 0;
-    text-align: left;
+    width: 100% !important;
 }
 }
 /* =Media query for tablets
@@ -2525,19 +2781,17 @@ table.responsive.responsive-768.rtl.dataTable tbody td
 table.responsive.responsive-768 tbody td:before
 { 
     display: block;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    content: attr(data-column);
 }
-.responsive-768-container  table.responsive.rtl tbody td:before,
-table.responsive.responsive-768.rtl tbody td:before 
+.responsive-768-container table.cellular.responsive.dataTable > tbody > tr,
+.responsive-768-container table.cellular.responsive.dataTable  > tr,
+table.cellular.responsive.dataTable.responsive-768 > tbody > tr,
+table.cellular.responsive.dataTable.responsive-768  > tr,
+.responsive-768-container table.cellular.responsive > tbody > tr,
+.responsive-768-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-768 > tbody > tr,
+table.cellular.responsive.responsive-768  > tr
 { 
-    left: auto; right: 0;
-    text-align: left;
+    width: 100% !important;
 }
 }
 /* =Media query for smaller tablets and larger handheld devices
@@ -3031,19 +3285,17 @@ table.responsive.responsive-640.rtl.dataTable tbody td
 table.responsive.responsive-640 tbody td:before
 { 
     display: block;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    content: attr(data-column);
 }
-.responsive-640-container  table.responsive.rtl tbody td:before,
-table.responsive.responsive-640.rtl tbody td:before 
+.responsive-640-container table.cellular.responsive.dataTable > tbody > tr,
+.responsive-640-container table.cellular.responsive.dataTable  > tr,
+table.cellular.responsive.dataTable.responsive-640 > tbody > tr,
+table.cellular.responsive.dataTable.responsive-640  > tr,
+.responsive-640-container table.cellular.responsive > tbody > tr,
+.responsive-640-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-640 > tbody > tr,
+table.cellular.responsive.responsive-640  > tr
 { 
-    left: auto; right: 0;
-    text-align: left;
+    width: 100% !important;
 }
 }
 /* =Media query for tablets in portrait
@@ -3537,19 +3789,17 @@ table.responsive.responsive-portrait.rtl.dataTable tbody td
 table.responsive.responsive-portrait tbody td:before
 { 
     display: block;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    content: attr(data-column);
 }
-.responsive-portrait-container  table.responsive.rtl tbody td:before,
-table.responsive.responsive-portrait.rtl tbody td:before 
+.responsive-portrait-container table.cellular.responsive.dataTable > tbody > tr,
+.responsive-portrait-container table.cellular.responsive.dataTable  > tr,
+table.cellular.responsive.dataTable.responsive-portrait > tbody > tr,
+table.cellular.responsive.dataTable.responsive-portrait  > tr,
+.responsive-portrait-container table.cellular.responsive > tbody > tr,
+.responsive-portrait-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-portrait > tbody > tr,
+table.cellular.responsive.responsive-portrait  > tr
 { 
-    left: auto; right: 0;
-    text-align: left;
+    width: 100% !important;
 }
 }
 /* =Media query for tablets in landscape
@@ -4043,19 +4293,17 @@ table.responsive.responsive-landscape.rtl.dataTable tbody td
 table.responsive.responsive-landscape tbody td:before
 { 
     display: block;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    content: attr(data-column);
 }
-.responsive-landscape-container  table.responsive.rtl tbody td:before,
-table.responsive.responsive-landscape.rtl tbody td:before 
+.responsive-landscape-container table.cellular.responsive.dataTable > tbody > tr,
+.responsive-landscape-container table.cellular.responsive.dataTable  > tr,
+table.cellular.responsive.dataTable.responsive-landscape > tbody > tr,
+table.cellular.responsive.dataTable.responsive-landscape  > tr,
+.responsive-landscape-container table.cellular.responsive > tbody > tr,
+.responsive-landscape-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-landscape > tbody > tr,
+table.cellular.responsive.responsive-landscape  > tr
 { 
-    left: auto; right: 0;
-    text-align: left;
+    width: 100% !important;
 }
 }
 /* =Media query for smaller handheld devices 480
@@ -4439,18 +4687,13 @@ table.responsive.rtl.dataTable tbody td
 table.responsive tbody td:before
 { 
     display: block;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    content: attr(data-column);
 }
-table.responsive.rtl tbody td:before 
+table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive.dataTable  > tr,
+table.cellular.responsive > tbody > tr,
+table.cellular.responsive  > tr
 { 
-    left: auto; right: 0;
-    text-align: left;
+    width: 100% !important;
 }
 }
 
