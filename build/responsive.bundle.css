@@ -389,33 +389,6 @@ html
     box-sizing: border-box;
 }
 
-
-.fluid-animated
-{
-    -webkit-transition: width 2s ease;
-
-    -moz-transition: width 2s ease;
-
-    -ms-transition: width 2s ease;
-
-    -o-transition: width 2s ease;
-
-    transition: width 2s ease;  
-}
-
-.fluid-animated2
-{
-    -webkit-transition: width 2s ease, height 2s ease;
-
-    -moz-transition: width 2s ease, height 2s ease;
-
-    -ms-transition: width 2s ease, height 2s ease;
-
-    -o-transition: width 2s ease, height 2s ease;
-
-    transition: width 2s ease, height 2s ease;  
-}
-
 .fluid
 {
     position: relative;
@@ -433,19 +406,18 @@ html
     padding: 0;
     border: 0;
     word-wrap: break-word;
-    z-index: 1;
     float: left;
     max-width: 100%;
 }
 
-.fluid img,
-.fluid video,
-table img,
-table video,
 table.responsive img,
 table.responsive video,
 table.cellular img,
-table.cellular video
+table.cellular video,
+table img,
+table video,
+.fluid img,
+.fluid video
 {
     position: relative;
     max-width: 100%;
@@ -460,7 +432,6 @@ table.cellular video
 
     box-sizing: border-box;
 }
-
 .col-1-1
 {
     width: 100%;
@@ -881,17 +852,20 @@ table.responsive.dataTable,
 table.responsive
 { 
     position: relative;
-    -webkit-box-sizing: padding-box;
+    -webkit-box-sizing: border-box !important;
 
-    -moz-box-sizing: padding-box;
+    -moz-box-sizing: border-box !important;
 
-    -ms-box-sizing: padding-box;
+    -ms-box-sizing: border-box !important;
 
-    -o-box-sizing: padding-box;
+    -o-box-sizing: border-box !important;
 
-    box-sizing: padding-box;
+    box-sizing: border-box !important;
     border-collapse: collapse; 
     width: 100%;
+    max-width: 100%;
+    padding: 0;
+    border: 0;
 }
 table.responsive.dataTable thead, 
 table.responsive.dataTable tbody, 
@@ -905,53 +879,46 @@ table.responsive td,
 table.responsive tr 
 { 
     position: relative;
-    -webkit-box-sizing: padding-box;
+    -webkit-box-sizing: border-box !important;
 
-    -moz-box-sizing: padding-box;
+    -moz-box-sizing: border-box !important;
 
-    -ms-box-sizing: padding-box;
+    -ms-box-sizing: border-box !important;
 
-    -o-box-sizing: padding-box;
+    -o-box-sizing: border-box !important;
 
-    box-sizing: padding-box;
+    box-sizing: border-box !important;
 }
 table.responsive.dataTable tbody td .data-column,
 table.responsive tbody td .data-column,
 table.responsive.dataTable tbody td:before,
 table.responsive tbody td:before 
 { 
-    
-    position: absolute;
-    -webkit-box-sizing: padding-box;
+    position: relative;
+    -webkit-box-sizing: border-box !important;
 
-    -moz-box-sizing: padding-box;
+    -moz-box-sizing: border-box !important;
 
-    -ms-box-sizing: padding-box;
+    -ms-box-sizing: border-box !important;
 
-    -o-box-sizing: padding-box;
+    -o-box-sizing: border-box !important;
 
-    box-sizing: padding-box;
-    height: 100%;
-    top: 0; left: 0;
-    width: 25%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
+    box-sizing: border-box !important;
+    padding: 0; margin: 0; border: 0;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 120px;
+    margin-right: 10px;
+    text-align: left;
+    font-weight: bold;
+    z-index: 1;
     display: none;
 }
 table.responsive.dataTable tbody td:before,
 table.responsive tbody td:before 
 { 
     content: attr(data-column);
-}
-table.responsive.dataTable.rtl tbody td .data-column,
-table.responsive.rtl tbody td .data-column, 
-table.responsive.dataTable.rtl tbody td:before,
-table.responsive.rtl tbody td:before 
-{ 
-    left: auto; right: 0;
-    text-align: left;
 }
 
 table.cellular.responsive.dataTable,
@@ -993,7 +960,6 @@ table.cellular td
     border: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
-    color: inherit !important;
     width: 100%;
 }
 table.cellular.responsive.dataTable,
@@ -1065,18 +1031,7 @@ table.cellular > tbody > tr
 {
     float: left !important;
     display: inline-block !important;
-    padding: 5px 1.6em 5px 1px !important;
     min-height: 100px !important;
-}
-table.cellular.responsive.dataTable > tbody > tr > td,
-table.cellular.responsive > tr > td,
-table.cellular.responsive > tbody > tr > td,
-table.cellular.dataTable > tbody > tr > td,
-table.cellular > tr > td,
-table.cellular > tbody > tr > td
-{
-    min-height: 2em;
-    padding: 10px !important;
 }
 table.cellular.responsive.dataTable > tbody > tr > td .data-column,
 table.cellular.responsive > tr > td .data-column,
@@ -1110,6 +1065,7 @@ table.cellular > tbody > tr > td:before
     margin-right: 10px;
     text-align: left;
     font-weight: bold;
+    z-index: 1;
 }
 table.cellular.responsive.dataTable > tbody > tr > td:before,
 table.cellular.responsive > tr > td:before,
@@ -1129,7 +1085,7 @@ table.cellular > tbody > tr > td:after
 {
     position: absolute;
     display: block;
-    content: " ";
+    content: "";
     left: 0; bottom: 0;
     width: 100%; height: 1px;
 }
@@ -1800,12 +1756,14 @@ table.cellular.cell-1-6 > tbody > tr:nth-child(6n+1)
     flex-direction: column-reverse;
 }
 .responsive-1024-container  table.responsive,
+.responsive-1024-container  table.responsive tfoot,
 .responsive-1024-container  table.responsive thead,
 .responsive-1024-container  table.responsive tbody, 
 .responsive-1024-container  table.responsive tr,
 .responsive-1024-container  table.responsive th, 
 .responsive-1024-container  table.responsive td,
 table.responsive.responsive-1024,
+table.responsive.responsive-1024 tfoot,
 table.responsive.responsive-1024 thead,
 table.responsive.responsive-1024 tbody, 
 table.responsive.responsive-1024 tr,
@@ -1815,50 +1773,21 @@ table.responsive.responsive-1024 td
     display: block; 
     width: 100%; 
 }
-.responsive-1024-container  table.responsive thead tr,
-table.responsive.responsive-1024 thead tr,
-.responsive-1024-container  table.responsive tfoot tr,
-table.responsive.responsive-1024 tfoot tr 
+.responsive-1024-container  table.responsive tfoot,
+table.responsive.responsive-1024 tfoot,
+.responsive-1024-container  table.responsive thead,
+table.responsive.responsive-1024 thead
 { 
     position: absolute;
-    top: -9999px; left: -9999px;
-}
-.responsive-1024-container  table.responsive tr,
-table.responsive.responsive-1024 tr 
-{ 
-    margin-bottom: 1px; 
-}
-.responsive-1024-container  table.responsive td,
-.responsive-1024-container  table.responsive.dataTable tbody td,
-table.responsive.responsive-1024 td,
-table.responsive.responsive-1024.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-.responsive-1024-container  table.responsive.rtl td,
-.responsive-1024-container  table.responsive.rtl.dataTable tbody td,
-table.responsive.responsive-1024.rtl td,
-table.responsive.responsive-1024.rtl.dataTable tbody td 
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
 }
 .responsive-1024-container  table.responsive tbody td:before,
 table.responsive.responsive-1024 tbody td:before
 { 
-    display: block;
+    display: inline-block;
 }
 .responsive-1024-container table.cellular.responsive.dataTable > tbody > tr,
 table.cellular.responsive.dataTable.responsive-1024 > tbody > tr,
@@ -1871,7 +1800,6 @@ table.cellular.autocell-1-1-1024.responsive > tbody > tr,
 table.cellular.autocell-1-1-1024.responsive  > tr
 { 
     width: 100% !important;
-    clear: none !important;
 }
 .responsive-1024-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
 table.cellular.autocell-1-2.responsive.dataTable.responsive-1024 > tbody > tr,
@@ -1908,6 +1836,123 @@ table.cellular.autocell-1-4-1024.responsive > tbody > tr,
 table.cellular.autocell-1-4-1024.responsive  > tr
 { 
     width: 25% !important;
+}
+.responsive-1024-container table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive.dataTable.responsive-1024 > tbody > tr,
+.responsive-1024-container table.cellular.responsive > tbody > tr,
+.responsive-1024-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-1024 > tbody > tr,
+table.cellular.responsive.responsive-1024  > tr,
+.responsive-1024-container table.cellular.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.responsive.dataTable.responsive-1024 > tbody > tr:nth-child(n+1),
+.responsive-1024-container table.cellular.responsive > tbody > tr:nth-child(n+1),
+.responsive-1024-container table.cellular.responsive  > tr:nth-child(n+1),
+table.cellular.responsive.responsive-1024 > tbody > tr:nth-child(n+1),
+table.cellular.responsive.responsive-1024  > tr:nth-child(n+1),
+.responsive-1024-container table.cellular.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.dataTable.responsive-1024 > tbody > tr:nth-child(2n+1),
+.responsive-1024-container table.cellular.responsive > tbody > tr:nth-child(2n+1),
+.responsive-1024-container table.cellular.responsive  > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-1024 > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-1024  > tr:nth-child(2n+1),
+.responsive-1024-container table.cellular.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.dataTable.responsive-1024 > tbody > tr:nth-child(3n+1),
+.responsive-1024-container table.cellular.responsive > tbody > tr:nth-child(3n+1),
+.responsive-1024-container table.cellular.responsive  > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-1024 > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-1024  > tr:nth-child(3n+1),
+.responsive-1024-container table.cellular.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.dataTable.responsive-1024 > tbody > tr:nth-child(4n+1),
+.responsive-1024-container table.cellular.responsive > tbody > tr:nth-child(4n+1),
+.responsive-1024-container table.cellular.responsive  > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-1024 > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-1024  > tr:nth-child(4n+1),
+.responsive-1024-container table.cellular.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.dataTable.responsive-1024 > tbody > tr:nth-child(5n+1),
+.responsive-1024-container table.cellular.responsive > tbody > tr:nth-child(5n+1),
+.responsive-1024-container table.cellular.responsive  > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-1024 > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-1024  > tr:nth-child(5n+1),
+.responsive-1024-container table.cellular.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.dataTable.responsive-1024 > tbody > tr:nth-child(6n+1),
+.responsive-1024-container table.cellular.responsive > tbody > tr:nth-child(6n+1),
+.responsive-1024-container table.cellular.responsive  > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-1024 > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-1024  > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-1024.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-1024.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-1024.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-1-1024.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-1024.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-1024.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-1024.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-1024.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-1024.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-1024.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-1024.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-1024.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-1024.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-1024.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-1024.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-1024.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-1024.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-1024.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-1024.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-1024.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-1024.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-2-1024.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-1024.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-1024.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-1024.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-1024.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-1024.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-1024.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-1024.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-1024.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-1024.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-1024.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-1024.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-1024.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-1024.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-1024.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-1024.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-1024.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-1024.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-3-1024.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-1024.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-1024.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-1024.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-1024.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-1024.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-1024.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-1024.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-1024.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-1024.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-1024.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-1024.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-1024.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-1024.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-1024.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-1024.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-1024.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-1024.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-4-1024.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-1024.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-1024.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-1024.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-1024.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-1024.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-1024.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-1024.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-1024.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-1024.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-1024.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-1024.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-1024.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-1024.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-1024.responsive  > tr:nth-child(6n+1)
+{ 
+    clear: none !important;
 }
 .responsive-1024-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
 table.cellular.autocell-1-2.responsive.dataTable.responsive-1024 > tbody > tr:nth-child(2n+1),
@@ -2496,12 +2541,14 @@ table.cellular.autocell-1-4-1024.responsive  > tr:nth-child(4n+1)
     flex-direction: column-reverse;
 }
 .responsive-960-container  table.responsive,
+.responsive-960-container  table.responsive tfoot,
 .responsive-960-container  table.responsive thead,
 .responsive-960-container  table.responsive tbody, 
 .responsive-960-container  table.responsive tr,
 .responsive-960-container  table.responsive th, 
 .responsive-960-container  table.responsive td,
 table.responsive.responsive-960,
+table.responsive.responsive-960 tfoot,
 table.responsive.responsive-960 thead,
 table.responsive.responsive-960 tbody, 
 table.responsive.responsive-960 tr,
@@ -2511,50 +2558,21 @@ table.responsive.responsive-960 td
     display: block; 
     width: 100%; 
 }
-.responsive-960-container  table.responsive thead tr,
-table.responsive.responsive-960 thead tr,
-.responsive-960-container  table.responsive tfoot tr,
-table.responsive.responsive-960 tfoot tr 
+.responsive-960-container  table.responsive tfoot,
+table.responsive.responsive-960 tfoot,
+.responsive-960-container  table.responsive thead,
+table.responsive.responsive-960 thead
 { 
     position: absolute;
-    top: -9999px; left: -9999px;
-}
-.responsive-960-container  table.responsive tr,
-table.responsive.responsive-960 tr 
-{ 
-    margin-bottom: 1px; 
-}
-.responsive-960-container  table.responsive td,
-.responsive-960-container  table.responsive.dataTable tbody td,
-table.responsive.responsive-960 td,
-table.responsive.responsive-960.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-.responsive-960-container  table.responsive.rtl td,
-.responsive-960-container  table.responsive.rtl.dataTable tbody td,
-table.responsive.responsive-960.rtl td,
-table.responsive.responsive-960.rtl.dataTable tbody td 
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
 }
 .responsive-960-container  table.responsive tbody td:before,
 table.responsive.responsive-960 tbody td:before
 { 
-    display: block;
+    display: inline-block;
 }
 .responsive-960-container table.cellular.responsive.dataTable > tbody > tr,
 table.cellular.responsive.dataTable.responsive-960 > tbody > tr,
@@ -2567,7 +2585,6 @@ table.cellular.autocell-1-1-960.responsive > tbody > tr,
 table.cellular.autocell-1-1-960.responsive  > tr
 { 
     width: 100% !important;
-    clear: none !important;
 }
 .responsive-960-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
 table.cellular.autocell-1-2.responsive.dataTable.responsive-960 > tbody > tr,
@@ -2604,6 +2621,123 @@ table.cellular.autocell-1-4-960.responsive > tbody > tr,
 table.cellular.autocell-1-4-960.responsive  > tr
 { 
     width: 25% !important;
+}
+.responsive-960-container table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive.dataTable.responsive-960 > tbody > tr,
+.responsive-960-container table.cellular.responsive > tbody > tr,
+.responsive-960-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-960 > tbody > tr,
+table.cellular.responsive.responsive-960  > tr,
+.responsive-960-container table.cellular.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.responsive.dataTable.responsive-960 > tbody > tr:nth-child(n+1),
+.responsive-960-container table.cellular.responsive > tbody > tr:nth-child(n+1),
+.responsive-960-container table.cellular.responsive  > tr:nth-child(n+1),
+table.cellular.responsive.responsive-960 > tbody > tr:nth-child(n+1),
+table.cellular.responsive.responsive-960  > tr:nth-child(n+1),
+.responsive-960-container table.cellular.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.dataTable.responsive-960 > tbody > tr:nth-child(2n+1),
+.responsive-960-container table.cellular.responsive > tbody > tr:nth-child(2n+1),
+.responsive-960-container table.cellular.responsive  > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-960 > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-960  > tr:nth-child(2n+1),
+.responsive-960-container table.cellular.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.dataTable.responsive-960 > tbody > tr:nth-child(3n+1),
+.responsive-960-container table.cellular.responsive > tbody > tr:nth-child(3n+1),
+.responsive-960-container table.cellular.responsive  > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-960 > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-960  > tr:nth-child(3n+1),
+.responsive-960-container table.cellular.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.dataTable.responsive-960 > tbody > tr:nth-child(4n+1),
+.responsive-960-container table.cellular.responsive > tbody > tr:nth-child(4n+1),
+.responsive-960-container table.cellular.responsive  > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-960 > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-960  > tr:nth-child(4n+1),
+.responsive-960-container table.cellular.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.dataTable.responsive-960 > tbody > tr:nth-child(5n+1),
+.responsive-960-container table.cellular.responsive > tbody > tr:nth-child(5n+1),
+.responsive-960-container table.cellular.responsive  > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-960 > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-960  > tr:nth-child(5n+1),
+.responsive-960-container table.cellular.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.dataTable.responsive-960 > tbody > tr:nth-child(6n+1),
+.responsive-960-container table.cellular.responsive > tbody > tr:nth-child(6n+1),
+.responsive-960-container table.cellular.responsive  > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-960 > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-960  > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-960.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-960.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-960.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-1-960.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-960.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-960.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-960.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-960.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-960.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-960.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-960.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-960.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-960.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-960.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-960.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-960.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-960.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-960.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-960.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-960.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-960.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-2-960.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-960.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-960.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-960.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-960.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-960.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-960.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-960.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-960.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-960.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-960.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-960.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-960.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-960.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-960.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-960.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-960.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-960.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-3-960.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-960.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-960.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-960.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-960.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-960.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-960.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-960.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-960.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-960.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-960.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-960.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-960.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-960.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-960.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-960.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-960.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-960.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-4-960.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-960.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-960.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-960.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-960.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-960.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-960.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-960.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-960.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-960.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-960.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-960.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-960.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-960.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-960.responsive  > tr:nth-child(6n+1)
+{ 
+    clear: none !important;
 }
 .responsive-960-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
 table.cellular.autocell-1-2.responsive.dataTable.responsive-960 > tbody > tr:nth-child(2n+1),
@@ -3192,12 +3326,14 @@ table.cellular.autocell-1-4-960.responsive  > tr:nth-child(4n+1)
     flex-direction: column-reverse;
 }
 .responsive-864-container  table.responsive,
+.responsive-864-container  table.responsive tfoot,
 .responsive-864-container  table.responsive thead,
 .responsive-864-container  table.responsive tbody, 
 .responsive-864-container  table.responsive tr,
 .responsive-864-container  table.responsive th, 
 .responsive-864-container  table.responsive td,
 table.responsive.responsive-864,
+table.responsive.responsive-864 tfoot,
 table.responsive.responsive-864 thead,
 table.responsive.responsive-864 tbody, 
 table.responsive.responsive-864 tr,
@@ -3207,50 +3343,21 @@ table.responsive.responsive-864 td
     display: block; 
     width: 100%; 
 }
-.responsive-864-container  table.responsive thead tr,
-table.responsive.responsive-864 thead tr,
-.responsive-864-container  table.responsive tfoot tr,
-table.responsive.responsive-864 tfoot tr 
+.responsive-864-container  table.responsive tfoot,
+table.responsive.responsive-864 tfoot,
+.responsive-864-container  table.responsive thead,
+table.responsive.responsive-864 thead
 { 
     position: absolute;
-    top: -9999px; left: -9999px;
-}
-.responsive-864-container  table.responsive tr,
-table.responsive.responsive-864 tr 
-{ 
-    margin-bottom: 1px; 
-}
-.responsive-864-container  table.responsive td,
-.responsive-864-container  table.responsive.dataTable tbody td,
-table.responsive.responsive-864 td,
-table.responsive.responsive-864.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-.responsive-864-container  table.responsive.rtl td,
-.responsive-864-container  table.responsive.rtl.dataTable tbody td,
-table.responsive.responsive-864.rtl td,
-table.responsive.responsive-864.rtl.dataTable tbody td 
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
 }
 .responsive-864-container  table.responsive tbody td:before,
 table.responsive.responsive-864 tbody td:before
 { 
-    display: block;
+    display: inline-block;
 }
 .responsive-864-container table.cellular.responsive.dataTable > tbody > tr,
 table.cellular.responsive.dataTable.responsive-864 > tbody > tr,
@@ -3263,7 +3370,6 @@ table.cellular.autocell-1-1-864.responsive > tbody > tr,
 table.cellular.autocell-1-1-864.responsive  > tr
 { 
     width: 100% !important;
-    clear: none !important;
 }
 .responsive-864-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
 table.cellular.autocell-1-2.responsive.dataTable.responsive-864 > tbody > tr,
@@ -3300,6 +3406,123 @@ table.cellular.autocell-1-4-864.responsive > tbody > tr,
 table.cellular.autocell-1-4-864.responsive  > tr
 { 
     width: 25% !important;
+}
+.responsive-864-container table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive.dataTable.responsive-864 > tbody > tr,
+.responsive-864-container table.cellular.responsive > tbody > tr,
+.responsive-864-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-864 > tbody > tr,
+table.cellular.responsive.responsive-864  > tr,
+.responsive-864-container table.cellular.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.responsive.dataTable.responsive-864 > tbody > tr:nth-child(n+1),
+.responsive-864-container table.cellular.responsive > tbody > tr:nth-child(n+1),
+.responsive-864-container table.cellular.responsive  > tr:nth-child(n+1),
+table.cellular.responsive.responsive-864 > tbody > tr:nth-child(n+1),
+table.cellular.responsive.responsive-864  > tr:nth-child(n+1),
+.responsive-864-container table.cellular.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.dataTable.responsive-864 > tbody > tr:nth-child(2n+1),
+.responsive-864-container table.cellular.responsive > tbody > tr:nth-child(2n+1),
+.responsive-864-container table.cellular.responsive  > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-864 > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-864  > tr:nth-child(2n+1),
+.responsive-864-container table.cellular.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.dataTable.responsive-864 > tbody > tr:nth-child(3n+1),
+.responsive-864-container table.cellular.responsive > tbody > tr:nth-child(3n+1),
+.responsive-864-container table.cellular.responsive  > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-864 > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-864  > tr:nth-child(3n+1),
+.responsive-864-container table.cellular.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.dataTable.responsive-864 > tbody > tr:nth-child(4n+1),
+.responsive-864-container table.cellular.responsive > tbody > tr:nth-child(4n+1),
+.responsive-864-container table.cellular.responsive  > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-864 > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-864  > tr:nth-child(4n+1),
+.responsive-864-container table.cellular.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.dataTable.responsive-864 > tbody > tr:nth-child(5n+1),
+.responsive-864-container table.cellular.responsive > tbody > tr:nth-child(5n+1),
+.responsive-864-container table.cellular.responsive  > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-864 > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-864  > tr:nth-child(5n+1),
+.responsive-864-container table.cellular.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.dataTable.responsive-864 > tbody > tr:nth-child(6n+1),
+.responsive-864-container table.cellular.responsive > tbody > tr:nth-child(6n+1),
+.responsive-864-container table.cellular.responsive  > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-864 > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-864  > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-864.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-864.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-864.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-1-864.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-864.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-864.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-864.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-864.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-864.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-864.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-864.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-864.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-864.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-864.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-864.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-864.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-864.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-864.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-864.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-864.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-864.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-2-864.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-864.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-864.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-864.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-864.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-864.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-864.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-864.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-864.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-864.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-864.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-864.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-864.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-864.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-864.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-864.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-864.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-864.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-3-864.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-864.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-864.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-864.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-864.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-864.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-864.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-864.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-864.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-864.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-864.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-864.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-864.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-864.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-864.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-864.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-864.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-864.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-4-864.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-864.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-864.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-864.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-864.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-864.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-864.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-864.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-864.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-864.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-864.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-864.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-864.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-864.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-864.responsive  > tr:nth-child(6n+1)
+{ 
+    clear: none !important;
 }
 .responsive-864-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
 table.cellular.autocell-1-2.responsive.dataTable.responsive-864 > tbody > tr:nth-child(2n+1),
@@ -3888,12 +4111,14 @@ table.cellular.autocell-1-4-864.responsive  > tr:nth-child(4n+1)
     flex-direction: column-reverse;
 }
 .responsive-768-container  table.responsive,
+.responsive-768-container  table.responsive tfoot,
 .responsive-768-container  table.responsive thead,
 .responsive-768-container  table.responsive tbody, 
 .responsive-768-container  table.responsive tr,
 .responsive-768-container  table.responsive th, 
 .responsive-768-container  table.responsive td,
 table.responsive.responsive-768,
+table.responsive.responsive-768 tfoot,
 table.responsive.responsive-768 thead,
 table.responsive.responsive-768 tbody, 
 table.responsive.responsive-768 tr,
@@ -3903,50 +4128,21 @@ table.responsive.responsive-768 td
     display: block; 
     width: 100%; 
 }
-.responsive-768-container  table.responsive thead tr,
-table.responsive.responsive-768 thead tr,
-.responsive-768-container  table.responsive tfoot tr,
-table.responsive.responsive-768 tfoot tr 
+.responsive-768-container  table.responsive tfoot,
+table.responsive.responsive-768 tfoot,
+.responsive-768-container  table.responsive thead,
+table.responsive.responsive-768 thead
 { 
     position: absolute;
-    top: -9999px; left: -9999px;
-}
-.responsive-768-container  table.responsive tr,
-table.responsive.responsive-768 tr 
-{ 
-    margin-bottom: 1px; 
-}
-.responsive-768-container  table.responsive td,
-.responsive-768-container  table.responsive.dataTable tbody td,
-table.responsive.responsive-768 td,
-table.responsive.responsive-768.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-.responsive-768-container  table.responsive.rtl td,
-.responsive-768-container  table.responsive.rtl.dataTable tbody td,
-table.responsive.responsive-768.rtl td,
-table.responsive.responsive-768.rtl.dataTable tbody td 
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
 }
 .responsive-768-container  table.responsive tbody td:before,
 table.responsive.responsive-768 tbody td:before
 { 
-    display: block;
+    display: inline-block;
 }
 .responsive-768-container table.cellular.responsive.dataTable > tbody > tr,
 table.cellular.responsive.dataTable.responsive-768 > tbody > tr,
@@ -3959,7 +4155,6 @@ table.cellular.autocell-1-1-768.responsive > tbody > tr,
 table.cellular.autocell-1-1-768.responsive  > tr
 { 
     width: 100% !important;
-    clear: none !important;
 }
 .responsive-768-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
 table.cellular.autocell-1-2.responsive.dataTable.responsive-768 > tbody > tr,
@@ -3996,6 +4191,123 @@ table.cellular.autocell-1-4-768.responsive > tbody > tr,
 table.cellular.autocell-1-4-768.responsive  > tr
 { 
     width: 25% !important;
+}
+.responsive-768-container table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive.dataTable.responsive-768 > tbody > tr,
+.responsive-768-container table.cellular.responsive > tbody > tr,
+.responsive-768-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-768 > tbody > tr,
+table.cellular.responsive.responsive-768  > tr,
+.responsive-768-container table.cellular.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.responsive.dataTable.responsive-768 > tbody > tr:nth-child(n+1),
+.responsive-768-container table.cellular.responsive > tbody > tr:nth-child(n+1),
+.responsive-768-container table.cellular.responsive  > tr:nth-child(n+1),
+table.cellular.responsive.responsive-768 > tbody > tr:nth-child(n+1),
+table.cellular.responsive.responsive-768  > tr:nth-child(n+1),
+.responsive-768-container table.cellular.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.dataTable.responsive-768 > tbody > tr:nth-child(2n+1),
+.responsive-768-container table.cellular.responsive > tbody > tr:nth-child(2n+1),
+.responsive-768-container table.cellular.responsive  > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-768 > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-768  > tr:nth-child(2n+1),
+.responsive-768-container table.cellular.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.dataTable.responsive-768 > tbody > tr:nth-child(3n+1),
+.responsive-768-container table.cellular.responsive > tbody > tr:nth-child(3n+1),
+.responsive-768-container table.cellular.responsive  > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-768 > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-768  > tr:nth-child(3n+1),
+.responsive-768-container table.cellular.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.dataTable.responsive-768 > tbody > tr:nth-child(4n+1),
+.responsive-768-container table.cellular.responsive > tbody > tr:nth-child(4n+1),
+.responsive-768-container table.cellular.responsive  > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-768 > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-768  > tr:nth-child(4n+1),
+.responsive-768-container table.cellular.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.dataTable.responsive-768 > tbody > tr:nth-child(5n+1),
+.responsive-768-container table.cellular.responsive > tbody > tr:nth-child(5n+1),
+.responsive-768-container table.cellular.responsive  > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-768 > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-768  > tr:nth-child(5n+1),
+.responsive-768-container table.cellular.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.dataTable.responsive-768 > tbody > tr:nth-child(6n+1),
+.responsive-768-container table.cellular.responsive > tbody > tr:nth-child(6n+1),
+.responsive-768-container table.cellular.responsive  > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-768 > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-768  > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-768.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-768.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-768.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-1-768.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-768.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-768.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-768.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-768.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-768.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-768.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-768.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-768.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-768.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-768.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-768.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-768.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-768.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-768.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-768.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-768.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-768.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-2-768.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-768.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-768.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-768.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-768.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-768.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-768.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-768.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-768.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-768.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-768.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-768.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-768.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-768.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-768.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-768.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-768.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-768.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-3-768.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-768.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-768.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-768.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-768.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-768.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-768.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-768.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-768.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-768.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-768.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-768.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-768.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-768.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-768.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-768.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-768.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-768.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-4-768.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-768.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-768.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-768.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-768.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-768.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-768.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-768.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-768.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-768.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-768.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-768.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-768.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-768.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-768.responsive  > tr:nth-child(6n+1)
+{ 
+    clear: none !important;
 }
 .responsive-768-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
 table.cellular.autocell-1-2.responsive.dataTable.responsive-768 > tbody > tr:nth-child(2n+1),
@@ -4584,12 +4896,14 @@ table.cellular.autocell-1-4-768.responsive  > tr:nth-child(4n+1)
     flex-direction: column-reverse;
 }
 .responsive-640-container  table.responsive,
+.responsive-640-container  table.responsive tfoot,
 .responsive-640-container  table.responsive thead,
 .responsive-640-container  table.responsive tbody, 
 .responsive-640-container  table.responsive tr,
 .responsive-640-container  table.responsive th, 
 .responsive-640-container  table.responsive td,
 table.responsive.responsive-640,
+table.responsive.responsive-640 tfoot,
 table.responsive.responsive-640 thead,
 table.responsive.responsive-640 tbody, 
 table.responsive.responsive-640 tr,
@@ -4599,50 +4913,21 @@ table.responsive.responsive-640 td
     display: block; 
     width: 100%; 
 }
-.responsive-640-container  table.responsive thead tr,
-table.responsive.responsive-640 thead tr,
-.responsive-640-container  table.responsive tfoot tr,
-table.responsive.responsive-640 tfoot tr 
+.responsive-640-container  table.responsive tfoot,
+table.responsive.responsive-640 tfoot,
+.responsive-640-container  table.responsive thead,
+table.responsive.responsive-640 thead
 { 
     position: absolute;
-    top: -9999px; left: -9999px;
-}
-.responsive-640-container  table.responsive tr,
-table.responsive.responsive-640 tr 
-{ 
-    margin-bottom: 1px; 
-}
-.responsive-640-container  table.responsive td,
-.responsive-640-container  table.responsive.dataTable tbody td,
-table.responsive.responsive-640 td,
-table.responsive.responsive-640.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-.responsive-640-container  table.responsive.rtl td,
-.responsive-640-container  table.responsive.rtl.dataTable tbody td,
-table.responsive.responsive-640.rtl td,
-table.responsive.responsive-640.rtl.dataTable tbody td 
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
 }
 .responsive-640-container  table.responsive tbody td:before,
 table.responsive.responsive-640 tbody td:before
 { 
-    display: block;
+    display: inline-block;
 }
 .responsive-640-container table.cellular.responsive.dataTable > tbody > tr,
 table.cellular.responsive.dataTable.responsive-640 > tbody > tr,
@@ -4655,7 +4940,6 @@ table.cellular.autocell-1-1-640.responsive > tbody > tr,
 table.cellular.autocell-1-1-640.responsive  > tr
 { 
     width: 100% !important;
-    clear: none !important;
 }
 .responsive-640-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
 table.cellular.autocell-1-2.responsive.dataTable.responsive-640 > tbody > tr,
@@ -4693,6 +4977,123 @@ table.cellular.autocell-1-4-640.responsive  > tr
 { 
     width: 25% !important;
 }
+.responsive-640-container table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive.dataTable.responsive-640 > tbody > tr,
+.responsive-640-container table.cellular.responsive > tbody > tr,
+.responsive-640-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-640 > tbody > tr,
+table.cellular.responsive.responsive-640  > tr,
+.responsive-640-container table.cellular.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.responsive.dataTable.responsive-640 > tbody > tr:nth-child(n+1),
+.responsive-640-container table.cellular.responsive > tbody > tr:nth-child(n+1),
+.responsive-640-container table.cellular.responsive  > tr:nth-child(n+1),
+table.cellular.responsive.responsive-640 > tbody > tr:nth-child(n+1),
+table.cellular.responsive.responsive-640  > tr:nth-child(n+1),
+.responsive-640-container table.cellular.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.dataTable.responsive-640 > tbody > tr:nth-child(2n+1),
+.responsive-640-container table.cellular.responsive > tbody > tr:nth-child(2n+1),
+.responsive-640-container table.cellular.responsive  > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-640 > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-640  > tr:nth-child(2n+1),
+.responsive-640-container table.cellular.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.dataTable.responsive-640 > tbody > tr:nth-child(3n+1),
+.responsive-640-container table.cellular.responsive > tbody > tr:nth-child(3n+1),
+.responsive-640-container table.cellular.responsive  > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-640 > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-640  > tr:nth-child(3n+1),
+.responsive-640-container table.cellular.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.dataTable.responsive-640 > tbody > tr:nth-child(4n+1),
+.responsive-640-container table.cellular.responsive > tbody > tr:nth-child(4n+1),
+.responsive-640-container table.cellular.responsive  > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-640 > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-640  > tr:nth-child(4n+1),
+.responsive-640-container table.cellular.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.dataTable.responsive-640 > tbody > tr:nth-child(5n+1),
+.responsive-640-container table.cellular.responsive > tbody > tr:nth-child(5n+1),
+.responsive-640-container table.cellular.responsive  > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-640 > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-640  > tr:nth-child(5n+1),
+.responsive-640-container table.cellular.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.dataTable.responsive-640 > tbody > tr:nth-child(6n+1),
+.responsive-640-container table.cellular.responsive > tbody > tr:nth-child(6n+1),
+.responsive-640-container table.cellular.responsive  > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-640 > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-640  > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-640.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-640.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-640.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-1-640.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-640.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-640.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-640.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-640.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-640.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-640.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-640.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-640.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-640.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-640.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-640.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-640.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-640.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-640.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-640.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-640.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-640.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-2-640.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-640.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-640.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-640.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-640.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-640.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-640.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-640.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-640.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-640.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-640.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-640.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-640.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-640.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-640.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-640.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-640.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-640.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-3-640.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-640.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-640.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-640.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-640.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-640.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-640.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-640.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-640.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-640.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-640.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-640.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-640.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-640.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-640.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-640.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-640.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-640.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-4-640.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-640.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-640.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-640.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-640.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-640.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-640.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-640.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-640.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-640.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-640.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-640.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-640.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-640.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-640.responsive  > tr:nth-child(6n+1)
+{ 
+    clear: none !important;
+}
 .responsive-640-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
 table.cellular.autocell-1-2.responsive.dataTable.responsive-640 > tbody > tr:nth-child(2n+1),
 table.cellular.autocell-1-2-640.responsive.dataTable > tbody > tr:nth-child(2n+1),
@@ -4725,1397 +5126,9 @@ table.cellular.autocell-1-4-640.responsive  > tr:nth-child(4n+1)
 }
 }
 
-@media (orientation:portrait)
-{
-.responsive-portrait-container  .fluid.autofloat-none:not(.autoadjust),
-.responsive-portrait-container  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
-.responsive-portrait.fluid.autofloat-none:not(.autoadjust),
-.responsive-portrait.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
-{
-    display: block;
-    float: none;
-    clear: both;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-.responsive-portrait-container  .fluid.autocol-1-1,
-.responsive-portrait.fluid.autocol-1-1,
-.fluid.autocol-1-1-portrait
-{
-    float: none;
-    clear: both;
-    width: 100%;
-}
-.responsive-portrait-container  .fluid.autocol-1-2,
-.responsive-portrait-container  .fluid.autocol-2-4,
-.responsive-portrait-container  .fluid.autocol-3-6,
-.responsive-portrait-container  .fluid.autocol-4-8,
-.responsive-portrait-container  .fluid.autocol-5-10,
-.responsive-portrait-container  .fluid.autocol-6-12,
-.responsive-portrait.fluid.autocol-1-2,
-.responsive-portrait.fluid.autocol-2-4,
-.responsive-portrait.fluid.autocol-3-6,
-.responsive-portrait.fluid.autocol-4-8,
-.responsive-portrait.fluid.autocol-5-10,
-.responsive-portrait.fluid.autocol-6-12,
-.fluid.autocol-1-2-portrait,
-.fluid.autocol-2-4-portrait,
-.fluid.autocol-3-6-portrait,
-.fluid.autocol-4-8-portrait,
-.fluid.autocol-5-10-portrait,
-.fluid.autocol-6-12-portrait
-{
-    width: 50%;
-}
-.responsive-portrait-container  .fluid.autocol-1-3,
-.responsive-portrait-container  .fluid.autocol-2-6,
-.responsive-portrait-container  .fluid.autocol-3-9,
-.responsive-portrait-container  .fluid.autocol-4-12,
-.responsive-portrait.fluid.autocol-1-3,
-.responsive-portrait.fluid.autocol-2-6,
-.responsive-portrait.fluid.autocol-3-9,
-.responsive-portrait.fluid.autocol-4-12,
-.fluid.autocol-1-3-portrait,
-.fluid.autocol-2-6-portrait,
-.fluid.autocol-3-9-portrait,
-.fluid.autocol-4-12-portrait
-{
-    width: 33.33%;
-}
-.responsive-portrait-container  .fluid.autocol-2-3,
-.responsive-portrait-container  .fluid.autocol-4-6,
-.responsive-portrait-container  .fluid.autocol-6-9,
-.responsive-portrait-container  .fluid.autocol-8-12,
-.responsive-portrait.fluid.autocol-2-3,
-.responsive-portrait.fluid.autocol-4-6,
-.responsive-portrait.fluid.autocol-6-9,
-.responsive-portrait.fluid.autocol-8-12,
-.fluid.autocol-2-3-portrait,
-.fluid.autocol-4-6-portrait,
-.fluid.autocol-6-9-portrait,
-.fluid.autocol-8-12-portrait
-{
-    width: 66.66%;
-}
-.responsive-portrait-container  .fluid.autocol-1-4,
-.responsive-portrait-container  .fluid.autocol-2-8,
-.responsive-portrait-container  .fluid.autocol-3-12,
-.responsive-portrait.fluid.autocol-1-4,
-.responsive-portrait.fluid.autocol-2-8,
-.responsive-portrait.fluid.autocol-3-12,
-.fluid.autocol-1-4-portrait,
-.fluid.autocol-2-8-portrait,
-.fluid.autocol-3-12-portrait
-{
-    width: 25%;
-}
-.responsive-portrait-container  .fluid.autocol-3-4,
-.responsive-portrait-container  .fluid.autocol-6-8,
-.responsive-portrait-container  .fluid.autocol-9-12,
-.responsive-portrait.fluid.autocol-3-4,
-.responsive-portrait.fluid.autocol-6-8,
-.responsive-portrait.fluid.autocol-9-12,
-.fluid.autocol-3-4-portrait,
-.fluid.autocol-6-8-portrait,
-.fluid.autocol-9-12-portrait
-{
-    width: 75%;
-}
-.responsive-portrait-container  .fluid.autocol-1-5,
-.responsive-portrait-container  .fluid.autocol-2-10,
-.responsive-portrait.fluid.autocol-1-5,
-.responsive-portrait.fluid.autocol-2-10,
-.fluid.autocol-1-5-portrait,
-.fluid.autocol-2-10-portrait
-{
-    width: 20%;
-}
-.responsive-portrait-container  .fluid.autocol-2-5,
-.responsive-portrait-container  .fluid.autocol-4-10,
-.responsive-portrait.fluid.autocol-2-5,
-.responsive-portrait.fluid.autocol-4-10,
-.fluid.autocol-2-5-portrait,
-.fluid.autocol-4-10-portrait
-{
-    width: 40%;
-}
-.responsive-portrait-container  .fluid.autocol-3-5,
-.responsive-portrait-container  .fluid.autocol-6-10,
-.responsive-portrait.fluid.autocol-3-5,
-.responsive-portrait.fluid.autocol-6-10,
-.fluid.autocol-3-5-portrait,
-.fluid.autocol-6-10-portrait
-{
-    width: 60%;
-}
-.responsive-portrait-container  .fluid.autocol-4-5,
-.responsive-portrait-container  .fluid.autocol-8-10,
-.responsive-portrait.fluid.autocol-4-5,
-.responsive-portrait.fluid.autocol-8-10,
-.fluid.autocol-4-5-portrait,
-.fluid.autocol-8-10-portrait
-{
-    width: 80%;
-}
-.responsive-portrait-container  .fluid.autocol-1-6,
-.responsive-portrait-container  .fluid.autocol-2-12,
-.responsive-portrait.fluid.autocol-1-6,
-.responsive-portrait.fluid.autocol-2-12,
-.fluid.autocol-1-6-portrait,
-.fluid.autocol-2-12-portrait
-{
-    width: 16.66%;
-}
-.responsive-portrait-container  .fluid.autocol-5-6,
-.responsive-portrait-container  .fluid.autocol-10-12,
-.responsive-portrait.fluid.autocol-5-6,
-.responsive-portrait.fluid.autocol-10-12,
-.fluid.autocol-5-6-portrait,
-.fluid.autocol-10-12-portrait
-{
-    width: 83.33%;
-}
-.responsive-portrait-container  .fluid.autocol-1-7,
-.responsive-portrait.fluid.autocol-1-7,
-.fluid.autocol-1-7-portrait
-{
-    width: 14.28%;
-}
-.responsive-portrait-container  .fluid.autocol-2-7,
-.responsive-portrait.fluid.autocol-2-7,
-.fluid.autocol-2-7-portrait
-{
-    width: 28.57%;
-}
-.responsive-portrait-container   .fluid.autocol-3-7,
-.responsive-portrait.fluid.autocol-3-7,
-.fluid.autocol-3-7-portrait
-{
-    width: 42.85%;
-}
-.responsive-portrait-container   .fluid.autocol-4-7,
-.responsive-portrait.fluid.autocol-4-7,
-.fluid.autocol-4-7-portrait
-{
-    width: 57.14%;
-}
-.responsive-portrait-container   .fluid.autocol-5-7,
-.responsive-portrait.fluid.autocol-5-7,
-.fluid.autocol-5-7-portrait
-{
-    width: 71.42%;
-}
-.responsive-portrait-container   .fluid.autocol-6-7,
-.responsive-portrait.fluid.autocol-6-7,
-.fluid.autocol-6-7-portrait
-{
-    width: 85.71%;
-}
-.responsive-portrait-container   .fluid.autocol-1-8,
-.responsive-portrait.fluid.autocol-1-8,
-.fluid.autocol-1-8-portrait
-{
-    width: 12.5%;
-}
-.responsive-portrait-container   .fluid.autocol-3-8,
-.responsive-portrait.fluid.autocol-3-8,
-.fluid.autocol-3-8-portrait
-{
-    width: 37.5%;
-}
-.responsive-portrait-container   .fluid.autocol-5-8,
-.responsive-portrait.fluid.autocol-5-8,
-.fluid.autocol-5-8-portrait
-{
-    width: 62.5%;
-}
-.responsive-portrait-container   .fluid.autocol-7-8,
-.responsive-portrait.fluid.autocol-7-8,
-.fluid.autocol-7-8-portrait
-{
-    width: 87.5%;
-}
-.responsive-portrait-container  .fluid.autocol-1-9,
-.responsive-portrait.fluid.autocol-1-9,
-.fluid.autocol-1-9-portrait
-{
-    width: 11.11%;
-}
-.responsive-portrait-container   .fluid.autocol-2-9,
-.responsive-portrait.fluid.autocol-2-9,
-.fluid.autocol-2-9-portrait
-{
-    width: 22.22%;
-}
-.responsive-portrait-container  .fluid.autocol-4-9,
-.responsive-portrait.fluid.autocol-4-9,
-.fluid.autocol-4-9-portrait
-{
-    width: 44.44%;
-}
-.responsive-portrait-container  .fluid.autocol-5-9,
-.responsive-portrait.fluid.autocol-5-9,
-.fluid.autocol-5-9-portrait
-{
-    width: 55.55%;
-}
-.responsive-portrait-container  .fluid.autocol-7-9,
-.responsive-portrait.fluid.autocol-7-9,
-.fluid.autocol-7-9-portrait
-{
-    width: 77.77%;
-}
-.responsive-portrait-container  .fluid.autocol-8-9,
-.responsive-portrait.fluid.autocol-8-9,
-.fluid.autocol-8-9-portrait
-{
-    width: 88.88%;
-}
-.responsive-portrait-container  .fluid.autocol-1-10,
-.responsive-portrait.fluid.autocol-1-10,
-.fluid.autocol-1-10-portrait
-{
-    width: 10%;
-}
-.responsive-portrait-container  .fluid.autocol-3-10,
-.responsive-portrait.fluid.autocol-3-10,
-.fluid.autocol-3-10-portrait
-{
-    width: 30%;
-}
-.responsive-portrait-container  .fluid.autocol-6-10,
-.responsive-portrait.fluid.autocol-6-10,
-.fluid.autocol-6-10-portrait
-{
-    width: 60%;
-}
-.responsive-portrait-container  .fluid.autocol-7-10,
-.responsive-portrait.fluid.autocol-7-10,
-.fluid.autocol-7-10-portrait
-{
-    width: 70%;
-}
-.responsive-portrait-container  .fluid.autocol-9-10,
-.responsive-portrait.fluid.autocol-9-10,
-.fluid.autocol-9-10-portrait
-{
-    width: 90%;
-}
-.responsive-portrait-container  .fluid.autocol-1-12,
-.responsive-portrait.fluid.autocol-1-12,
-.fluid.autocol-1-12-portrait
-{
-    width: 8.33%;
-}
-.responsive-portrait-container  .fluid.autocol-5-12,
-.responsive-portrait.fluid.autocol-5-12,
-.fluid.autocol-5-12-portrait
-{
-    width: 41.66%;
-}
-.responsive-portrait-container  .fluid.autocol-7-12,
-.responsive-portrait.fluid.autocol-7-12,
-.fluid.autocol-7-12-portrait
-{
-    width: 58.33%;
-}
-.responsive-portrait-container  .fluid.autocol-11-12,
-.responsive-portrait.fluid.autocol-11-12,
-.fluid.autocol-11-12-portrait
-{
-    width: 91.66%;
-}
-.responsive-portrait-container  .autorelative,
-.responsive-portrait.autorelative,
-.autorelative-portrait
-{
-    position: relative;
-}
-.responsive-portrait-container  .autoabsolute,
-.responsive-portrait.autoabsolute,
-.autoabsolute-portrait
-{
-    position: absolute;
-}
-.responsive-portrait-container  .autovisible,
-.responsive-portrait.autovisible,
-.autovisible-portrait
-{
-    visibility: visible;
-}
-.responsive-portrait-container  .autohidden,
-.responsive-portrait.autohidden,
-.autohidden-portrait
-{
-    visibility: hidden;
-}
-.responsive-portrait-container  .autoscroll-x,
-.responsive-portrait.autoscroll-x,
-.autoscroll-x-portrait
-{
-    overflow-x: auto;
-}
-.responsive-portrait-container  .autoscroll-y,
-.responsive-portrait.autoscroll-y,
-.autoscroll-y-portrait
-{
-    overflow-y: auto;
-}
-.responsive-portrait-container  .autowidth,
-.responsive-portrait.autowidth,
-.autowidth-portrait
-{
-    width: 100% !important;
-}
-.responsive-portrait-container  .autowidth-reset,
-.responsive-portrait.autowidth-reset,
-.autowidth-reset-portrait
-{
-    width: 0 !important;
-}
-.responsive-portrait-container  .autoheight-reset,
-.responsive-portrait.autoheight-reset,
-.autoheight-reset-portrait
-{
-    height: 0;
-}
-.responsive-portrait-container  .autoheight,
-.responsive-portrait.autoheight,
-.autoheight-portrait
-{
-    height: auto;
-}
-.responsive-portrait-container  .autobreak,
-.responsive-portrait.autobreak,
-.autobreak-portrait
-{
-    display: block;
-    width: 1px;
-    height: 1px;
-    float: none;
-    clear: both;
-}
-.responsive-portrait-container  .autounbreak,
-.responsive-portrait.autounbreak,
-.autounbreak-portrait
-{
-    display: inline-block;
-    width: 0;
-    height: 0;
-    float: left;
-    clear: none;
-}
-.responsive-portrait-container  .autounbreak.float-right,
-.responsive-portrait.autounbreak.float-right,
-.autounbreak-portrait.float-right
-{
-    float: right;
-}
-.responsive-portrait-container  .autohide,
-.responsive-portrait.autohide,
-.autohide-portrait
-{
-    display: none !important;
-}
-.responsive-portrait-container  .autoshow,
-.responsive-portrait.autoshow ,
-.autoshow-portrait,
-.responsive-portrait-container  .autoblock,
-.responsive-portrait.autoblock,
-.autoblock-portrait
-{
-    display: block;
-}
-.responsive-portrait-container  .autoshow.inline,
-.responsive-portrait.autoshow.inline,
-.autoshow-portrait.inline,
-.responsive-portrait-container  .autoshow.inline-block,
-.responsive-portrait.autoshow.inline-block,
-.autoshow-portrait.inline-block,
-.responsive-portrait-container  .autoinline,
-.responsive-portrait.autoinline,
-.autoinline-portrait
-{
-    display: inline-block;
-}
-.responsive-portrait-container  .autotext-left,
-.responsive-portrait.autotext-left,
-.autotext-left-portrait
-{
-    text-align: left;
-}
-.responsive-portrait-container  .autotext-right,
-.responsive-portrait.autotext-right,
-.autotext-right-portrait
-{
-    text-align: right;
-}
-.responsive-portrait-container  .autotext-center,
-.responsive-portrait.autotext-center,
-.autotext-center-portrait
-{
-    text-align: center;
-}
-.responsive-portrait-container  .autotext-justify,
-.responsive-portrait.autotext-justify,
-.autotext-justify-portrait
-{
-    text-align: justify;
-}
-.responsive-portrait-container  .autofloat-left,
-.responsive-portrait.autofloat-left,
-.autofloat-left-portrait
-{
-    float: left;
-}
-.responsive-portrait-container  .autofloat-right,
-.responsive-portrait.autofloat-right,
-.autofloat-right-portrait
-{
-    float: right;
-}
-.responsive-portrait-container  .autofloat-none,
-.responsive-portrait.autofloat-none,
-.autofloat-none-portrait
-{
-    float: none;
-}
-.responsive-portrait-container  .autoclear-left,
-.responsive-portrait.autoclear-left,
-.autoclear-left-portrait
-{
-    clear: left;
-}
-.responsive-portrait-container  .autoclear-right,
-.responsive-portrait.autoclear-right,
-.autoclear-right-portrait
-{
-    clear: right;
-}
-.responsive-portrait-container  .autoclear-both,
-.responsive-portrait.autoclear-both,
-.autoclear-both-portrait
-{
-    clear: both;
-}
-.responsive-portrait-container  .automargin-reset,
-.responsive-portrait.automargin-reset,
-.automargin-reset-portrait
-{
-    margin: 0 !important;
-}
-.responsive-portrait-container  .automargin-reset-h,
-.responsive-portrait.automargin-reset-h,
-.automargin-reset-h-portrait
-{
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-.responsive-portrait-container  .automargin-reset-v,
-.responsive-portrait.automargin-reset-v,
-.automargin-reset-v-portrait
-{
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-.responsive-portrait-container  .autopadding-reset,
-.responsive-portrait.autopadding-reset,
-.autopadding-reset-portrait
-{
-    padding: 0 !important;
-}
-.responsive-portrait-container  .autopadding-reset-h,
-.responsive-portrait.autopadding-reset-h,
-.autopadding-reset-h-portrait
-{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-.responsive-portrait-container  .autopadding-reset-v,
-.responsive-portrait.autopadding-reset-v,
-.autopadding-reset-v-portrait
-{
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-.responsive-portrait-container  .autoreverse-order,
-.responsive-portrait.autoreverse-order,
-.autoreverse-order-portrait
-{
-    -webkit-transform: rotate(180deg);
 
-    -moz-transform: rotate(180deg);
 
-    -ms-transform: rotate(180deg);
 
-    -o-transform: rotate(180deg);
-
-    transform: rotate(180deg);
-}
-.responsive-portrait-container  .autoreverse-order > *,
-.responsive-portrait.autoreverse-order > *,
-.autoreverse-order-portrait > *
-{
-    -webkit-transform: rotate(180deg);
-
-    -moz-transform: rotate(180deg);
-
-    -ms-transform: rotate(180deg);
-
-    -o-transform: rotate(180deg);
-
-    transform: rotate(180deg);
-}
-.responsive-portrait-container  .autoreverse-flexorder-rows,
-.responsive-portrait.autoreverse-flexorder-rows,
-.autoreverse-flexorder-rows-portrait
-{
-    flex-direction: row-reverse;
-}
-.responsive-portrait-container  .autoreverse-flexorder,
-.responsive-portrait.autoreverse-flexorder,
-.autoreverse-flexorder-portrait
-{
-    flex-direction: column-reverse;
-}
-.responsive-portrait-container  table.responsive,
-.responsive-portrait-container  table.responsive thead,
-.responsive-portrait-container  table.responsive tbody, 
-.responsive-portrait-container  table.responsive tr,
-.responsive-portrait-container  table.responsive th, 
-.responsive-portrait-container  table.responsive td,
-table.responsive.responsive-portrait,
-table.responsive.responsive-portrait thead,
-table.responsive.responsive-portrait tbody, 
-table.responsive.responsive-portrait tr,
-table.responsive.responsive-portrait th, 
-table.responsive.responsive-portrait td
-{ 
-    display: block; 
-    width: 100%; 
-}
-.responsive-portrait-container  table.responsive thead tr,
-table.responsive.responsive-portrait thead tr,
-.responsive-portrait-container  table.responsive tfoot tr,
-table.responsive.responsive-portrait tfoot tr 
-{ 
-    position: absolute;
-    top: -9999px; left: -9999px;
-}
-.responsive-portrait-container  table.responsive tr,
-table.responsive.responsive-portrait tr 
-{ 
-    margin-bottom: 1px; 
-}
-.responsive-portrait-container  table.responsive td,
-.responsive-portrait-container  table.responsive.dataTable tbody td,
-table.responsive.responsive-portrait td,
-table.responsive.responsive-portrait.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-.responsive-portrait-container  table.responsive.rtl td,
-.responsive-portrait-container  table.responsive.rtl.dataTable tbody td,
-table.responsive.responsive-portrait.rtl td,
-table.responsive.responsive-portrait.rtl.dataTable tbody td 
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
-}
-.responsive-portrait-container  table.responsive tbody td:before,
-table.responsive.responsive-portrait tbody td:before
-{ 
-    display: block;
-}
-.responsive-portrait-container table.cellular.responsive.dataTable > tbody > tr,
-table.cellular.responsive.dataTable.responsive-portrait > tbody > tr,
-table.cellular.autocell-1-1-portrait.responsive.dataTable > tbody > tr,
-.responsive-portrait-container table.cellular.responsive > tbody > tr,
-.responsive-portrait-container table.cellular.responsive  > tr,
-table.cellular.responsive.responsive-portrait > tbody > tr,
-table.cellular.responsive.responsive-portrait  > tr,
-table.cellular.autocell-1-1-portrait.responsive > tbody > tr,
-table.cellular.autocell-1-1-portrait.responsive  > tr
-{ 
-    width: 100% !important;
-    clear: none !important;
-}
-.responsive-portrait-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
-table.cellular.autocell-1-2.responsive.dataTable.responsive-portrait > tbody > tr,
-table.cellular.autocell-1-2-portrait.responsive.dataTable > tbody > tr,
-.responsive-portrait-container table.cellular.autocell-1-2.responsive > tbody > tr,
-.responsive-portrait-container table.cellular.autocell-1-2.responsive  > tr,
-table.cellular.autocell-1-2.responsive.responsive-portrait > tbody > tr,
-table.cellular.autocell-1-2.responsive.responsive-portrait  > tr,
-table.cellular.autocell-1-2-portrait.responsive > tbody > tr,
-table.cellular.autocell-1-2-portrait.responsive  > tr
-{ 
-    width: 50% !important;
-}
-.responsive-portrait-container table.cellular.autocell-1-3.responsive.dataTable > tbody > tr,
-table.cellular.autocell-1-3.responsive.dataTable.responsive-portrait > tbody > tr,
-table.cellular.autocell-1-3-portrait.responsive.dataTable > tbody > tr,
-.responsive-portrait-container table.cellular.autocell-1-3.responsive > tbody > tr,
-.responsive-portrait-container table.cellular.autocell-1-3.responsive  > tr,
-table.cellular.autocell-1-3.responsive.responsive-portrait > tbody > tr,
-table.cellular.autocell-1-3.responsive.responsive-portrait  > tr,
-table.cellular.autocell-1-3-portrait.responsive > tbody > tr,
-table.cellular.autocell-1-3-portrait.responsive  > tr
-{ 
-    width: 33.33% !important;
-}
-.responsive-portrait-container table.cellular.autocell-1-4.responsive.dataTable > tbody > tr,
-table.cellular.autocell-1-4.responsive.dataTable.responsive-portrait > tbody > tr,
-table.cellular.autocell-1-4-portrait.responsive.dataTable > tbody > tr,
-.responsive-portrait-container table.cellular.autocell-1-4.responsive > tbody > tr,
-.responsive-portrait-container table.cellular.autocell-1-4.responsive  > tr,
-table.cellular.autocell-1-4.responsive.responsive-portrait > tbody > tr,
-table.cellular.autocell-1-4.responsive.responsive-portrait  > tr,
-table.cellular.autocell-1-4-portrait.responsive > tbody > tr,
-table.cellular.autocell-1-4-portrait.responsive  > tr
-{ 
-    width: 25% !important;
-}
-.responsive-portrait-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
-table.cellular.autocell-1-2.responsive.dataTable.responsive-portrait > tbody > tr:nth-child(2n+1),
-table.cellular.autocell-1-2-portrait.responsive.dataTable > tbody > tr:nth-child(2n+1),
-.responsive-portrait-container table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(2n+1),
-.responsive-portrait-container table.cellular.autocell-1-2.responsive  > tr:nth-child(2n+1),
-table.cellular.autocell-1-2.responsive.responsive-portrait > tbody > tr:nth-child(2n+1),
-table.cellular.autocell-1-2.responsive.responsive-portrait  > tr:nth-child(2n+1),
-table.cellular.autocell-1-2-portrait.responsive > tbody > tr:nth-child(2n+1),
-table.cellular.autocell-1-2-portrait.responsive  > tr:nth-child(2n+1),
-.responsive-portrait-container table.cellular.autocell-1-3.responsive.dataTable > tbody > tr:nth-child(3n+1),
-table.cellular.autocell-1-3.responsive.dataTable.responsive-portrait > tbody > tr:nth-child(3n+1),
-table.cellular.autocell-1-3-portrait.responsive.dataTable > tbody > tr:nth-child(3n+1),
-.responsive-portrait-container table.cellular.autocell-1-3.responsive > tbody > tr:nth-child(3n+1),
-.responsive-portrait-container table.cellular.autocell-1-3.responsive  > tr:nth-child(3n+1),
-table.cellular.autocell-1-3.responsive.responsive-portrait > tbody > tr:nth-child(3n+1),
-table.cellular.autocell-1-3.responsive.responsive-portrait  > tr:nth-child(3n+1),
-table.cellular.autocell-1-3-portrait.responsive > tbody > tr:nth-child(3n+1),
-table.cellular.autocell-1-3-portrait.responsive  > tr:nth-child(3n+1),
-.responsive-portrait-container table.cellular.autocell-1-4.responsive.dataTable > tbody > tr:nth-child(4n+1),
-table.cellular.autocell-1-4.responsive.dataTable.responsive-portrait > tbody > tr:nth-child(4n+1),
-table.cellular.autocell-1-4-portrait.responsive.dataTable > tbody > tr:nth-child(4n+1),
-.responsive-portrait-container table.cellular.autocell-1-4.responsive > tbody > tr:nth-child(4n+1),
-.responsive-portrait-container table.cellular.autocell-1-4.responsive  > tr:nth-child(4n+1),
-table.cellular.autocell-1-4.responsive.responsive-portrait > tbody > tr:nth-child(4n+1),
-table.cellular.autocell-1-4.responsive.responsive-portrait  > tr:nth-child(4n+1),
-table.cellular.autocell-1-4-portrait.responsive > tbody > tr:nth-child(4n+1),
-table.cellular.autocell-1-4-portrait.responsive  > tr:nth-child(4n+1)
-{ 
-    clear: left !important;
-}
-}
-
-@media (orientation:landscape)
-{
-.responsive-landscape-container  .fluid.autofloat-none:not(.autoadjust),
-.responsive-landscape-container  .fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right),
-.responsive-landscape.fluid.autofloat-none:not(.autoadjust),
-.responsive-landscape.fluid:not(.autoadjust):not(.preserve):not(.float-left):not(.float-right)
-{
-    display: block;
-    float: none;
-    clear: both;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-.responsive-landscape-container  .fluid.autocol-1-1,
-.responsive-landscape.fluid.autocol-1-1,
-.fluid.autocol-1-1-landscape
-{
-    float: none;
-    clear: both;
-    width: 100%;
-}
-.responsive-landscape-container  .fluid.autocol-1-2,
-.responsive-landscape-container  .fluid.autocol-2-4,
-.responsive-landscape-container  .fluid.autocol-3-6,
-.responsive-landscape-container  .fluid.autocol-4-8,
-.responsive-landscape-container  .fluid.autocol-5-10,
-.responsive-landscape-container  .fluid.autocol-6-12,
-.responsive-landscape.fluid.autocol-1-2,
-.responsive-landscape.fluid.autocol-2-4,
-.responsive-landscape.fluid.autocol-3-6,
-.responsive-landscape.fluid.autocol-4-8,
-.responsive-landscape.fluid.autocol-5-10,
-.responsive-landscape.fluid.autocol-6-12,
-.fluid.autocol-1-2-landscape,
-.fluid.autocol-2-4-landscape,
-.fluid.autocol-3-6-landscape,
-.fluid.autocol-4-8-landscape,
-.fluid.autocol-5-10-landscape,
-.fluid.autocol-6-12-landscape
-{
-    width: 50%;
-}
-.responsive-landscape-container  .fluid.autocol-1-3,
-.responsive-landscape-container  .fluid.autocol-2-6,
-.responsive-landscape-container  .fluid.autocol-3-9,
-.responsive-landscape-container  .fluid.autocol-4-12,
-.responsive-landscape.fluid.autocol-1-3,
-.responsive-landscape.fluid.autocol-2-6,
-.responsive-landscape.fluid.autocol-3-9,
-.responsive-landscape.fluid.autocol-4-12,
-.fluid.autocol-1-3-landscape,
-.fluid.autocol-2-6-landscape,
-.fluid.autocol-3-9-landscape,
-.fluid.autocol-4-12-landscape
-{
-    width: 33.33%;
-}
-.responsive-landscape-container  .fluid.autocol-2-3,
-.responsive-landscape-container  .fluid.autocol-4-6,
-.responsive-landscape-container  .fluid.autocol-6-9,
-.responsive-landscape-container  .fluid.autocol-8-12,
-.responsive-landscape.fluid.autocol-2-3,
-.responsive-landscape.fluid.autocol-4-6,
-.responsive-landscape.fluid.autocol-6-9,
-.responsive-landscape.fluid.autocol-8-12,
-.fluid.autocol-2-3-landscape,
-.fluid.autocol-4-6-landscape,
-.fluid.autocol-6-9-landscape,
-.fluid.autocol-8-12-landscape
-{
-    width: 66.66%;
-}
-.responsive-landscape-container  .fluid.autocol-1-4,
-.responsive-landscape-container  .fluid.autocol-2-8,
-.responsive-landscape-container  .fluid.autocol-3-12,
-.responsive-landscape.fluid.autocol-1-4,
-.responsive-landscape.fluid.autocol-2-8,
-.responsive-landscape.fluid.autocol-3-12,
-.fluid.autocol-1-4-landscape,
-.fluid.autocol-2-8-landscape,
-.fluid.autocol-3-12-landscape
-{
-    width: 25%;
-}
-.responsive-landscape-container  .fluid.autocol-3-4,
-.responsive-landscape-container  .fluid.autocol-6-8,
-.responsive-landscape-container  .fluid.autocol-9-12,
-.responsive-landscape.fluid.autocol-3-4,
-.responsive-landscape.fluid.autocol-6-8,
-.responsive-landscape.fluid.autocol-9-12,
-.fluid.autocol-3-4-landscape,
-.fluid.autocol-6-8-landscape,
-.fluid.autocol-9-12-landscape
-{
-    width: 75%;
-}
-.responsive-landscape-container  .fluid.autocol-1-5,
-.responsive-landscape-container  .fluid.autocol-2-10,
-.responsive-landscape.fluid.autocol-1-5,
-.responsive-landscape.fluid.autocol-2-10,
-.fluid.autocol-1-5-landscape,
-.fluid.autocol-2-10-landscape
-{
-    width: 20%;
-}
-.responsive-landscape-container  .fluid.autocol-2-5,
-.responsive-landscape-container  .fluid.autocol-4-10,
-.responsive-landscape.fluid.autocol-2-5,
-.responsive-landscape.fluid.autocol-4-10,
-.fluid.autocol-2-5-landscape,
-.fluid.autocol-4-10-landscape
-{
-    width: 40%;
-}
-.responsive-landscape-container  .fluid.autocol-3-5,
-.responsive-landscape-container  .fluid.autocol-6-10,
-.responsive-landscape.fluid.autocol-3-5,
-.responsive-landscape.fluid.autocol-6-10,
-.fluid.autocol-3-5-landscape,
-.fluid.autocol-6-10-landscape
-{
-    width: 60%;
-}
-.responsive-landscape-container  .fluid.autocol-4-5,
-.responsive-landscape-container  .fluid.autocol-8-10,
-.responsive-landscape.fluid.autocol-4-5,
-.responsive-landscape.fluid.autocol-8-10,
-.fluid.autocol-4-5-landscape,
-.fluid.autocol-8-10-landscape
-{
-    width: 80%;
-}
-.responsive-landscape-container  .fluid.autocol-1-6,
-.responsive-landscape-container  .fluid.autocol-2-12,
-.responsive-landscape.fluid.autocol-1-6,
-.responsive-landscape.fluid.autocol-2-12,
-.fluid.autocol-1-6-landscape,
-.fluid.autocol-2-12-landscape
-{
-    width: 16.66%;
-}
-.responsive-landscape-container  .fluid.autocol-5-6,
-.responsive-landscape-container  .fluid.autocol-10-12,
-.responsive-landscape.fluid.autocol-5-6,
-.responsive-landscape.fluid.autocol-10-12,
-.fluid.autocol-5-6-landscape,
-.fluid.autocol-10-12-landscape
-{
-    width: 83.33%;
-}
-.responsive-landscape-container  .fluid.autocol-1-7,
-.responsive-landscape.fluid.autocol-1-7,
-.fluid.autocol-1-7-landscape
-{
-    width: 14.28%;
-}
-.responsive-landscape-container  .fluid.autocol-2-7,
-.responsive-landscape.fluid.autocol-2-7,
-.fluid.autocol-2-7-landscape
-{
-    width: 28.57%;
-}
-.responsive-landscape-container   .fluid.autocol-3-7,
-.responsive-landscape.fluid.autocol-3-7,
-.fluid.autocol-3-7-landscape
-{
-    width: 42.85%;
-}
-.responsive-landscape-container   .fluid.autocol-4-7,
-.responsive-landscape.fluid.autocol-4-7,
-.fluid.autocol-4-7-landscape
-{
-    width: 57.14%;
-}
-.responsive-landscape-container   .fluid.autocol-5-7,
-.responsive-landscape.fluid.autocol-5-7,
-.fluid.autocol-5-7-landscape
-{
-    width: 71.42%;
-}
-.responsive-landscape-container   .fluid.autocol-6-7,
-.responsive-landscape.fluid.autocol-6-7,
-.fluid.autocol-6-7-landscape
-{
-    width: 85.71%;
-}
-.responsive-landscape-container   .fluid.autocol-1-8,
-.responsive-landscape.fluid.autocol-1-8,
-.fluid.autocol-1-8-landscape
-{
-    width: 12.5%;
-}
-.responsive-landscape-container   .fluid.autocol-3-8,
-.responsive-landscape.fluid.autocol-3-8,
-.fluid.autocol-3-8-landscape
-{
-    width: 37.5%;
-}
-.responsive-landscape-container   .fluid.autocol-5-8,
-.responsive-landscape.fluid.autocol-5-8,
-.fluid.autocol-5-8-landscape
-{
-    width: 62.5%;
-}
-.responsive-landscape-container   .fluid.autocol-7-8,
-.responsive-landscape.fluid.autocol-7-8,
-.fluid.autocol-7-8-landscape
-{
-    width: 87.5%;
-}
-.responsive-landscape-container  .fluid.autocol-1-9,
-.responsive-landscape.fluid.autocol-1-9,
-.fluid.autocol-1-9-landscape
-{
-    width: 11.11%;
-}
-.responsive-landscape-container   .fluid.autocol-2-9,
-.responsive-landscape.fluid.autocol-2-9,
-.fluid.autocol-2-9-landscape
-{
-    width: 22.22%;
-}
-.responsive-landscape-container  .fluid.autocol-4-9,
-.responsive-landscape.fluid.autocol-4-9,
-.fluid.autocol-4-9-landscape
-{
-    width: 44.44%;
-}
-.responsive-landscape-container  .fluid.autocol-5-9,
-.responsive-landscape.fluid.autocol-5-9,
-.fluid.autocol-5-9-landscape
-{
-    width: 55.55%;
-}
-.responsive-landscape-container  .fluid.autocol-7-9,
-.responsive-landscape.fluid.autocol-7-9,
-.fluid.autocol-7-9-landscape
-{
-    width: 77.77%;
-}
-.responsive-landscape-container  .fluid.autocol-8-9,
-.responsive-landscape.fluid.autocol-8-9,
-.fluid.autocol-8-9-landscape
-{
-    width: 88.88%;
-}
-.responsive-landscape-container  .fluid.autocol-1-10,
-.responsive-landscape.fluid.autocol-1-10,
-.fluid.autocol-1-10-landscape
-{
-    width: 10%;
-}
-.responsive-landscape-container  .fluid.autocol-3-10,
-.responsive-landscape.fluid.autocol-3-10,
-.fluid.autocol-3-10-landscape
-{
-    width: 30%;
-}
-.responsive-landscape-container  .fluid.autocol-6-10,
-.responsive-landscape.fluid.autocol-6-10,
-.fluid.autocol-6-10-landscape
-{
-    width: 60%;
-}
-.responsive-landscape-container  .fluid.autocol-7-10,
-.responsive-landscape.fluid.autocol-7-10,
-.fluid.autocol-7-10-landscape
-{
-    width: 70%;
-}
-.responsive-landscape-container  .fluid.autocol-9-10,
-.responsive-landscape.fluid.autocol-9-10,
-.fluid.autocol-9-10-landscape
-{
-    width: 90%;
-}
-.responsive-landscape-container  .fluid.autocol-1-12,
-.responsive-landscape.fluid.autocol-1-12,
-.fluid.autocol-1-12-landscape
-{
-    width: 8.33%;
-}
-.responsive-landscape-container  .fluid.autocol-5-12,
-.responsive-landscape.fluid.autocol-5-12,
-.fluid.autocol-5-12-landscape
-{
-    width: 41.66%;
-}
-.responsive-landscape-container  .fluid.autocol-7-12,
-.responsive-landscape.fluid.autocol-7-12,
-.fluid.autocol-7-12-landscape
-{
-    width: 58.33%;
-}
-.responsive-landscape-container  .fluid.autocol-11-12,
-.responsive-landscape.fluid.autocol-11-12,
-.fluid.autocol-11-12-landscape
-{
-    width: 91.66%;
-}
-.responsive-landscape-container  .autorelative,
-.responsive-landscape.autorelative,
-.autorelative-landscape
-{
-    position: relative;
-}
-.responsive-landscape-container  .autoabsolute,
-.responsive-landscape.autoabsolute,
-.autoabsolute-landscape
-{
-    position: absolute;
-}
-.responsive-landscape-container  .autovisible,
-.responsive-landscape.autovisible,
-.autovisible-landscape
-{
-    visibility: visible;
-}
-.responsive-landscape-container  .autohidden,
-.responsive-landscape.autohidden,
-.autohidden-landscape
-{
-    visibility: hidden;
-}
-.responsive-landscape-container  .autoscroll-x,
-.responsive-landscape.autoscroll-x,
-.autoscroll-x-landscape
-{
-    overflow-x: auto;
-}
-.responsive-landscape-container  .autoscroll-y,
-.responsive-landscape.autoscroll-y,
-.autoscroll-y-landscape
-{
-    overflow-y: auto;
-}
-.responsive-landscape-container  .autowidth,
-.responsive-landscape.autowidth,
-.autowidth-landscape
-{
-    width: 100% !important;
-}
-.responsive-landscape-container  .autowidth-reset,
-.responsive-landscape.autowidth-reset,
-.autowidth-reset-landscape
-{
-    width: 0 !important;
-}
-.responsive-landscape-container  .autoheight-reset,
-.responsive-landscape.autoheight-reset,
-.autoheight-reset-landscape
-{
-    height: 0;
-}
-.responsive-landscape-container  .autoheight,
-.responsive-landscape.autoheight,
-.autoheight-landscape
-{
-    height: auto;
-}
-.responsive-landscape-container  .autobreak,
-.responsive-landscape.autobreak,
-.autobreak-landscape
-{
-    display: block;
-    width: 1px;
-    height: 1px;
-    float: none;
-    clear: both;
-}
-.responsive-landscape-container  .autounbreak,
-.responsive-landscape.autounbreak,
-.autounbreak-landscape
-{
-    display: inline-block;
-    width: 0;
-    height: 0;
-    float: left;
-    clear: none;
-}
-.responsive-landscape-container  .autounbreak.float-right,
-.responsive-landscape.autounbreak.float-right,
-.autounbreak-landscape.float-right
-{
-    float: right;
-}
-.responsive-landscape-container  .autohide,
-.responsive-landscape.autohide,
-.autohide-landscape
-{
-    display: none !important;
-}
-.responsive-landscape-container  .autoshow,
-.responsive-landscape.autoshow ,
-.autoshow-landscape,
-.responsive-landscape-container  .autoblock,
-.responsive-landscape.autoblock,
-.autoblock-landscape
-{
-    display: block;
-}
-.responsive-landscape-container  .autoshow.inline,
-.responsive-landscape.autoshow.inline,
-.autoshow-landscape.inline,
-.responsive-landscape-container  .autoshow.inline-block,
-.responsive-landscape.autoshow.inline-block,
-.autoshow-landscape.inline-block,
-.responsive-landscape-container  .autoinline,
-.responsive-landscape.autoinline,
-.autoinline-landscape
-{
-    display: inline-block;
-}
-.responsive-landscape-container  .autotext-left,
-.responsive-landscape.autotext-left,
-.autotext-left-landscape
-{
-    text-align: left;
-}
-.responsive-landscape-container  .autotext-right,
-.responsive-landscape.autotext-right,
-.autotext-right-landscape
-{
-    text-align: right;
-}
-.responsive-landscape-container  .autotext-center,
-.responsive-landscape.autotext-center,
-.autotext-center-landscape
-{
-    text-align: center;
-}
-.responsive-landscape-container  .autotext-justify,
-.responsive-landscape.autotext-justify,
-.autotext-justify-landscape
-{
-    text-align: justify;
-}
-.responsive-landscape-container  .autofloat-left,
-.responsive-landscape.autofloat-left,
-.autofloat-left-landscape
-{
-    float: left;
-}
-.responsive-landscape-container  .autofloat-right,
-.responsive-landscape.autofloat-right,
-.autofloat-right-landscape
-{
-    float: right;
-}
-.responsive-landscape-container  .autofloat-none,
-.responsive-landscape.autofloat-none,
-.autofloat-none-landscape
-{
-    float: none;
-}
-.responsive-landscape-container  .autoclear-left,
-.responsive-landscape.autoclear-left,
-.autoclear-left-landscape
-{
-    clear: left;
-}
-.responsive-landscape-container  .autoclear-right,
-.responsive-landscape.autoclear-right,
-.autoclear-right-landscape
-{
-    clear: right;
-}
-.responsive-landscape-container  .autoclear-both,
-.responsive-landscape.autoclear-both,
-.autoclear-both-landscape
-{
-    clear: both;
-}
-.responsive-landscape-container  .automargin-reset,
-.responsive-landscape.automargin-reset,
-.automargin-reset-landscape
-{
-    margin: 0 !important;
-}
-.responsive-landscape-container  .automargin-reset-h,
-.responsive-landscape.automargin-reset-h,
-.automargin-reset-h-landscape
-{
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-.responsive-landscape-container  .automargin-reset-v,
-.responsive-landscape.automargin-reset-v,
-.automargin-reset-v-landscape
-{
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-.responsive-landscape-container  .autopadding-reset,
-.responsive-landscape.autopadding-reset,
-.autopadding-reset-landscape
-{
-    padding: 0 !important;
-}
-.responsive-landscape-container  .autopadding-reset-h,
-.responsive-landscape.autopadding-reset-h,
-.autopadding-reset-h-landscape
-{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-.responsive-landscape-container  .autopadding-reset-v,
-.responsive-landscape.autopadding-reset-v,
-.autopadding-reset-v-landscape
-{
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-.responsive-landscape-container  .autoreverse-order,
-.responsive-landscape.autoreverse-order,
-.autoreverse-order-landscape
-{
-    -webkit-transform: rotate(180deg);
-
-    -moz-transform: rotate(180deg);
-
-    -ms-transform: rotate(180deg);
-
-    -o-transform: rotate(180deg);
-
-    transform: rotate(180deg);
-}
-.responsive-landscape-container  .autoreverse-order > *,
-.responsive-landscape.autoreverse-order > *,
-.autoreverse-order-landscape > *
-{
-    -webkit-transform: rotate(180deg);
-
-    -moz-transform: rotate(180deg);
-
-    -ms-transform: rotate(180deg);
-
-    -o-transform: rotate(180deg);
-
-    transform: rotate(180deg);
-}
-.responsive-landscape-container  .autoreverse-flexorder-rows,
-.responsive-landscape.autoreverse-flexorder-rows,
-.autoreverse-flexorder-rows-landscape
-{
-    flex-direction: row-reverse;
-}
-.responsive-landscape-container  .autoreverse-flexorder,
-.responsive-landscape.autoreverse-flexorder,
-.autoreverse-flexorder-landscape
-{
-    flex-direction: column-reverse;
-}
-.responsive-landscape-container  table.responsive,
-.responsive-landscape-container  table.responsive thead,
-.responsive-landscape-container  table.responsive tbody, 
-.responsive-landscape-container  table.responsive tr,
-.responsive-landscape-container  table.responsive th, 
-.responsive-landscape-container  table.responsive td,
-table.responsive.responsive-landscape,
-table.responsive.responsive-landscape thead,
-table.responsive.responsive-landscape tbody, 
-table.responsive.responsive-landscape tr,
-table.responsive.responsive-landscape th, 
-table.responsive.responsive-landscape td
-{ 
-    display: block; 
-    width: 100%; 
-}
-.responsive-landscape-container  table.responsive thead tr,
-table.responsive.responsive-landscape thead tr,
-.responsive-landscape-container  table.responsive tfoot tr,
-table.responsive.responsive-landscape tfoot tr 
-{ 
-    position: absolute;
-    top: -9999px; left: -9999px;
-}
-.responsive-landscape-container  table.responsive tr,
-table.responsive.responsive-landscape tr 
-{ 
-    margin-bottom: 1px; 
-}
-.responsive-landscape-container  table.responsive td,
-.responsive-landscape-container  table.responsive.dataTable tbody td,
-table.responsive.responsive-landscape td,
-table.responsive.responsive-landscape.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-.responsive-landscape-container  table.responsive.rtl td,
-.responsive-landscape-container  table.responsive.rtl.dataTable tbody td,
-table.responsive.responsive-landscape.rtl td,
-table.responsive.responsive-landscape.rtl.dataTable tbody td 
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
-}
-.responsive-landscape-container  table.responsive tbody td:before,
-table.responsive.responsive-landscape tbody td:before
-{ 
-    display: block;
-}
-.responsive-landscape-container table.cellular.responsive.dataTable > tbody > tr,
-table.cellular.responsive.dataTable.responsive-landscape > tbody > tr,
-table.cellular.autocell-1-1-landscape.responsive.dataTable > tbody > tr,
-.responsive-landscape-container table.cellular.responsive > tbody > tr,
-.responsive-landscape-container table.cellular.responsive  > tr,
-table.cellular.responsive.responsive-landscape > tbody > tr,
-table.cellular.responsive.responsive-landscape  > tr,
-table.cellular.autocell-1-1-landscape.responsive > tbody > tr,
-table.cellular.autocell-1-1-landscape.responsive  > tr
-{ 
-    width: 100% !important;
-    clear: none !important;
-}
-.responsive-landscape-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
-table.cellular.autocell-1-2.responsive.dataTable.responsive-landscape > tbody > tr,
-table.cellular.autocell-1-2-landscape.responsive.dataTable > tbody > tr,
-.responsive-landscape-container table.cellular.autocell-1-2.responsive > tbody > tr,
-.responsive-landscape-container table.cellular.autocell-1-2.responsive  > tr,
-table.cellular.autocell-1-2.responsive.responsive-landscape > tbody > tr,
-table.cellular.autocell-1-2.responsive.responsive-landscape  > tr,
-table.cellular.autocell-1-2-landscape.responsive > tbody > tr,
-table.cellular.autocell-1-2-landscape.responsive  > tr
-{ 
-    width: 50% !important;
-}
-.responsive-landscape-container table.cellular.autocell-1-3.responsive.dataTable > tbody > tr,
-table.cellular.autocell-1-3.responsive.dataTable.responsive-landscape > tbody > tr,
-table.cellular.autocell-1-3-landscape.responsive.dataTable > tbody > tr,
-.responsive-landscape-container table.cellular.autocell-1-3.responsive > tbody > tr,
-.responsive-landscape-container table.cellular.autocell-1-3.responsive  > tr,
-table.cellular.autocell-1-3.responsive.responsive-landscape > tbody > tr,
-table.cellular.autocell-1-3.responsive.responsive-landscape  > tr,
-table.cellular.autocell-1-3-landscape.responsive > tbody > tr,
-table.cellular.autocell-1-3-landscape.responsive  > tr
-{ 
-    width: 33.33% !important;
-}
-.responsive-landscape-container table.cellular.autocell-1-4.responsive.dataTable > tbody > tr,
-table.cellular.autocell-1-4.responsive.dataTable.responsive-landscape > tbody > tr,
-table.cellular.autocell-1-4-landscape.responsive.dataTable > tbody > tr,
-.responsive-landscape-container table.cellular.autocell-1-4.responsive > tbody > tr,
-.responsive-landscape-container table.cellular.autocell-1-4.responsive  > tr,
-table.cellular.autocell-1-4.responsive.responsive-landscape > tbody > tr,
-table.cellular.autocell-1-4.responsive.responsive-landscape  > tr,
-table.cellular.autocell-1-4-landscape.responsive > tbody > tr,
-table.cellular.autocell-1-4-landscape.responsive  > tr
-{ 
-    width: 25% !important;
-}
-.responsive-landscape-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
-table.cellular.autocell-1-2.responsive.dataTable.responsive-landscape > tbody > tr:nth-child(2n+1),
-table.cellular.autocell-1-2-landscape.responsive.dataTable > tbody > tr:nth-child(2n+1),
-.responsive-landscape-container table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(2n+1),
-.responsive-landscape-container table.cellular.autocell-1-2.responsive  > tr:nth-child(2n+1),
-table.cellular.autocell-1-2.responsive.responsive-landscape > tbody > tr:nth-child(2n+1),
-table.cellular.autocell-1-2.responsive.responsive-landscape  > tr:nth-child(2n+1),
-table.cellular.autocell-1-2-landscape.responsive > tbody > tr:nth-child(2n+1),
-table.cellular.autocell-1-2-landscape.responsive  > tr:nth-child(2n+1),
-.responsive-landscape-container table.cellular.autocell-1-3.responsive.dataTable > tbody > tr:nth-child(3n+1),
-table.cellular.autocell-1-3.responsive.dataTable.responsive-landscape > tbody > tr:nth-child(3n+1),
-table.cellular.autocell-1-3-landscape.responsive.dataTable > tbody > tr:nth-child(3n+1),
-.responsive-landscape-container table.cellular.autocell-1-3.responsive > tbody > tr:nth-child(3n+1),
-.responsive-landscape-container table.cellular.autocell-1-3.responsive  > tr:nth-child(3n+1),
-table.cellular.autocell-1-3.responsive.responsive-landscape > tbody > tr:nth-child(3n+1),
-table.cellular.autocell-1-3.responsive.responsive-landscape  > tr:nth-child(3n+1),
-table.cellular.autocell-1-3-landscape.responsive > tbody > tr:nth-child(3n+1),
-table.cellular.autocell-1-3-landscape.responsive  > tr:nth-child(3n+1),
-.responsive-landscape-container table.cellular.autocell-1-4.responsive.dataTable > tbody > tr:nth-child(4n+1),
-table.cellular.autocell-1-4.responsive.dataTable.responsive-landscape > tbody > tr:nth-child(4n+1),
-table.cellular.autocell-1-4-landscape.responsive.dataTable > tbody > tr:nth-child(4n+1),
-.responsive-landscape-container table.cellular.autocell-1-4.responsive > tbody > tr:nth-child(4n+1),
-.responsive-landscape-container table.cellular.autocell-1-4.responsive  > tr:nth-child(4n+1),
-table.cellular.autocell-1-4.responsive.responsive-landscape > tbody > tr:nth-child(4n+1),
-table.cellular.autocell-1-4.responsive.responsive-landscape  > tr:nth-child(4n+1),
-table.cellular.autocell-1-4-landscape.responsive > tbody > tr:nth-child(4n+1),
-table.cellular.autocell-1-4-landscape.responsive  > tr:nth-child(4n+1)
-{ 
-    clear: left !important;
-}
-}
 
 @media (max-width: 30em), (max-device-width: 30em)
 {
@@ -6476,6 +5489,7 @@ table.cellular.autocell-1-4-landscape.responsive  > tr:nth-child(4n+1)
     flex-direction: column-reverse;
 }
 table.responsive,
+table.responsive tfoot,
 table.responsive thead,
 table.responsive tbody, 
 table.responsive tr,
@@ -6485,42 +5499,18 @@ table.responsive td
     display: block; 
     width: 100%; 
 }
-table.responsive thead tr,
-table.responsive tfoot tr 
+table.responsive tfoot,
+table.responsive thead
 { 
     position: absolute;
-    top: -9999px; left: -9999px;
-}
-table.responsive tr 
-{ 
-    margin-bottom: 1px; 
-}
-table.responsive td,
-table.responsive.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-table.responsive.rtl td,
-table.responsive.rtl.dataTable tbody td
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
 }
 table.responsive tbody td:before
 { 
-    display: block;
+    display: inline-block;
 }
 table.cellular.responsive.dataTable > tbody > tr,
 table.cellular.responsive > tbody > tr,
@@ -6530,7 +5520,6 @@ table.cellular.autocell-1-1.responsive > tbody > tr,
 table.cellular.autocell-1-1.responsive  > tr
 { 
     width: 100% !important;
-    clear: none !important;
 }
 table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
 table.cellular.autocell-1-2.responsive > tbody > tr,
@@ -6549,6 +5538,102 @@ table.cellular.autocell-1-4.responsive > tbody > tr,
 table.cellular.autocell-1-4.responsive  > tr
 { 
     width: 25% !important;
+}
+table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive > tbody > tr,
+table.cellular.responsive  > tr,
+table.cellular.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.responsive > tbody > tr:nth-child(n+1),
+table.cellular.responsive  > tr:nth-child(n+1),
+table.cellular.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.responsive  > tr:nth-child(2n+1),
+table.cellular.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.responsive  > tr:nth-child(3n+1),
+table.cellular.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.responsive  > tr:nth-child(4n+1),
+table.cellular.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.responsive  > tr:nth-child(5n+1),
+table.cellular.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-1.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-1.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-1.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-1.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-1.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-1.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-3.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-3.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-3.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-3.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-3.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-3.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-4.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-4.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-4.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-4.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-4.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-4.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4.responsive  > tr:nth-child(6n+1)
+{ 
+    clear: none !important;
 }
 table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
 table.cellular.autocell-1-2.responsive > tbody > tr:nth-child(2n+1),
@@ -7117,12 +6202,14 @@ table.cellular.autocell-1-4.responsive  > tr:nth-child(4n+1)
     flex-direction: column-reverse;
 }
 .responsive-480-container  table.responsive,
+.responsive-480-container  table.responsive tfoot,
 .responsive-480-container  table.responsive thead,
 .responsive-480-container  table.responsive tbody, 
 .responsive-480-container  table.responsive tr,
 .responsive-480-container  table.responsive th, 
 .responsive-480-container  table.responsive td,
 table.responsive.responsive-480,
+table.responsive.responsive-480 tfoot,
 table.responsive.responsive-480 thead,
 table.responsive.responsive-480 tbody, 
 table.responsive.responsive-480 tr,
@@ -7132,50 +6219,21 @@ table.responsive.responsive-480 td
     display: block; 
     width: 100%; 
 }
-.responsive-480-container  table.responsive thead tr,
-table.responsive.responsive-480 thead tr,
-.responsive-480-container  table.responsive tfoot tr,
-table.responsive.responsive-480 tfoot tr 
+.responsive-480-container  table.responsive tfoot,
+table.responsive.responsive-480 tfoot,
+.responsive-480-container  table.responsive thead,
+table.responsive.responsive-480 thead
 { 
     position: absolute;
-    top: -9999px; left: -9999px;
-}
-.responsive-480-container  table.responsive tr,
-table.responsive.responsive-480 tr 
-{ 
-    margin-bottom: 1px; 
-}
-.responsive-480-container  table.responsive td,
-.responsive-480-container  table.responsive.dataTable tbody td,
-table.responsive.responsive-480 td,
-table.responsive.responsive-480.dataTable tbody td 
-{ 
-    -webkit-box-sizing: border-box;
- 
-    -moz-box-sizing: border-box;
- 
-    -ms-box-sizing: border-box;
- 
-    -o-box-sizing: border-box;
- 
-    box-sizing: border-box;
-    
-    padding-left: 30% !important;
-    padding-right: 15% !important;
-    min-height: 2em;
-}
-.responsive-480-container  table.responsive.rtl td,
-.responsive-480-container  table.responsive.rtl.dataTable tbody td,
-table.responsive.responsive-480.rtl td,
-table.responsive.responsive-480.rtl.dataTable tbody td 
-{ 
-    padding-left: 15% !important;
-    padding-right: 30% !important;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
 }
 .responsive-480-container  table.responsive tbody td:before,
 table.responsive.responsive-480 tbody td:before
 { 
-    display: block;
+    display: inline-block;
 }
 .responsive-480-container table.cellular.responsive.dataTable > tbody > tr,
 table.cellular.responsive.dataTable.responsive-480 > tbody > tr,
@@ -7188,7 +6246,6 @@ table.cellular.autocell-1-1-480.responsive > tbody > tr,
 table.cellular.autocell-1-1-480.responsive  > tr
 { 
     width: 100% !important;
-    clear: none !important;
 }
 .responsive-480-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr,
 table.cellular.autocell-1-2.responsive.dataTable.responsive-480 > tbody > tr,
@@ -7225,6 +6282,123 @@ table.cellular.autocell-1-4-480.responsive > tbody > tr,
 table.cellular.autocell-1-4-480.responsive  > tr
 { 
     width: 25% !important;
+}
+.responsive-480-container table.cellular.responsive.dataTable > tbody > tr,
+table.cellular.responsive.dataTable.responsive-480 > tbody > tr,
+.responsive-480-container table.cellular.responsive > tbody > tr,
+.responsive-480-container table.cellular.responsive  > tr,
+table.cellular.responsive.responsive-480 > tbody > tr,
+table.cellular.responsive.responsive-480  > tr,
+.responsive-480-container table.cellular.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.responsive.dataTable.responsive-480 > tbody > tr:nth-child(n+1),
+.responsive-480-container table.cellular.responsive > tbody > tr:nth-child(n+1),
+.responsive-480-container table.cellular.responsive  > tr:nth-child(n+1),
+table.cellular.responsive.responsive-480 > tbody > tr:nth-child(n+1),
+table.cellular.responsive.responsive-480  > tr:nth-child(n+1),
+.responsive-480-container table.cellular.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.dataTable.responsive-480 > tbody > tr:nth-child(2n+1),
+.responsive-480-container table.cellular.responsive > tbody > tr:nth-child(2n+1),
+.responsive-480-container table.cellular.responsive  > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-480 > tbody > tr:nth-child(2n+1),
+table.cellular.responsive.responsive-480  > tr:nth-child(2n+1),
+.responsive-480-container table.cellular.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.dataTable.responsive-480 > tbody > tr:nth-child(3n+1),
+.responsive-480-container table.cellular.responsive > tbody > tr:nth-child(3n+1),
+.responsive-480-container table.cellular.responsive  > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-480 > tbody > tr:nth-child(3n+1),
+table.cellular.responsive.responsive-480  > tr:nth-child(3n+1),
+.responsive-480-container table.cellular.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.dataTable.responsive-480 > tbody > tr:nth-child(4n+1),
+.responsive-480-container table.cellular.responsive > tbody > tr:nth-child(4n+1),
+.responsive-480-container table.cellular.responsive  > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-480 > tbody > tr:nth-child(4n+1),
+table.cellular.responsive.responsive-480  > tr:nth-child(4n+1),
+.responsive-480-container table.cellular.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.dataTable.responsive-480 > tbody > tr:nth-child(5n+1),
+.responsive-480-container table.cellular.responsive > tbody > tr:nth-child(5n+1),
+.responsive-480-container table.cellular.responsive  > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-480 > tbody > tr:nth-child(5n+1),
+table.cellular.responsive.responsive-480  > tr:nth-child(5n+1),
+.responsive-480-container table.cellular.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.dataTable.responsive-480 > tbody > tr:nth-child(6n+1),
+.responsive-480-container table.cellular.responsive > tbody > tr:nth-child(6n+1),
+.responsive-480-container table.cellular.responsive  > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-480 > tbody > tr:nth-child(6n+1),
+table.cellular.responsive.responsive-480  > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-480.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-480.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-1-480.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-1-480.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-480.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-480.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-1-480.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-480.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-480.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-1-480.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-480.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-480.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-1-480.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-480.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-480.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-1-480.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-480.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-1-480.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-480.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-480.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-2-480.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-2-480.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-480.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-480.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-2-480.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-480.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-480.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-2-480.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-480.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-480.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-2-480.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-480.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-480.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-2-480.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-480.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-2-480.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-480.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-480.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-3-480.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-3-480.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-480.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-480.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-3-480.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-480.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-480.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-3-480.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-480.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-480.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-3-480.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-480.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-480.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-3-480.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-480.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-3-480.responsive  > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-480.responsive.dataTable > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-480.responsive > tbody > tr:nth-child(n+1),
+table.cellular.autocell-1-4-480.responsive  > tr:nth-child(n+1),
+table.cellular.autocell-1-4-480.responsive.dataTable > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-480.responsive > tbody > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-480.responsive  > tr:nth-child(2n+1),
+table.cellular.autocell-1-4-480.responsive.dataTable > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-480.responsive > tbody > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-480.responsive  > tr:nth-child(3n+1),
+table.cellular.autocell-1-4-480.responsive.dataTable > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-480.responsive > tbody > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-480.responsive  > tr:nth-child(4n+1),
+table.cellular.autocell-1-4-480.responsive.dataTable > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-480.responsive > tbody > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-480.responsive  > tr:nth-child(5n+1),
+table.cellular.autocell-1-4-480.responsive.dataTable > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-480.responsive > tbody > tr:nth-child(6n+1),
+table.cellular.autocell-1-4-480.responsive  > tr:nth-child(6n+1)
+{ 
+    clear: none !important;
 }
 .responsive-480-container table.cellular.autocell-1-2.responsive.dataTable > tbody > tr:nth-child(2n+1),
 table.cellular.autocell-1-2.responsive.dataTable.responsive-480 > tbody > tr:nth-child(2n+1),
